@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ .Title }}</title>
+  <style>
+    body { max-width: 800px; margin: 0 auto; font-family: sans-serif; line-height: 1.6; padding: 1rem; }
+    nav { margin-bottom: 2rem; }
+    nav a { margin-right: 1rem; text-decoration: none; color: #333; }
+    h2 { margin-top: 2rem; }
+    .post-list { list-style: none; padding: 0; }
+    .post-list li { margin-bottom: 1.5rem; }
+    .newsletter { border-top: 1px solid #ddd; padding-top: 2rem; margin-top: 2rem; }
+    .newsletter input[type="email"] { width: 70%; padding: 0.5rem; }
+    .newsletter button { padding: 0.5rem 1rem; margin-left: 0.5rem; }
+  </style>
+</head>
+<body>
+  <nav>
+    {{ range .Site.Menus.main }}
+      <a href="{{ .URL }}">{{ .Name }}</a>
+    {{ end }}
+  </nav>
+
+  <main>
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+
+    <h2>Featured Posts</h2>
+    <ul class="post-list">
+      {{ range first 3 .Site.RegularPages }}
+        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+      {{ end }}
+    </ul>
+
+    <h2>Posts</h2>
+    <ul class="post-list">
+      {{ range .Site.RegularPages }}
+        <li>
+          <a href="{{ .Permalink }}">{{ .Title }}</a><br>
+          {{ .Summary }}
+        </li>
+      {{ end }}
+    </ul>
+  </main>
+
+  <footer class="newsletter">
+    <h2>Subscribe to Newsletter</h2>
+    <p>Join me on this journey and stay updated.</p>
+    <form action="#" method="POST">
+      <input type="email" placeholder="Your email">
+      <button type="submit">Subscribe</button>
+    </form>
+  </footer>
+</body>
+</html>
