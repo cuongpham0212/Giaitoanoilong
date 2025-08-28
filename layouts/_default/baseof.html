@@ -1,18 +1,82 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    {{ partial "head.html" . }}
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ "assets/css/style.css" | relURL }}">
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    <meta name="description" content="{{ .Description }}">
+
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Favicon -->
     <link rel="icon" href="{{ "favicon.ico" | relURL }}" type="image/x-icon">
     <link rel="icon" href="{{ "favicon-32.png" | relURL }}" type="image/png">
     <link rel="apple-touch-icon" href="{{ "favicon-180.png" | relURL }}">
 </head>
-<body>
-    {{ partial "header.html" . }}
-    <main>
-        {{ block "main" . }}{{ end }}
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+    <!-- Header -->
+    <header class="bg-white shadow">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold"><a href="/" class="hover:text-blue-600">{{ .Site.Title }}</a></h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    {{ range .Site.Menus.main }}
+                    <li><a href="{{ .URL }}" class="hover:text-blue-600">{{ .Name }}</a></li>
+                    {{ end }}
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-4 gap-8">
+      
+      <!-- Nội dung chính (Posts) -->
+      <div class="lg:col-span-3">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {{ range .Pages }}
+          <article class="border rounded-lg p-4 hover:shadow-lg transition-shadow duration-200 bg-white">
+            <h2 class="text-xl font-bold mb-2">
+              <a href="{{ .Permalink }}" class="hover:text-blue-600">{{ .Title }}</a>
+            </h2>
+            <p class="text-gray-600">{{ .Summary }}</p>
+            <a href="{{ .Permalink }}" class="text-blue-600 hover:underline mt-2 inline-block">Đọc tiếp →</a>
+          </article>
+          {{ end }}
+        </div>
+      </div>
+      
+      <!-- Sidebar -->
+      <aside class="lg:col-span-1 space-y-6">
+        <div class="p-4 border rounded-lg bg-white">
+          <h3 class="font-bold mb-2 text-lg">Danh mục</h3>
+          <ul class="space-y-1">
+            {{ range .Site.Menus.main }}
+            <li><a href="{{ .URL }}" class="text-gray-700 hover:text-blue-600">{{ .Name }}</a></li>
+            {{ end }}
+          </ul>
+        </div>
+
+        <div class="p-4 border rounded-lg bg-white">
+          <h3 class="font-bold mb-2 text-lg">Bài viết mới</h3>
+          <ul class="space-y-1">
+            {{ range first 5 .Site.RegularPages }}
+            <li><a href="{{ .Permalink }}" class="text-gray-700 hover:text-blue-600">{{ .Title }}</a></li>
+            {{ end }}
+          </ul>
+        </div>
+      </aside>
+
     </main>
-    {{ partial "footer.html" . }}
+
+    <!-- Footer -->
+    <footer class="bg-white shadow mt-12">
+        <div class="container mx-auto px-4 py-6 text-center text-gray-600">
+            &copy; 2025 {{ .Site.Title }}. All rights reserved.
+        </div>
+    </footer>
+
 </body>
 </html>

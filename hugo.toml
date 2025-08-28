@@ -3,6 +3,9 @@ languageCode = 'vi'
 title = 'Giải Tỏa Nỗi Lòng'
 theme = "mytheme"
 
+[permalinks]
+  post = "/:slug/"
+
 [menu]
   [[menu.main]]
     name = "Trang chủ"

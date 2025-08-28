@@ -1,5 +1,26 @@
-<footer class="site-footer">
-    <div class="container">
-        <p>&copy; 2025 MySite. All rights reserved.</p>
+<footer class="bg-gray-800 text-gray-200 mt-12">
+  <div class="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">
+    
+    <!-- Copyright -->
+    <p class="text-sm">&copy; 2025 {{ .Site.Title }}. All rights reserved.</p>
+    
+    <!-- Footer Menu -->
+    <nav class="mt-4 md:mt-0">
+      <ul class="flex space-x-4 text-sm">
+        {{ range .Site.Menus.main }}
+        <li>
+          <a href="{{ .URL }}" class="hover:text-white">{{ .Name }}</a>
+        </li>
+        {{ end }}
+      </ul>
+    </nav>
+
+    <!-- Social icons (giả lập) -->
+    <div class="mt-4 md:mt-0 flex space-x-4">
+      <a href="#" class="hover:text-white">Facebook</a>
+      <a href="#" class="hover:text-white">Twitter</a>
+      <a href="#" class="hover:text-white">Instagram</a>
     </div>
+
+  </div>
 </footer>
