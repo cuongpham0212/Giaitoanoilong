@@ -1,3 +1,18 @@
 baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+languageCode = 'vi'
+title = 'Giải Tỏa Nỗi Lòng'
+theme = "mytheme"
+
+[menu]
+  [[menu.main]]
+    name = "Trang chủ"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Tâm sự cuộc sống"
+    url = "/tamsu/"
+    weight = 2
+  [[menu.main]]
+    name = "Đầu tư ít vốn"
+    url = "/dautu/"
+    weight = 3
