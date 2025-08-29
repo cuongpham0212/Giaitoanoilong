@@ -1,0 +1,57 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "static/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "tamsu"
+    label: "Tâm sự"
+    folder: "content/tamsu"
+    create: true
+    slug: "{{slug}}"
+    format: "md"
+    fields:
+      - { label: "Tiêu đề bài (H1)", name: "title", widget: "string" }
+      - { label: "Mô tả ngắn (Meta Description)", name: "description", widget: "text" }
+      - { label: "Tiêu đề phụ (H2)", name: "subtitle", widget: "string", required: false }
+      - { label: "Ngày", name: "date", widget: "datetime" }
+      - { label: "Ảnh đại diện", name: "image", widget: "image", required: false }
+      - { label: "Nội dung bài viết", name: "body", widget: "markdown" }
+
+  - name: "dautu"
+    label: "Đầu tư"
+    folder: "content/dautu"
+    create: true
+    slug: "{{slug}}"
+    format: "md"
+    fields:
+      - { label: "Tiêu đề bài (H1)", name: "title", widget: "string" }
+      - { label: "Mô tả ngắn (Meta Description)", name: "description", widget: "text" }
+      - { label: "Tiêu đề phụ (H2)", name: "subtitle", widget: "string", required: false }
+      - { label: "Ngày", name: "date", widget: "datetime" }
+      - { label: "Ảnh đại diện", name: "image", widget: "image", required: false }
+      - { label: "Nội dung bài viết", name: "body", widget: "markdown" }
+
+  - name: "categories"
+    label: "Danh mục"
+    folder: "content/categories"
+    create: true
+    slug: "{{slug}}"
+    format: "md"
+    fields:
+      - { label: "Tiêu đề danh mục (H1)", name: "title", widget: "string" }
+      - { label: "Mô tả danh mục (Meta Description)", name: "description", widget: "text" }
+      - { label: "Nội dung", name: "body", widget: "markdown" }
+
+  - name: "pages"
+    label: "Trang tĩnh"
+    folder: "content/pages"
+    create: true
+    slug: "{{slug}}"
+    format: "md"
+    fields:
+      - { label: "Tiêu đề trang (H1)", name: "title", widget: "string" }
+      - { label: "Mô tả trang (Meta Description)", name: "description", widget: "text" }
+      - { label: "Nội dung trang", name: "body", widget: "markdown" }
