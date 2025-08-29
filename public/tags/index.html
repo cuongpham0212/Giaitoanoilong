@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tags | Giải Tỏa Nỗi Lòng</title>
@@ -14,28 +14,43 @@
     <link rel="icon" href="/favicon-32.png" type="image/png">
     <link rel="apple-touch-icon" href="/favicon-180.png">
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans">
+<body class="bg-gray-50 text-gray-900 font-sans min-h-screen flex flex-col">
 
     
-    <header class="bg-white shadow">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold"><a href="/" class="hover:text-blue-600">Giải Tỏa Nỗi Lòng</a></h1>
-            <nav>
-                <ul class="flex space-x-4">
-                    
-                    <li><a href="/" class="hover:text-blue-600">Trang chủ</a></li>
-                    
-                    <li><a href="/tamsu/" class="hover:text-blue-600">Tâm sự cuộc sống</a></li>
-                    
-                    <li><a href="/dautu/" class="hover:text-blue-600">Đầu tư ít vốn</a></li>
-                    
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <header class="bg-gray-100 shadow-md">
+  <div class="container mx-auto flex items-center justify-between p-4">
+    <h1 class="text-2xl font-bold text-blue-600 logo">
+      <a href="/" class="hover:text-blue-800">Giải Tỏa Nỗi Lòng</a>
+    </h1>
+    <nav class="main-nav">
+      <ul class="flex space-x-6">
+        
+        <li>
+          <a href="/" class="text-gray-700 hover:text-blue-600 font-medium">
+            Trang chủ
+          </a>
+        </li>
+        
+        <li>
+          <a href="/tamsu/" class="text-gray-700 hover:text-blue-600 font-medium">
+            Tâm sự cuộc sống
+          </a>
+        </li>
+        
+        <li>
+          <a href="/dautu/" class="text-gray-700 hover:text-blue-600 font-medium">
+            Đầu tư ít vốn
+          </a>
+        </li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
 
     
-    <main class="container mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-4 gap-8">
+    <main class="container mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-4 gap-8 flex-grow">
       
       
       <div class="lg:col-span-3">
@@ -70,11 +85,41 @@
     </main>
 
     
-    <footer class="bg-white shadow mt-12">
-        <div class="container mx-auto px-4 py-6 text-center text-gray-600">
-            &copy; 2025 Giải Tỏa Nỗi Lòng. All rights reserved.
-        </div>
-    </footer>
+    <footer class="bg-gray-800 text-gray-200 mt-12">
+  <div class="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">
+
+    
+    <p class="text-sm mb-4 md:mb-0">&copy; 2025 Giải Tỏa Nỗi Lòng. All rights reserved.</p>
+
+    
+    <nav class="mb-4 md:mb-0">
+      <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-sm">
+        
+        <li>
+          <a href="/" class="hover:text-white transition-colors">Trang chủ</a>
+        </li>
+        
+        <li>
+          <a href="/tamsu/" class="hover:text-white transition-colors">Tâm sự cuộc sống</a>
+        </li>
+        
+        <li>
+          <a href="/dautu/" class="hover:text-white transition-colors">Đầu tư ít vốn</a>
+        </li>
+        
+      </ul>
+    </nav>
+
+    
+    <div class="flex space-x-4">
+      <a href="#" class="hover:text-white transition-colors">Facebook</a>
+      <a href="#" class="hover:text-white transition-colors">Twitter</a>
+      <a href="#" class="hover:text-white transition-colors">Instagram</a>
+    </div>
+
+  </div>
+</footer>
+
 
 </body>
 </html>

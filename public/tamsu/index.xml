@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tâm sự cuộc sống on Giải Tỏa Nỗi Lòng</title>
-    <link>http://localhost:1313/tamsu/</link>
+    <link>https://giaitoanoilong.netlify.app/tamsu/</link>
     <description>Recent content in Tâm sự cuộc sống on Giải Tỏa Nỗi Lòng</description>
     <generator>Hugo</generator>
     <language>vi</language>
-    <atom:link href="http://localhost:1313/tamsu/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://giaitoanoilong.netlify.app/tamsu/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
