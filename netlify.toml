@@ -10,5 +10,5 @@
 [[redirects]]
   from = "/#confirmation_token=:token"
   to = "/admin/#confirmation_token=:token"
-  status = 302
+  status = 301
   force = true
