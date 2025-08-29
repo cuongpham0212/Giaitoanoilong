@@ -1,22 +1,12 @@
 (function () {
-  // Thêm CSS fix caret + font
   function injectFixCss() {
     if (document.getElementById("nc-ltr-fix")) return;
     var css = `
-      /* ép hiển thị LTR + caret di chuyển mượt */
-      .nc-controlPane textarea,
-      .nc-controlPane input,
-      .public-DraftEditor-content,
-      .CodeMirror {
+      .nc-controlPane textarea, .nc-controlPane input, .public-DraftEditor-content, .CodeMirror {
         direction: ltr !important;
-        unicode-bidi: isolate !important;
+        unicode-bidi: plaintext !important;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
-        caret-color: black !important;
-      }
-
-      /* tránh caret bị nhảy */
-      .public-DraftEditor-content {
-        white-space: pre-wrap !important;
+        caret-color: auto !important;
       }
     `;
     var style = document.createElement("style");
@@ -25,7 +15,6 @@
     document.head.appendChild(style);
   }
 
-  // Component Preview cho bài viết
   function PostPreview(props) {
     var entry = props.entry;
     var title = entry.getIn(["data", "title"]) || "";
@@ -34,30 +23,27 @@
 
     return window.React.createElement(
       "div",
-      { style: { fontFamily: "sans-serif", padding: "1rem", lineHeight: "1.6" } },
+      { style: { fontFamily: "sans-serif", padding: "1rem" } },
       window.React.createElement("h1", null, title),
       description
-        ? window.React.createElement("p", { style: { fontStyle: "italic" } }, description)
+        ? window.React.createElement("p", null, window.React.createElement("em", null, description))
         : null,
       body
     );
   }
 
-  // Đăng ký preview template
   function registerTemplates() {
-    if (!window.CMS) return;
     injectFixCss();
-
     ["tamsu", "dautu", "pages", "categories"].forEach(function (col) {
       window.CMS.registerPreviewTemplate(col, PostPreview);
     });
   }
 
-  // Chờ CMS load xong
+  // chờ React và CMS load đủ
   var i = setInterval(function () {
-    if (window.CMS && window.React) {
+    if (window.CMS && window.React && window.React.createContext) {
       clearInterval(i);
       registerTemplates();
     }
-  }, 100);
+  }, 200);
 })();
