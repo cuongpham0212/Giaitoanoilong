@@ -19,3 +19,6 @@ theme = "mytheme"
     name = "Đầu tư ít vốn"
     url = "/dautu/"
     weight = 3
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
