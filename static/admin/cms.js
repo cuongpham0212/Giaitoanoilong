@@ -2,7 +2,10 @@
   function injectFixCss() {
     if (document.getElementById("nc-ltr-fix")) return;
     var css = `
-      .nc-controlPane textarea, .nc-controlPane input, .public-DraftEditor-content, .CodeMirror {
+      .nc-controlPane textarea, 
+      .nc-controlPane input, 
+      .public-DraftEditor-content, 
+      .CodeMirror {
         direction: ltr !important;
         unicode-bidi: plaintext !important;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
@@ -39,11 +42,20 @@
     });
   }
 
-  // chờ React và CMS load đủ
-  var i = setInterval(function () {
-    if (window.CMS && window.React && window.React.createContext) {
-      clearInterval(i);
-      registerTemplates();
+  // Khi CMS sẵn sàng
+  document.addEventListener("DOMContentLoaded", function () {
+    if (!window.CMS) {
+      console.error("CMS chưa sẵn sàng!");
+      return;
     }
-  }, 200);
+
+    // Netlify CMS có sự kiện onLoad
+    window.CMS.registerEventListener({
+      name: "preload",
+      handler: function () {
+        console.log("CMS preload ok, đăng ký templates...");
+        registerTemplates();
+      },
+    });
+  });
 })();
