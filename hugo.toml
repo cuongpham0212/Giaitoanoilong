@@ -19,6 +19,10 @@ theme = "mytheme"
     name = "Đầu tư ít vốn"
     url = "/dautu/"
     weight = 3
+  [[menu.main]]
+    name = "Giới thiệu"
+    url  = "/gioi-thieu/"
+    weight = 4
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
