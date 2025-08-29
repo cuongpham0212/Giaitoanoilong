@@ -21,8 +21,8 @@ theme = "mytheme"
     weight = 3
   [[menu.main]]
     name = "Giới thiệu"
-    url  = "/gioi-thieu/"
-    weight = 4
+    url  = "/giải-tỏa-nỗi-lòng--lắng-nghe-không-phán-xét-dịch-vụ-tâm-sự-giá-rẻ-cho-người-thu-nhập-thấp/"
+    eight = 4
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
