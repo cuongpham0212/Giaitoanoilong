@@ -1,5 +1,5 @@
 (function () {
-  // --- CSS Fix cho editor ---
+  // Inject CSS fix caret + editor
   function injectFixCss() {
     if (document.getElementById("nc-ltr-fix")) return;
     var css = `
@@ -44,27 +44,26 @@
     document.head.appendChild(style);
   }
 
-  // --- Preview chỉ hiện Title + Body ---
+  // Preview chỉ hiện Title + Body
   function PostPreview(props) {
     var entry = props.entry;
     var title = entry.getIn(["data", "title"]) || "";
     var body = props.widgetFor("body");
 
     return React.createElement(
-      "article",
+      "div",
       { style: { fontFamily: "sans-serif", padding: "1rem" } },
       React.createElement("h1", null, title),
-      body ? React.createElement("section", null, body) : null
+      body
     );
   }
 
   function registerTemplates() {
     injectFixCss();
-    // ép CMS dùng template custom cho tất cả collection
     ["tamsu", "dautu", "pages", "categories"].forEach(function (col) {
       window.CMS.registerPreviewTemplate(col, PostPreview);
     });
-    console.log("✅ Preview templates custom đã đăng ký");
+    console.log("✅ Preview templates đã đăng ký");
   }
 
   function waitForCMS() {
@@ -75,12 +74,14 @@
     return false;
   }
 
-  // --- Khởi chạy ---
+  // thử ngay khi DOM ready
   document.addEventListener("DOMContentLoaded", function () {
     if (!waitForCMS()) {
       console.warn("⏳ CMS chưa sẵn sàng, thử lại bằng interval...");
       var i = setInterval(function () {
-        if (waitForCMS()) clearInterval(i);
+        if (waitForCMS()) {
+          clearInterval(i);
+        }
       }, 200);
     }
   });
