@@ -24,12 +24,12 @@
     var description = entry.getIn(["data", "description"]) || "";
     var body = props.widgetFor("body");
 
-    return window.React.createElement(
+    return React.createElement(
       "div",
       { style: { fontFamily: "sans-serif", padding: "1rem" } },
-      window.React.createElement("h1", null, title),
+      React.createElement("h1", null, title),
       description
-        ? window.React.createElement("p", null, window.React.createElement("em", null, description))
+        ? React.createElement("p", null, React.createElement("em", null, description))
         : null,
       body
     );
@@ -38,27 +38,24 @@
   function registerTemplates() {
     injectFixCss();
     ["tamsu", "dautu", "pages", "categories"].forEach(function (col) {
-      window.CMS.registerPreviewTemplate(col, PostPreview);
+      CMS.registerPreviewTemplate(col, PostPreview);
     });
     console.log("✅ Preview templates đã đăng ký");
   }
 
   function waitForCMS() {
-    if (window.CMS && window.React) {
+    if (window.CMS) {
       registerTemplates();
       return true;
     }
     return false;
   }
 
-  // thử ngay khi DOM ready
   document.addEventListener("DOMContentLoaded", function () {
     if (!waitForCMS()) {
       console.warn("⏳ CMS chưa sẵn sàng, thử lại bằng interval...");
       var i = setInterval(function () {
-        if (waitForCMS()) {
-          clearInterval(i);
-        }
+        if (waitForCMS()) clearInterval(i);
       }, 200);
     }
   });
