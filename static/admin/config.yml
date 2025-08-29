@@ -1,5 +1,6 @@
 backend:
   name: github
+  repo: cuongpham0212/giaitoanoilong
   branch: main
 
 media_folder: "static/uploads"
