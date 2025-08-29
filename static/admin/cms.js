@@ -51,7 +51,6 @@
     return false;
   }
 
-  // thử ngay khi DOM ready
   document.addEventListener("DOMContentLoaded", function () {
     if (!waitForCMS()) {
       var i = setInterval(function () {
