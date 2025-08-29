@@ -1,4 +1,5 @@
 (function () {
+  // Inject CSS fix caret + editor
   function injectFixCss() {
     if (document.getElementById("nc-ltr-fix")) return;
     var css = `
@@ -43,19 +44,16 @@
     document.head.appendChild(style);
   }
 
+  // Preview chỉ hiện Title + Body
   function PostPreview(props) {
     var entry = props.entry;
     var title = entry.getIn(["data", "title"]) || "";
-    var description = entry.getIn(["data", "description"]) || "";
     var body = props.widgetFor("body");
 
     return React.createElement(
       "div",
       { style: { fontFamily: "sans-serif", padding: "1rem" } },
       React.createElement("h1", null, title),
-      description
-        ? React.createElement("p", null, React.createElement("em", null, description))
-        : null,
       body
     );
   }
