@@ -7,9 +7,9 @@
       .public-DraftEditor-content, 
       .CodeMirror {
         direction: ltr !important;
-        unicode-bidi: plaintext !important;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
-        caret-color: auto !important;
+        unicode-bidi: isolate !important; /* FIX caret bug */
+        font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+        caret-color: black !important;
       }
     `;
     var style = document.createElement("style");
@@ -24,12 +24,12 @@
     var description = entry.getIn(["data", "description"]) || "";
     var body = props.widgetFor("body");
 
-    return React.createElement(
+    return window.React.createElement(
       "div",
       { style: { fontFamily: "sans-serif", padding: "1rem" } },
-      React.createElement("h1", null, title),
+      window.React.createElement("h1", null, title),
       description
-        ? React.createElement("p", null, React.createElement("em", null, description))
+        ? window.React.createElement("p", null, window.React.createElement("em", null, description))
         : null,
       body
     );
@@ -38,24 +38,26 @@
   function registerTemplates() {
     injectFixCss();
     ["tamsu", "dautu", "pages", "categories"].forEach(function (col) {
-      CMS.registerPreviewTemplate(col, PostPreview);
+      window.CMS.registerPreviewTemplate(col, PostPreview);
     });
     console.log("✅ Preview templates đã đăng ký");
   }
 
   function waitForCMS() {
-    if (window.CMS) {
+    if (window.CMS && window.React) {
       registerTemplates();
       return true;
     }
     return false;
   }
 
+  // thử ngay khi DOM ready
   document.addEventListener("DOMContentLoaded", function () {
     if (!waitForCMS()) {
-      console.warn("⏳ CMS chưa sẵn sàng, thử lại bằng interval...");
       var i = setInterval(function () {
-        if (waitForCMS()) clearInterval(i);
+        if (waitForCMS()) {
+          clearInterval(i);
+        }
       }, 200);
     }
   });
