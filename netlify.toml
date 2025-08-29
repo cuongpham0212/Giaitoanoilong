@@ -6,3 +6,9 @@
   HUGO_VERSION = "0.149.0"
   HUGO_ENV = "production"
   HUGO_ENABLEGITINFO = "true"
+
+[[redirects]]
+  from = "/#confirmation_token=:token"
+  to = "/admin/#confirmation_token=:token"
+  status = 302
+  force = true
