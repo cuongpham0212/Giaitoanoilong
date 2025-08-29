@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://giaitoanoilong.netlify.app/'
 languageCode = 'vi'
 title = 'Giải Tỏa Nỗi Lòng'
 theme = "mytheme"
