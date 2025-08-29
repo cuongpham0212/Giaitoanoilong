@@ -2,13 +2,38 @@
   function injectFixCss() {
     if (document.getElementById("nc-ltr-fix")) return;
     var css = `
+      /* Các input/textarea thường */
       .nc-controlPane textarea, 
-      .nc-controlPane input, 
-      .public-DraftEditor-content, 
+      .nc-controlPane input {
+        direction: ltr !important;
+        unicode-bidi: plaintext !important;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+        caret-color: auto !important;
+      }
+
+      /* Khung editor chính của Netlify CMS (Draft.js) */
+      .public-DraftEditor-content {
+        direction: ltr !important;
+        unicode-bidi: isolate !important;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+        white-space: pre-wrap !important;
+        word-break: break-word !important;
+        caret-color: black !important;
+      }
+
+      /* Placeholder trong editor */
+      .public-DraftEditorPlaceholder-root {
+        direction: ltr !important;
+        unicode-bidi: isolate !important;
+        font-family: inherit !important;
+        opacity: 0.6 !important;
+      }
+
+      /* CodeMirror khi chỉnh Markdown trực tiếp */
       .CodeMirror {
         direction: ltr !important;
-        unicode-bidi: isolate !important; /* FIX caret bug */
-        font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+        unicode-bidi: isolate !important;
+        font-family: monospace !important;
         caret-color: black !important;
       }
     `;
@@ -24,12 +49,12 @@
     var description = entry.getIn(["data", "description"]) || "";
     var body = props.widgetFor("body");
 
-    return window.React.createElement(
+    return React.createElement(
       "div",
       { style: { fontFamily: "sans-serif", padding: "1rem" } },
-      window.React.createElement("h1", null, title),
+      React.createElement("h1", null, title),
       description
-        ? window.React.createElement("p", null, window.React.createElement("em", null, description))
+        ? React.createElement("p", null, React.createElement("em", null, description))
         : null,
       body
     );
@@ -51,8 +76,10 @@
     return false;
   }
 
+  // thử ngay khi DOM ready
   document.addEventListener("DOMContentLoaded", function () {
     if (!waitForCMS()) {
+      console.warn("⏳ CMS chưa sẵn sàng, thử lại bằng interval...");
       var i = setInterval(function () {
         if (waitForCMS()) {
           clearInterval(i);
