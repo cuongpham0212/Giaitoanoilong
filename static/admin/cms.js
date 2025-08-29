@@ -40,22 +40,26 @@
     ["tamsu", "dautu", "pages", "categories"].forEach(function (col) {
       window.CMS.registerPreviewTemplate(col, PostPreview);
     });
+    console.log("✅ Preview templates đã đăng ký");
   }
 
-  // Khi CMS sẵn sàng
-  document.addEventListener("DOMContentLoaded", function () {
-    if (!window.CMS) {
-      console.error("CMS chưa sẵn sàng!");
-      return;
+  function waitForCMS() {
+    if (window.CMS && window.React) {
+      registerTemplates();
+      return true;
     }
+    return false;
+  }
 
-    // Netlify CMS có sự kiện onLoad
-    window.CMS.registerEventListener({
-      name: "preload",
-      handler: function () {
-        console.log("CMS preload ok, đăng ký templates...");
-        registerTemplates();
-      },
-    });
+  // thử ngay khi DOM ready
+  document.addEventListener("DOMContentLoaded", function () {
+    if (!waitForCMS()) {
+      console.warn("⏳ CMS chưa sẵn sàng, thử lại bằng interval...");
+      var i = setInterval(function () {
+        if (waitForCMS()) {
+          clearInterval(i);
+        }
+      }, 200);
+    }
   });
 })();
