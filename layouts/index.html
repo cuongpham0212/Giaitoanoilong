@@ -8,4 +8,12 @@
     </li>
   {{ end }}
 </ul>
+
+<script>
+  // Nếu URL có confirmation_token → tự động chuyển hướng về /admin
+  if (window.location.hash && window.location.hash.includes("confirmation_token")) {
+    window.location.href = "/admin/" + window.location.hash;
+  }
+</script>
+
 {{ end }}
