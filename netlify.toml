@@ -9,9 +9,9 @@
 
 [[redirects]]
   from = "/admin"
-  to = "/admin"
+  to = "/admin/"
   status = 301
-  
+
 [[redirects]]
   from = "/#confirmation_token=:token"
   to = "/admin/#confirmation_token=:token"
