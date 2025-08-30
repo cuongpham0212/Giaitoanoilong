@@ -1,9 +1,12 @@
----
-title: "Ngôn Phong Chia Sẻ Và Hành Trình Tìm Lại Cốt Lõi Con Người"
-date: 2025-08-30
-description: "Từ ngôn phong hàn lâm đến đời thường, từ quyền uy đến đồng cảm – hành trình tìm lại cốt lõi con người sau nhiều biến cố."
-tags: ["ngôn phong chia sẻ", "ngôn phong hàn lâm", "ngôn phong trải đời", "cốt lõi con người", "chia sẻ đồng hành"]
----
++++
+title = "Ngôn Phong Chia Sẻ Và Hành Trình Tìm Lại Cốt Lõi Con Người"
+date = "2025-08-29T12:00:00+07:00"
+description = "Từ ngôn phong hàn lâm đến đời thường, từ quyền uy đến đồng cảm – hành trình tìm lại cốt lõi con người sau nhiều biến cố."
+tags = ["ngôn phong chia sẻ", "ngôn phong hàn lâm", "ngôn phong trải đời", "cốt lõi con người", "chia sẻ đồng hành"]
+draft = false
++++
+
+
 
 # Ngôn Phong Chia Sẻ Và Hành Trình Tìm Lại Cốt Lõi Con Người
 

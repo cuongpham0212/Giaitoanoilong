@@ -1,0 +1,29 @@
+/* ===== Custom Button Style ===== */
+.btn-action {
+  display: inline-block;
+  padding: 10px 18px;
+  margin: 5px 10px 5px 0;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  font-size: 15px;
+}
+
+.btn-donate {
+  background-color: #f59e0b; /* vàng cam */
+  color: #fff;
+}
+
+.btn-donate:hover {
+  background-color: #d97706;
+}
+
+.btn-book {
+  background-color: #3b82f6; /* xanh */
+  color: #fff;
+}
+
+.btn-book:hover {
+  background-color: #2563eb;
+}
