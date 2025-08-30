@@ -1,12 +1,5 @@
 ---
-
-\_build:
-
-&nbsp; list: never
-
-&nbsp; publishResources: false
-
+_build:
+  list: never
+  publishResources: false
 ---
-
-
-

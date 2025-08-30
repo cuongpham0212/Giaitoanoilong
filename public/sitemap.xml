@@ -2,14 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://giaitoanoilong.netlify.app/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>https://giaitoanoilong.netlify.app/dautu/</loc>
+    <loc>http://localhost:1313/dautu/</loc>
   </url><url>
-    <loc>https://giaitoanoilong.netlify.app/</loc>
+    <loc>http://localhost:1313/</loc>
   </url><url>
-    <loc>https://giaitoanoilong.netlify.app/tags/</loc>
+    <loc>http://localhost:1313/pages/gi%E1%BA%A3i-t%E1%BB%8Fa-n%E1%BB%97i-l%C3%B2ng--l%E1%BA%AFng-nghe-kh%C3%B4ng-ph%C3%A1n-x%C3%A9t/</loc>
   </url><url>
-    <loc>https://giaitoanoilong.netlify.app/tamsu/</loc>
+    <loc>http://localhost:1313/pages/gi%E1%BA%A3i-t%E1%BB%8Fa-n%E1%BB%97i-l%C3%B2ng--l%E1%BA%AFng-nghe-kh%C3%B4ng-ph%C3%A1n-x%C3%A9t-d%E1%BB%8Bch-v%E1%BB%A5-t%C3%A2m-s%E1%BB%B1-gi%C3%A1-r%E1%BA%BB-cho-ng%C6%B0%E1%BB%9Di-thu-nh%E1%BA%ADp-th%E1%BA%A5p/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tamsu/</loc>
   </url>
 </urlset>
