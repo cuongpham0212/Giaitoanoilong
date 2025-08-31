@@ -3,81 +3,123 @@ name = "Ace of Pentacles"
 intro = "Cơ hội tài chính và vật chất mới."
 outro = "Xây dựng nền móng vững chắc cho tương lai."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/pentacles/ace-of-pentacles/"
+seo_title = "Ace of Pentacles - Cơ hội tài chính mới | Tarot"
+seo_description = "Khám phá ý nghĩa lá Ace of Pentacles: cơ hội tài chính, nền móng vững chắc cho tương lai."
+slug = "ace-of-pentacles"
 
 [[cards]]
 name = "Two of Pentacles"
 intro = "Cân bằng công việc và tài chính."
 outro = "Giữ sự linh hoạt để thích nghi với thay đổi."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/pentacles/two-of-pentacles/"
+seo_title = "Two of Pentacles - Cân bằng và linh hoạt | Tarot"
+seo_description = "Ý nghĩa lá Two of Pentacles: Cân bằng công việc, tài chính và thích nghi với thay đổi."
+slug = "two-of-pentacles"
 
 [[cards]]
 name = "Three of Pentacles"
 intro = "Hợp tác, làm việc nhóm hiệu quả."
 outro = "Cùng nhau xây dựng nền móng thành công."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/pentacles/three-of-pentacles/"
+seo_title = "Three of Pentacles - Hợp tác và thành công | Tarot"
+seo_description = "Ý nghĩa Three of Pentacles: Làm việc nhóm, hợp tác để đạt được nền móng thành công."
+slug = "three-of-pentacles"
 
 [[cards]]
 name = "Four of Pentacles"
 intro = "Giữ chặt, sợ mất mát tài sản."
 outro = "Hãy học cách chia sẻ và buông bỏ."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/pentacles/four-of-pentacles/"
+seo_title = "Four of Pentacles - Kiểm soát và buông bỏ | Tarot"
+seo_description = "Lá Four of Pentacles: Sợ mất mát tài chính và bài học về sự chia sẻ, buông bỏ."
+slug = "four-of-pentacles"
 
 [[cards]]
 name = "Five of Pentacles"
 intro = "Khó khăn tài chính, cảm giác bị bỏ rơi."
 outro = "Tìm kiếm sự hỗ trợ và niềm hy vọng mới."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/pentacles/five-of-pentacles/"
+seo_title = "Five of Pentacles - Khó khăn và hy vọng | Tarot"
+seo_description = "Ý nghĩa Five of Pentacles: Khó khăn tài chính, sự cô đơn và tìm kiếm niềm tin mới."
+slug = "five-of-pentacles"
 
 [[cards]]
 name = "Six of Pentacles"
 intro = "Hỗ trợ, cho đi và nhận lại công bằng."
 outro = "Sự hào phóng mang đến năng lượng tích cực."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/pentacles/six-of-pentacles/"
+seo_title = "Six of Pentacles - Cho đi và nhận lại | Tarot"
+seo_description = "Lá Six of Pentacles: Hỗ trợ, sự công bằng và năng lượng tích cực trong cuộc sống."
+slug = "six-of-pentacles"
 
 [[cards]]
 name = "Seven of Pentacles"
 intro = "Kiên nhẫn, chờ đợi kết quả đầu tư."
 outro = "Hãy đánh giá và điều chỉnh hướng đi."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/pentacles/seven-of-pentacles/"
+seo_title = "Seven of Pentacles - Kiên nhẫn và đầu tư | Tarot"
+seo_description = "Ý nghĩa Seven of Pentacles: Kiên nhẫn, đánh giá kết quả và điều chỉnh kế hoạch."
+slug = "seven-of-pentacles"
 
 [[cards]]
 name = "Eight of Pentacles"
 intro = "Chuyên tâm, rèn luyện kỹ năng."
 outro = "Kiên trì mang đến thành công bền vững."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/pentacles/eight-of-pentacles/"
+seo_title = "Eight of Pentacles - Chuyên tâm và thành công | Tarot"
+seo_description = "Lá Eight of Pentacles: Rèn luyện kỹ năng và kiên trì để đạt được thành công bền vững."
+slug = "eight-of-pentacles"
 
 [[cards]]
 name = "Nine of Pentacles"
 intro = "Độc lập tài chính, tận hưởng thành quả."
 outro = "Hãy tự hào về những gì bạn đạt được."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/pentacles/nine-of-pentacles/"
+seo_title = "Nine of Pentacles - Độc lập và thành quả | Tarot"
+seo_description = "Ý nghĩa Nine of Pentacles: Tự do tài chính và niềm tự hào về những gì đạt được."
+slug = "nine-of-pentacles"
 
 [[cards]]
 name = "Ten of Pentacles"
 intro = "Gia đình, di sản, sự sung túc."
 outro = "Tạo dựng nền tảng vững chắc cho thế hệ sau."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/pentacles/ten-of-pentacles/"
+seo_title = "Ten of Pentacles - Sung túc và di sản | Tarot"
+seo_description = "Lá Ten of Pentacles: Sự thịnh vượng, gia đình và nền tảng cho thế hệ tương lai."
+slug = "ten-of-pentacles"
 
 [[cards]]
 name = "Page of Pentacles"
 intro = "Học hỏi, khởi đầu tài chính mới."
 outro = "Kiến thức là chìa khóa mở ra cơ hội."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/pentacles/page-of-pentacles/"
+seo_title = "Page of Pentacles - Học hỏi và cơ hội | Tarot"
+seo_description = "Ý nghĩa Page of Pentacles: Khởi đầu học hỏi và những cơ hội tài chính mới."
+slug = "page-of-pentacles"
 
 [[cards]]
 name = "Knight of Pentacles"
 intro = "Chăm chỉ, kiên trì, thực tế."
 outro = "Tiến chậm nhưng chắc chắn đến thành công."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/pentacles/knight-of-pentacles/"
+seo_title = "Knight of Pentacles - Kiên trì và thực tế | Tarot"
+seo_description = "Lá Knight of Pentacles: Chăm chỉ, thực tế và tiến tới thành công bền vững."
+slug = "knight-of-pentacles"
 
 [[cards]]
 name = "Queen of Pentacles"
 intro = "Nuôi dưỡng, thực tế, tài chính ổn định."
 outro = "Mang lại sự ấm áp và an toàn cho mọi người."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/pentacles/queen-of-pentacles/"
+seo_title = "Queen of Pentacles - Ổn định và nuôi dưỡng | Tarot"
+seo_description = "Ý nghĩa Queen of Pentacles: Sự ấm áp, ổn định tài chính và chăm sóc người khác."
+slug = "queen-of-pentacles"
 
 [[cards]]
 name = "King of Pentacles"
 intro = "Giàu có, quản lý tài chính khôn ngoan."
 outro = "Lãnh đạo bằng sự thịnh vượng và trách nhiệm."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/pentacles/king-of-pentacles/"
+seo_title = "King of Pentacles - Lãnh đạo và thịnh vượng | Tarot"
+seo_description = "Lá King of Pentacles: Lãnh đạo khôn ngoan, giàu có và trách nhiệm với tài chính."
+slug = "king-of-pentacles"

@@ -3,82 +3,123 @@ name = "Ace of Swords"
 intro = "Ý tưởng bùng sáng, sự thật rõ ràng."
 outro = "Hãy dùng sự thật để giải quyết rối ren."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/swords/ace-of-swords/"
+seo_title = "Ace of Swords - Ý tưởng và Sự Thật | Tarot Swords"
+seo_description = "Ace of Swords tượng trưng cho sự thật, ý tưởng mới và sự sáng suốt trong mọi tình huống."
+slug = "ace-of-swords"
 
 [[cards]]
 name = "Two of Swords"
 intro = "Lưỡng lự, đứng giữa ngã ba đường."
 outro = "Đừng để nỗi sợ làm tê liệt quyết định của bạn."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/swords/two-of-swords/"
+seo_title = "Two of Swords - Lưỡng Lự Quyết Định | Tarot Swords"
+seo_description = "Two of Swords biểu thị sự do dự, khó khăn trong việc đưa ra lựa chọn quan trọng."
+slug = "two-of-swords"
 
 [[cards]]
 name = "Three of Swords"
 intro = "Tổn thương, chia ly, nỗi buồn sâu sắc."
 outro = "Nỗi đau là bước đầu của sự chữa lành."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/swords/three-of-swords/"
+seo_title = "Three of Swords - Nỗi Buồn và Chia Ly | Tarot Swords"
+seo_description = "Three of Swords đại diện cho sự đau khổ, mất mát và sự chữa lành cảm xúc."
+slug = "three-of-swords"
 
 [[cards]]
 name = "Four of Swords"
 intro = "Nghỉ ngơi, hồi phục, tìm lại sự cân bằng."
 outro = "Dành thời gian để lấy lại năng lượng và sự tỉnh táo."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/swords/four-of-swords/"
+seo_title = "Four of Swords - Nghỉ Ngơi và Phục Hồi | Tarot Swords"
+seo_description = "Four of Swords khuyên bạn tạm nghỉ, hồi phục năng lượng trước khi tiếp tục hành trình."
+slug = "four-of-swords"
 
 [[cards]]
 name = "Five of Swords"
 intro = "Xung đột, chiến thắng đầy tổn thất."
 outro = "Hãy cân nhắc cái giá của chiến thắng."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/swords/five-of-swords/"
+seo_title = "Five of Swords - Xung Đột và Cái Giá Chiến Thắng | Tarot Swords"
+seo_description = "Five of Swords phản ánh sự xung đột, mâu thuẫn và chiến thắng không trọn vẹn."
+slug = "five-of-swords"
 
 [[cards]]
 name = "Six of Swords"
 intro = "Chuyển đổi, buông bỏ quá khứ."
 outro = "Tiến về phía trước để tìm bình yên mới."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/swords/six-of-swords/"
+seo_title = "Six of Swords - Chuyển Đổi và Bình Yên | Tarot Swords"
+seo_description = "Six of Swords tượng trưng cho hành trình rời bỏ khó khăn để tìm sự bình an."
+slug = "six-of-swords"
 
 [[cards]]
 name = "Seven of Swords"
 intro = "Chiến lược, bí mật, có thể là lừa dối."
 outro = "Hãy thận trọng với những kế hoạch ẩn giấu."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/swords/seven-of-swords/"
+seo_title = "Seven of Swords - Chiến Lược và Bí Mật | Tarot Swords"
+seo_description = "Seven of Swords nhắc nhở về sự khôn ngoan, chiến lược và nguy cơ lừa dối."
+slug = "seven-of-swords"
 
 [[cards]]
 name = "Eight of Swords"
 intro = "Cảm giác mắc kẹt, tự giới hạn bản thân."
 outro = "Nhận ra rằng bạn có thể tự giải thoát chính mình."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/swords/eight-of-swords/"
+seo_title = "Eight of Swords - Giới Hạn và Giải Thoát | Tarot Swords"
+seo_description = "Eight of Swords đại diện cho những giới hạn tự đặt ra và sự tự do tiềm ẩn."
+slug = "eight-of-swords"
 
 [[cards]]
 name = "Nine of Swords"
 intro = "Lo âu, mất ngủ, sợ hãi trong tâm trí."
 outro = "Đừng để nỗi lo kiểm soát cuộc sống của bạn."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/swords/nine-of-swords/"
+seo_title = "Nine of Swords - Lo Âu và Sợ Hãi | Tarot Swords"
+seo_description = "Nine of Swords tượng trưng cho nỗi lo, căng thẳng và mất ngủ triền miên."
+slug = "nine-of-swords"
 
 [[cards]]
 name = "Ten of Swords"
 intro = "Kết thúc đau đớn, sự phản bội."
 outro = "Khi một cánh cửa đóng lại, một cánh cửa mới sẽ mở ra."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/swords/ten-of-swords/"
+seo_title = "Ten of Swords - Kết Thúc và Tái Sinh | Tarot Swords"
+seo_description = "Ten of Swords biểu thị sự kết thúc đau đớn và khởi đầu mới sau khủng hoảng."
+slug = "ten-of-swords"
 
 [[cards]]
 name = "Page of Swords"
 intro = "Tò mò, học hỏi, ý tưởng mới."
 outro = "Sẵn sàng khám phá tri thức mới mẻ."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/swords/page-of-swords/"
+seo_title = "Page of Swords - Khám Phá và Tri Thức | Tarot Swords"
+seo_description = "Page of Swords khuyến khích sự tò mò, học hỏi và tư duy sáng tạo."
+slug = "page-of-swords"
 
 [[cards]]
 name = "Knight of Swords"
 intro = "Hành động nhanh chóng, quyết đoán."
 outro = "Cẩn thận với sự vội vàng, nóng nảy."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/swords/knight-of-swords/"
+seo_title = "Knight of Swords - Hành Động Quyết Đoán | Tarot Swords"
+seo_description = "Knight of Swords tượng trưng cho tốc độ, hành động và sự quyết đoán mạnh mẽ."
+slug = "knight-of-swords"
 
 [[cards]]
 name = "Queen of Swords"
 intro = "Sắc sảo, độc lập, trí tuệ."
 outro = "Dùng lý trí để soi sáng sự thật."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/swords/queen-of-swords/"
+seo_title = "Queen of Swords - Trí Tuệ và Sự Thật | Tarot Swords"
+seo_description = "Queen of Swords đại diện cho trí tuệ, sự công bằng và cách nhìn khách quan."
+slug = "queen-of-swords"
 
 [[cards]]
 name = "King of Swords"
 intro = "Quyền lực trí tuệ, ra quyết định sáng suốt."
 outro = "Dẫn dắt bằng sự công bằng và minh bạch."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/swords/king-of-swords/"
-
+seo_title = "King of Swords - Lãnh Đạo và Trí Tuệ | Tarot Swords"
+seo_description = "King of Swords tượng trưng cho lãnh đạo trí tuệ, quyết đoán và minh bạch."
+slug = "king-of-swords"

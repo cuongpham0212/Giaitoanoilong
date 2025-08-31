@@ -3,129 +3,195 @@ name = "The Fool"
 intro = "Khởi đầu mới, tiềm năng vô hạn."
 outro = "Tin vào hành trình, dấn bước với niềm tin."
 link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/fool/"
+seo_title = "The Fool – Ý Nghĩa & Diễn Giải Tarot"
+seo_description = "Ý nghĩa lá The Fool: khởi đầu mới, cơ hội và tiềm năng vô hạn trong hành trình Tarot."
+slug = "the-fool"
 
 [[cards]]
 name = "The Magician"
 intro = "Sức mạnh chuyển hoá đang nằm trong tay bạn."
 outro = "Tập trung tạo bước tiến mạnh mẽ."
 link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/magician/"
+seo_title = "The Magician – Ý Nghĩa & Diễn Giải Tarot"
+seo_description = "Ý nghĩa lá The Magician: sức mạnh, sáng tạo và khả năng làm chủ số phận."
+slug = "the-magician"
 
 [[cards]]
 name = "The High Priestess"
 intro = "Trực giác và sự khôn ngoan nội tâm."
 outro = "Lắng nghe tiếng nói từ bên trong bạn."
 link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/high-priestess/"
+seo_title = "The High Priestess – Ý Nghĩa & Diễn Giải Tarot"
+seo_description = "Ý nghĩa lá The High Priestess: trí tuệ tiềm ẩn và sự hiểu biết trực giác."
+slug = "the-high-priestess"
 
 [[cards]]
 name = "The Empress"
 intro = "Nuôi dưỡng, sáng tạo và tình yêu."
 outro = "Kết nối với sự phong phú quanh bạn."
 link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/empress/"
+seo_title = "The Empress – Ý Nghĩa & Diễn Giải Tarot"
+seo_description = "Ý nghĩa lá The Empress: tình mẫu tử, sáng tạo và sự nuôi dưỡng."
+slug = "the-empress"
 
 [[cards]]
 name = "The Emperor"
 intro = "Cấu trúc, quyền lực và kiểm soát."
 outro = "Tạo dựng nền móng vững chắc cho tương lai."
 link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/emperor/"
+seo_title = "The Emperor – Ý Nghĩa & Diễn Giải Tarot"
+seo_description = "Ý nghĩa lá The Emperor: quyền lực, kiểm soát và sự ổn định."
+slug = "the-emperor"
 
 [[cards]]
 name = "The Hierophant"
 intro = "Truyền thống, kiến thức và niềm tin."
 outro = "Tìm kiếm sự chỉ dẫn từ người đi trước."
 link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/hierophant/"
+seo_title = "The Hierophant – Ý Nghĩa & Diễn Giải Tarot"
+seo_description = "Ý nghĩa lá The Hierophant: tri thức, tôn giáo và những chuẩn mực xã hội."
+slug = "the-hierophant"
 
 [[cards]]
 name = "The Lovers"
 intro = "Tình yêu và sự lựa chọn quan trọng."
 outro = "Hành động từ trái tim nhưng giữ sự sáng suốt."
 link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/lovers/"
+seo_title = "The Lovers – Ý Nghĩa & Diễn Giải Tarot"
+seo_description = "Ý nghĩa lá The Lovers: tình yêu, quan hệ và những quyết định quan trọng."
+slug = "the-lovers"
 
 [[cards]]
 name = "The Chariot"
 intro = "Quyết tâm và kiểm soát bản thân."
 outro = "Tiến về phía trước với sức mạnh nội tâm."
 link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/chariot/"
+seo_title = "The Chariot – Ý Nghĩa & Diễn Giải Tarot"
+seo_description = "Ý nghĩa lá The Chariot: ý chí, chiến thắng và khả năng kiểm soát."
+slug = "the-chariot"
 
 [[cards]]
 name = "Strength"
 intro = "Sức mạnh đến từ lòng kiên nhẫn."
 outro = "Mềm mại nhưng mạnh mẽ khi cần."
 link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/strength/"
+seo_title = "Strength – Ý Nghĩa & Diễn Giải Tarot"
+seo_description = "Ý nghĩa lá Strength: sức mạnh nội tâm, lòng can đảm và sự kiên nhẫn."
+slug = "strength"
 
 [[cards]]
 name = "The Hermit"
 intro = "Tìm kiếm sự thật từ bên trong."
 outro = "Dành thời gian cho chiêm nghiệm và im lặng."
 link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/hermit/"
+seo_title = "The Hermit – Ý Nghĩa & Diễn Giải Tarot"
+seo_description = "Ý nghĩa lá The Hermit: sự soi sáng nội tâm và trí tuệ sâu sắc."
+slug = "the-hermit"
 
 [[cards]]
 name = "Wheel of Fortune"
 intro = "Biến đổi, chu kỳ, cơ hội mới."
 outro = "Chấp nhận thay đổi như một phần tự nhiên."
 link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/wheel-of-fortune/"
+seo_title = "Wheel of Fortune – Ý Nghĩa & Diễn Giải Tarot"
+seo_description = "Ý nghĩa lá Wheel of Fortune: vận mệnh, sự thay đổi và những bước ngoặt."
+slug = "wheel-of-fortune"
 
 [[cards]]
 name = "Justice"
 intro = "Công bằng, sự thật và trách nhiệm."
 outro = "Cân nhắc kỹ mỗi quyết định quan trọng."
 link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/justice/"
+seo_title = "Justice – Ý Nghĩa & Diễn Giải Tarot"
+seo_description = "Ý nghĩa lá Justice: công bằng, sự thật và luật nhân quả."
+slug = "justice"
 
 [[cards]]
 name = "The Hanged Man"
 intro = "Góc nhìn mới, sự buông bỏ."
 outro = "Chậm lại để thấy rõ bức tranh toàn cảnh."
 link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/hanged-man/"
+seo_title = "The Hanged Man – Ý Nghĩa & Diễn Giải Tarot"
+seo_description = "Ý nghĩa lá The Hanged Man: sự hy sinh và góc nhìn mới mẻ."
+slug = "the-hanged-man"
 
 [[cards]]
 name = "Death"
 intro = "Kết thúc mở đường cho khởi đầu mới."
 outro = "Chấp nhận chuyển hoá để trưởng thành."
 link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/death/"
+seo_title = "Death – Ý Nghĩa & Diễn Giải Tarot"
+seo_description = "Ý nghĩa lá Death: sự kết thúc, chuyển đổi và tái sinh."
+slug = "death"
 
 [[cards]]
 name = "Temperance"
 intro = "Cân bằng, hài hoà và kiên nhẫn."
 outro = "Tìm điểm trung dung trong mọi tình huống."
 link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/temperance/"
+seo_title = "Temperance – Ý Nghĩa & Diễn Giải Tarot"
+seo_description = "Ý nghĩa lá Temperance: sự cân bằng, hòa hợp và kiên nhẫn."
+slug = "temperance"
 
 [[cards]]
 name = "The Devil"
 intro = "Cám dỗ và ràng buộc."
 outro = "Nhận diện xiềng xích vô hình để giải phóng."
 link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/devil/"
+seo_title = "The Devil – Ý Nghĩa & Diễn Giải Tarot"
+seo_description = "Ý nghĩa lá The Devil: những cám dỗ, ràng buộc và sự phụ thuộc."
+slug = "the-devil"
 
 [[cards]]
 name = "The Tower"
 intro = "Sự sụp đổ của những gì không còn phù hợp."
 outro = "Táo tạo lại từ nền móng mới."
 link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/tower/"
+seo_title = "The Tower – Ý Nghĩa & Diễn Giải Tarot"
+seo_description = "Ý nghĩa lá The Tower: biến động, sụp đổ và sự tái thiết."
+slug = "the-tower"
 
 [[cards]]
 name = "The Star"
 intro = "Hy vọng, cảm hứng, niềm tin."
 outro = "Giữ ánh sáng nội tâm dẫn đường."
 link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/star/"
+seo_title = "The Star – Ý Nghĩa & Diễn Giải Tarot"
+seo_description = "Ý nghĩa lá The Star: niềm hy vọng, cảm hứng và sự chữa lành."
+slug = "the-star"
 
 [[cards]]
 name = "The Moon"
 intro = "Ảo tưởng, bí ẩn, tiềm thức."
 outro = "Tin vào trực giác trong mơ hồ."
 link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/moon/"
+seo_title = "The Moon – Ý Nghĩa & Diễn Giải Tarot"
+seo_description = "Ý nghĩa lá The Moon: sự huyền bí, tiềm thức và ảo tưởng."
+slug = "the-moon"
 
 [[cards]]
 name = "The Sun"
 intro = "Niềm vui, thành công, tích cực."
 outro = "Đón nhận ánh sáng và hạnh phúc trọn vẹn."
 link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/sun/"
+seo_title = "The Sun – Ý Nghĩa & Diễn Giải Tarot"
+seo_description = "Ý nghĩa lá The Sun: sự tích cực, thành công và hạnh phúc."
+slug = "the-sun"
 
 [[cards]]
 name = "Judgement"
 intro = "Thức tỉnh, đánh giá lại bản thân."
 outro = "Buông bỏ quá khứ để tái sinh."
 link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/judgement/"
+seo_title = "Judgement – Ý Nghĩa & Diễn Giải Tarot"
+seo_description = "Ý nghĩa lá Judgement: sự thức tỉnh, tái sinh và quyết định cuối cùng."
+slug = "judgement"
 
 [[cards]]
 name = "The World"
 intro = "Hoàn thành, thành tựu, toàn vẹn."
 outro = "Tận hưởng kết quả và sẵn sàng hành trình mới."
 link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/world/"
+seo_title = "The World – Ý Nghĩa & Diễn Giải Tarot"
+seo_description = "Ý nghĩa lá The World: sự hoàn thiện, thành tựu và viên mãn."
+slug = "the-world"

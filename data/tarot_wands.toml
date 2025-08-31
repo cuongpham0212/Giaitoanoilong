@@ -3,81 +3,123 @@ name = "Ace of Wands"
 intro = "Khởi đầu mới đầy đam mê và sáng tạo."
 outro = "Chắp cánh ý tưởng, thổi lửa khởi nghiệp."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/wands/ace-of-wands/"
+seo_title = "Ace of Wands - Khởi đầu mới, đam mê & sáng tạo"
+seo_description = "Khám phá ý nghĩa lá bài Ace of Wands: khởi đầu mới, đam mê và cơ hội sáng tạo."
+slug = "ace-of-wands"
 
 [[cards]]
 name = "Two of Wands"
 intro = "Lựa chọn, hoạch định kế hoạch."
 outro = "Hãy sẵn sàng bước ra khỏi vùng an toàn."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/wands/two-of-wands/"
+seo_title = "Two of Wands - Lựa chọn & Kế hoạch"
+seo_description = "Tìm hiểu lá bài Two of Wands: lựa chọn, kế hoạch và bước ra khỏi vùng an toàn."
+slug = "two-of-wands"
 
 [[cards]]
 name = "Three of Wands"
 intro = "Tầm nhìn dài hạn, cơ hội mở rộng."
 outro = "Hãy dũng cảm tiến về phía trước với kế hoạch rõ ràng."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/wands/three-of-wands/"
+seo_title = "Three of Wands - Tầm nhìn & Cơ hội"
+seo_description = "Ý nghĩa lá bài Three of Wands: tầm nhìn dài hạn và cơ hội phát triển."
+slug = "three-of-wands"
 
 [[cards]]
 name = "Four of Wands"
 intro = "Ăn mừng, thành công ban đầu."
 outro = "Tận hưởng khoảnh khắc hạnh phúc cùng mọi người."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/wands/four-of-wands/"
+seo_title = "Four of Wands - Ăn mừng & Thành công"
+seo_description = "Lá bài Four of Wands tượng trưng cho niềm vui, ăn mừng và thành công ban đầu."
+slug = "four-of-wands"
 
 [[cards]]
 name = "Five of Wands"
 intro = "Xung đột, cạnh tranh, thách thức."
 outro = "Hãy học cách hợp tác thay vì đối đầu."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/wands/five-of-wands/"
+seo_title = "Five of Wands - Xung đột & Thách thức"
+seo_description = "Lá bài Five of Wands mang ý nghĩa xung đột, cạnh tranh và học cách hợp tác."
+slug = "five-of-wands"
 
 [[cards]]
 name = "Six of Wands"
 intro = "Chiến thắng, được công nhận."
 outro = "Tận hưởng thành tựu nhưng đừng quên khiêm tốn."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/wands/six-of-wands/"
+seo_title = "Six of Wands - Chiến thắng & Công nhận"
+seo_description = "Khám phá ý nghĩa Six of Wands: chiến thắng, sự công nhận và niềm tự hào."
+slug = "six-of-wands"
 
 [[cards]]
 name = "Seven of Wands"
 intro = "Bảo vệ quan điểm, kiên định lập trường."
 outro = "Giữ vững niềm tin của mình giữa thử thách."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/wands/seven-of-wands/"
+seo_title = "Seven of Wands - Bảo vệ & Kiên định"
+seo_description = "Ý nghĩa Seven of Wands: bảo vệ quan điểm, kiên định trước khó khăn."
+slug = "seven-of-wands"
 
 [[cards]]
 name = "Eight of Wands"
 intro = "Tiến triển nhanh, tin tức đến bất ngờ."
 outro = "Nắm bắt cơ hội khi nó xuất hiện."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/wands/eight-of-wands/"
+seo_title = "Eight of Wands - Tiến triển & Cơ hội"
+seo_description = "Lá bài Eight of Wands tượng trưng cho tiến triển nhanh và tin tức bất ngờ."
+slug = "eight-of-wands"
 
 [[cards]]
 name = "Nine of Wands"
 intro = "Kiên trì, sức mạnh cuối cùng."
 outro = "Đừng bỏ cuộc khi sắp chạm đích."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/wands/nine-of-wands/"
+seo_title = "Nine of Wands - Kiên trì & Sức mạnh"
+seo_description = "Khám phá Nine of Wands: kiên trì, sức mạnh và quyết tâm vượt qua thử thách."
+slug = "nine-of-wands"
 
 [[cards]]
 name = "Ten of Wands"
 intro = "Gánh nặng, trách nhiệm chồng chất."
 outro = "Học cách chia sẻ việc với người khác."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/wands/ten-of-wands/"
+seo_title = "Ten of Wands - Gánh nặng & Trách nhiệm"
+seo_description = "Ý nghĩa Ten of Wands: trách nhiệm, gánh nặng và chia sẻ công việc."
+slug = "ten-of-wands"
 
 [[cards]]
 name = "Page of Wands"
 intro = "Khám phá, háo hức với ý tưởng mới."
 outro = "Dám thử nghiệm điều mới mẻ không ngại rủi ro."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/wands/page-of-wands/"
+seo_title = "Page of Wands - Khám phá & Sáng tạo"
+seo_description = "Lá bài Page of Wands mang ý nghĩa khám phá, sáng tạo và trải nghiệm mới."
+slug = "page-of-wands"
 
 [[cards]]
 name = "Knight of Wands"
 intro = "Hành động táo bạo, nhiệt huyết."
 outro = "Tiến lên nhưng đừng quá vội vàng."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/wands/knight-of-wands/"
+seo_title = "Knight of Wands - Táo bạo & Nhiệt huyết"
+seo_description = "Knight of Wands tượng trưng cho hành động táo bạo và đam mê mãnh liệt."
+slug = "knight-of-wands"
 
 [[cards]]
 name = "Queen of Wands"
 intro = "Tự tin, quyến rũ, sáng tạo."
 outro = "Truyền cảm hứng cho người khác bằng đam mê của bạn."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/wands/queen-of-wands/"
+seo_title = "Queen of Wands - Tự tin & Sáng tạo"
+seo_description = "Ý nghĩa Queen of Wands: tự tin, quyến rũ và khả năng truyền cảm hứng mạnh mẽ."
+slug = "queen-of-wands"
 
 [[cards]]
 name = "King of Wands"
 intro = "Lãnh đạo, tầm nhìn lớn, đam mê mạnh mẽ."
 outro = "Dẫn dắt người khác bằng sự nhiệt huyết và trí tuệ."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/wands/king-of-wands/"
+seo_title = "King of Wands - Lãnh đạo & Đam mê"
+seo_description = "Khám phá King of Wands: lãnh đạo, tầm nhìn và niềm đam mê mạnh mẽ."
+slug = "king-of-wands"

@@ -3,82 +3,95 @@ name = "Ace of Cups"
 intro = "Khởi đầu cảm xúc, yêu thương mới."
 outro = "Mở lòng để đón nhận kết nối chân thành."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/cups/ace-of-cups/"
+description = "Ace of Cups: Khởi đầu cảm xúc, yêu thương mới. Mở lòng để đón nhận kết nối chân thành."
 
 [[cards]]
 name = "Two of Cups"
 intro = "Kết nối tình cảm, mối quan hệ hòa hợp."
 outro = "Tình yêu và sự gắn kết sâu sắc đang nảy nở."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/cups/two-of-cups/"
+description = "Two of Cups: Kết nối tình cảm, mối quan hệ hòa hợp. Tình yêu và sự gắn kết sâu sắc đang nảy nở."
 
 [[cards]]
 name = "Three of Cups"
 intro = "Tình bạn, niềm vui chung."
 outro = "Ăn mừng cùng những người thân yêu."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/cups/three-of-cups/"
+description = "Three of Cups: Tình bạn, niềm vui chung. Ăn mừng cùng những người thân yêu."
 
 [[cards]]
 name = "Four of Cups"
 intro = "Suy ngẫm, chán nản, bỏ lỡ cơ hội."
 outro = "Hãy mở lòng trước những khả năng mới."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/cups/four-of-cups/"
+description = "Four of Cups: Suy ngẫm, chán nản, bỏ lỡ cơ hội. Hãy mở lòng trước những khả năng mới."
 
 [[cards]]
 name = "Five of Cups"
 intro = "Mất mát, nuối tiếc quá khứ."
 outro = "Đừng quên vẫn còn hy vọng phía trước."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/cups/five-of-cups/"
+description = "Five of Cups: Mất mát, nuối tiếc quá khứ. Đừng quên vẫn còn hy vọng phía trước."
 
 [[cards]]
 name = "Six of Cups"
 intro = "Ký ức tuổi thơ, sự hoài niệm."
 outro = "Học hỏi từ quá khứ để yêu thương hiện tại."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/cups/six-of-cups/"
+description = "Six of Cups: Ký ức tuổi thơ, sự hoài niệm. Học hỏi từ quá khứ để yêu thương hiện tại."
 
 [[cards]]
 name = "Seven of Cups"
 intro = "Lựa chọn, ảo tưởng, mơ mộng."
 outro = "Hãy phân biệt giữa thực tế và hão huyền."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/cups/seven-of-cups/"
+description = "Seven of Cups: Lựa chọn, ảo tưởng, mơ mộng. Hãy phân biệt giữa thực tế và hão huyền."
 
 [[cards]]
 name = "Eight of Cups"
 intro = "Rời bỏ, tìm kiếm ý nghĩa sâu sắc hơn."
 outro = "Đôi khi rời đi là cách duy nhất để trưởng thành."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/cups/eight-of-cups/"
+description = "Eight of Cups: Rời bỏ, tìm kiếm ý nghĩa sâu sắc hơn. Đôi khi rời đi là cách duy nhất để trưởng thành."
 
 [[cards]]
 name = "Nine of Cups"
 intro = "Hạnh phúc cá nhân, ước mơ thành sự thật."
 outro = "Tận hưởng thành quả mà bạn xứng đáng nhận được."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/cups/nine-of-cups/"
+description = "Nine of Cups: Hạnh phúc cá nhân, ước mơ thành sự thật. Tận hưởng thành quả mà bạn xứng đáng nhận được."
 
 [[cards]]
 name = "Ten of Cups"
 intro = "Gia đình hạnh phúc, viên mãn tình cảm."
 outro = "Tình yêu thương mang đến sự trọn vẹn."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/cups/ten-of-cups/"
+description = "Ten of Cups: Gia đình hạnh phúc, viên mãn tình cảm. Tình yêu thương mang đến sự trọn vẹn."
 
 [[cards]]
 name = "Page of Cups"
 intro = "Tin vui bất ngờ, cảm xúc mới chớm nở."
 outro = "Đón nhận yêu thương với trái tim cởi mở."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/cups/page-of-cups/"
+description = "Page of Cups: Tin vui bất ngờ, cảm xúc mới chớm nở. Đón nhận yêu thương với trái tim cởi mở."
 
 [[cards]]
 name = "Knight of Cups"
 intro = "Lãng mạn, theo đuổi ước mơ tình cảm."
 outro = "Hãy để cảm xúc dẫn lối nhưng đừng quên lý trí."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/cups/knight-of-cups/"
+description = "Knight of Cups: Lãng mạn, theo đuổi ước mơ tình cảm. Hãy để cảm xúc dẫn lối nhưng đừng quên lý trí."
 
 [[cards]]
 name = "Queen of Cups"
 intro = "Trực giác, cảm thông, dịu dàng."
 outro = "Lắng nghe trái tim và chăm sóc cảm xúc bản thân."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/cups/queen-of-cups/"
+description = "Queen of Cups: Trực giác, cảm thông, dịu dàng. Lắng nghe trái tim và chăm sóc cảm xúc bản thân."
 
 [[cards]]
 name = "King of Cups"
 intro = "Trí tuệ cảm xúc, cân bằng tình cảm."
 outro = "Điều khiển cảm xúc để dẫn dắt người khác."
 link = "https://www.biddytarot.com/tarot-card-meanings/minor-arcana/cups/king-of-cups/"
-
+description = "King of Cups: Trí tuệ cảm xúc, cân bằng tình cảm. Điều khiển cảm xúc để dẫn dắt người khác."

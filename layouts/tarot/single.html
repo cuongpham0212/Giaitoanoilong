@@ -1,22 +1,30 @@
 {{ define "main" }}
+<!-- SEO Meta -->
+<title>Trải Bài Tarot 3 Lá Online - Khám Phá Thông Điệp Từ Vũ Trụ</title>
+<meta name="description" content="Rút Tarot 3 lá miễn phí để khám phá thông điệp về tình yêu, sự nghiệp và cuộc sống từ những lá bài huyền bí.">
+
 <div class="tarot-container">
-  <h1>{{ .Title }}</h1>
+  <!-- Tiêu đề chính SEO-friendly -->
+  <h1 class="tarot-title">Khám Phá Tương Lai Qua 3 Lá Tarot</h1>
+  <p class="tarot-subtitle">Trải nghiệm bói bài Tarot trực tuyến, nhận thông điệp ý nghĩa cho hành trình của bạn.</p>
+
+  <!-- Nút rút bài -->
   <div class="btn-wrap">
     <button id="drawBtn" class="tarot-btn">🔮 Rút Bài</button>
   </div>
+
+  <!-- Kết quả -->
   <div id="tarotResult" class="tarot-result"></div>
   <div id="tarotSummary" class="tarot-summary"></div>
 </div>
 
 <script>
-  // Dùng safeJS để giữ nguyên JSON chuẩn
   const tarotMajor = {{ site.Data.tarot_major.cards | jsonify | safeJS }};
   const tarotWands = {{ site.Data.tarot_wands.cards | jsonify | safeJS }};
   const tarotCups = {{ site.Data.tarot_cups.cards | jsonify | safeJS }};
   const tarotSwords = {{ site.Data.tarot_swords.cards | jsonify | safeJS }};
   const tarotPentacles = {{ site.Data.tarot_pentacles.cards | jsonify | safeJS }};
 
-  // Gộp tất cả dữ liệu vào 1 mảng
   const tarotData = [
     ...tarotMajor,
     ...tarotWands,
@@ -24,8 +32,6 @@
     ...tarotSwords,
     ...tarotPentacles
   ];
-
-  console.log("Tarot Data:", tarotData); // Kiểm tra kết quả ở Console
 
   document.addEventListener("DOMContentLoaded", () => {
     const btn = document.getElementById("drawBtn");
@@ -48,7 +54,7 @@
           <div class="tarot-card">
             <h3>${card.name}</h3>
             <p>${card.intro}</p>
-            <a href="${card.link}" target="_blank">Xem chi tiết</a>
+            <a href="${card.link}" target="_blank" class="detail-link">Xem chi tiết</a>
             <p><em>${card.outro}</em></p>
           </div>
         `;
@@ -66,15 +72,37 @@
   });
 </script>
 
-
 <style>
-  .btn-wrap { display:flex; justify-content:center; margin:20px 0;}
-  .tarot-btn { padding:12px 24px; font-size:1.2em; background:#ff6f61; color:#fff; border:none; border-radius:8px; cursor:pointer;}
-  .tarot-btn:hover { background:#ff3b2e; transform:scale(1.05);}
-  .tarot-result { display:flex; gap:20px; justify-content:center; flex-wrap:wrap; margin-top:20px;}
-  .tarot-card { border:1px solid #ccc; padding:10px; border-radius:8px; width:180px; box-shadow:0 2px 5px rgba(0,0,0,0.2); transition:transform 0.2s;}
-  .tarot-card:hover { transform:scale(1.05);}
-  .tarot-summary { max-width:600px; margin:30px auto; text-align:left; background:#f9f9f9; padding:15px; border-radius:8px;}
-  .tarot-summary h2 { text-align:center;}
+  .tarot-container { text-align:center; padding:20px; }
+
+  /* Tiêu đề lớn, huyền bí */
+  .tarot-title {
+    font-size: 2.2em;
+    color: #6a1b9a;
+    text-shadow: 0 0 10px rgba(106, 27, 154, 0.7), 0 0 20px rgba(123, 31, 162, 0.5);
+    margin-bottom: 10px;
+    font-family: 'Georgia', serif;
+    letter-spacing: 1px;
+  }
+
+  /* Câu mô tả mềm mại hơn */
+  .tarot-subtitle {
+    font-size: 1.3em;
+    color: #8e24aa;
+    margin-bottom: 25px;
+    font-style: italic;
+  }
+
+  .btn-wrap { display:flex; justify-content:center; margin:20px 0; }
+  .tarot-btn { padding:12px 24px; font-size:1.2em; background:#ff6f61; color:#fff; border:none; border-radius:8px; cursor:pointer; transition:0.3s; }
+  .tarot-btn:hover { background:#ff3b2e; transform:scale(1.05); }
+  .tarot-result { display:flex; gap:20px; justify-content:center; flex-wrap:wrap; margin-top:20px; }
+  .tarot-card { background:#fff; border:1px solid #eee; padding:15px; border-radius:10px; width:200px; box-shadow:0 4px 10px rgba(0,0,0,0.1); transition:transform 0.2s; text-align:center; }
+  .tarot-card:hover { transform:scale(1.05); }
+  .tarot-card h3 { margin-bottom:10px; color:#333; }
+  .detail-link { display:inline-block; margin:10px 0; color:#0077cc; text-decoration:none; }
+  .detail-link:hover { text-decoration:underline; }
+  .tarot-summary { max-width:600px; margin:30px auto; text-align:left; background:#f9f9f9; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
+  .tarot-summary h2 { text-align:center; margin-bottom:15px; }
 </style>
 {{ end }}
