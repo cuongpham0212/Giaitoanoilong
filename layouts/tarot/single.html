@@ -1,0 +1,62 @@
+{{ define "main" }}
+<div class="tarot-container">
+  <h1>{{ .Title }}</h1>
+  <div class="btn-wrap">
+    <button id="drawBtn" class="tarot-btn">🔮 Rút Bài</button>
+  </div>
+  <div id="tarotResult" class="tarot-result"></div>
+  <div id="tarotSummary" class="tarot-summary"></div>
+</div>
+
+<script>
+  const tarotData = [
+    {{ site.Data.tarot_major.cards | jsonify }},
+    {{ site.Data.tarot_wands.cards | jsonify }},
+    {{ site.Data.tarot_cups.cards | jsonify }},
+    {{ site.Data.tarot_swords.cards | jsonify }},
+    {{ site.Data.tarot_pentacles.cards | jsonify }}
+  ].flat();
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.getElementById("drawBtn");
+    const res = document.getElementById("tarotResult");
+    const sum = document.getElementById("tarotSummary");
+
+    btn.addEventListener("click", () => {
+      res.innerHTML = "";
+      sum.innerHTML = "";
+
+      const cards = tarotData.sort(() => 0.5 - Math.random()).slice(0, 3);
+
+      cards.forEach(card => {
+        res.innerHTML += `
+          <div class="tarot-card">
+            <h3>${card.name}</h3>
+            <p>${card.intro}</p>
+            <a href="${card.link}" target="_blank">Xem chi tiết</a>
+            <p><em>${card.outro}</em></p>
+          </div>
+        `;
+      });
+
+      sum.innerHTML = `
+        <h2>Diễn giải chung</h2>
+        <p><strong>Năng lượng hiện tại:</strong> ${cards[0].intro}</p>
+        <p><strong>Thách thức:</strong> ${cards[1].intro}</p>
+        <p><strong>Hướng đi phía trước:</strong> ${cards[2].intro}</p>
+      `;
+    });
+  });
+</script>
+
+<style>
+  .btn-wrap { display:flex; justify-content:center; margin:20px 0;}
+  .tarot-btn { padding:12px 24px; font-size:1.2em; background:#ff6f61; color:#fff; border:none; border-radius:8px; cursor:pointer;}
+  .tarot-btn:hover { background:#ff3b2e; transform:scale(1.05);}
+  .tarot-result { display:flex; gap:20px; justify-content:center; flex-wrap:wrap; margin-top:20px;}
+  .tarot-card { border:1px solid #ccc; padding:10px; border-radius:8px; width:180px; box-shadow:0 2px 5px rgba(0,0,0,0.2); transition:transform 0.2s;}
+  .tarot-card:hover { transform:scale(1.05);}
+  .tarot-summary { max-width:600px; margin:30px auto; text-align:left; background:#f9f9f9; padding:15px; border-radius:8px;}
+  .tarot-summary h2 { text-align:center;}
+</style>
+{{ end }}

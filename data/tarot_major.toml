@@ -1,0 +1,131 @@
+[[cards]]
+name = "The Fool"
+intro = "Khởi đầu mới, tiềm năng vô hạn."
+outro = "Tin vào hành trình, dấn bước với niềm tin."
+link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/fool/"
+
+[[cards]]
+name = "The Magician"
+intro = "Sức mạnh chuyển hoá đang nằm trong tay bạn."
+outro = "Tập trung tạo bước tiến mạnh mẽ."
+link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/magician/"
+
+[[cards]]
+name = "The High Priestess"
+intro = "Trực giác và sự khôn ngoan nội tâm."
+outro = "Lắng nghe tiếng nói từ bên trong bạn."
+link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/high-priestess/"
+
+[[cards]]
+name = "The Empress"
+intro = "Nuôi dưỡng, sáng tạo và tình yêu."
+outro = "Kết nối với sự phong phú quanh bạn."
+link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/empress/"
+
+[[cards]]
+name = "The Emperor"
+intro = "Cấu trúc, quyền lực và kiểm soát."
+outro = "Tạo dựng nền móng vững chắc cho tương lai."
+link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/emperor/"
+
+[[cards]]
+name = "The Hierophant"
+intro = "Truyền thống, kiến thức và niềm tin."
+outro = "Tìm kiếm sự chỉ dẫn từ người đi trước."
+link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/hierophant/"
+
+[[cards]]
+name = "The Lovers"
+intro = "Tình yêu và sự lựa chọn quan trọng."
+outro = "Hành động từ trái tim nhưng giữ sự sáng suốt."
+link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/lovers/"
+
+[[cards]]
+name = "The Chariot"
+intro = "Quyết tâm và kiểm soát bản thân."
+outro = "Tiến về phía trước với sức mạnh nội tâm."
+link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/chariot/"
+
+[[cards]]
+name = "Strength"
+intro = "Sức mạnh đến từ lòng kiên nhẫn."
+outro = "Mềm mại nhưng mạnh mẽ khi cần."
+link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/strength/"
+
+[[cards]]
+name = "The Hermit"
+intro = "Tìm kiếm sự thật từ bên trong."
+outro = "Dành thời gian cho chiêm nghiệm và im lặng."
+link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/hermit/"
+
+[[cards]]
+name = "Wheel of Fortune"
+intro = "Biến đổi, chu kỳ, cơ hội mới."
+outro = "Chấp nhận thay đổi như một phần tự nhiên."
+link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/wheel-of-fortune/"
+
+[[cards]]
+name = "Justice"
+intro = "Công bằng, sự thật và trách nhiệm."
+outro = "Cân nhắc kỹ mỗi quyết định quan trọng."
+link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/justice/"
+
+[[cards]]
+name = "The Hanged Man"
+intro = "Góc nhìn mới, sự buông bỏ."
+outro = "Chậm lại để thấy rõ bức tranh toàn cảnh."
+link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/hanged-man/"
+
+[[cards]]
+name = "Death"
+intro = "Kết thúc mở đường cho khởi đầu mới."
+outro = "Chấp nhận chuyển hoá để trưởng thành."
+link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/death/"
+
+[[cards]]
+name = "Temperance"
+intro = "Cân bằng, hài hoà và kiên nhẫn."
+outro = "Tìm điểm trung dung trong mọi tình huống."
+link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/temperance/"
+
+[[cards]]
+name = "The Devil"
+intro = "Cám dỗ và ràng buộc."
+outro = "Nhận diện xiềng xích vô hình để giải phóng."
+link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/devil/"
+
+[[cards]]
+name = "The Tower"
+intro = "Sự sụp đổ của những gì không còn phù hợp."
+outro = "Táo tạo lại từ nền móng mới."
+link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/tower/"
+
+[[cards]]
+name = "The Star"
+intro = "Hy vọng, cảm hứng, niềm tin."
+outro = "Giữ ánh sáng nội tâm dẫn đường."
+link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/star/"
+
+[[cards]]
+name = "The Moon"
+intro = "Ảo tưởng, bí ẩn, tiềm thức."
+outro = "Tin vào trực giác trong mơ hồ."
+link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/moon/"
+
+[[cards]]
+name = "The Sun"
+intro = "Niềm vui, thành công, tích cực."
+outro = "Đón nhận ánh sáng và hạnh phúc trọn vẹn."
+link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/sun/"
+
+[[cards]]
+name = "Judgement"
+intro = "Thức tỉnh, đánh giá lại bản thân."
+outro = "Buông bỏ quá khứ để tái sinh."
+link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/judgement/"
+
+[[cards]]
+name = "The World"
+intro = "Hoàn thành, thành tựu, toàn vẹn."
+outro = "Tận hưởng kết quả và sẵn sàng hành trình mới."
+link = "https://www.biddytarot.com/tarot-card-meanings/major-arcana/world/"

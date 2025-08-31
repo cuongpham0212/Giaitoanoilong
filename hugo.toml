@@ -22,10 +22,14 @@ title = 'Giải Tỏa Nỗi Lòng'
     name = "Đầu tư ít vốn"
     url = "/dautu/"
     weight = 3
+[[menu.main]]
+    name = "Tarot"
+    url = "/tarot/"
+    weight = 4
   [[menu.main]]
     name = "Giới thiệu"
     url  = "/pages/giải-tỏa-nỗi-lòng--lắng-nghe-không-phán-xét-dịch-vụ-tâm-sự-giá-rẻ-cho-người-thu-nhập-thấp/"
-    weight = 4
+    weight = 5
 
 [markup]
   [markup.goldmark]
