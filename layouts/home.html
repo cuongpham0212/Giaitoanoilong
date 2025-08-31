@@ -1,41 +1,40 @@
 {{ define "main" }}
-  <!-- Hero Section -->
-  <section class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-20 px-6 rounded-2xl shadow-lg mb-12">
-    <div class="max-w-3xl mx-auto text-center">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">{{ .Title }}</h1>
-      <p class="text-lg md:text-xl opacity-90">{{ .Description }}</p>
-      <div class="mt-6">
-        <a href="#posts" class="bg-white text-blue-600 font-semibold px-6 py-3 rounded-full shadow hover:shadow-lg transition">
-          Khám phá bài viết →
-        </a>
-      </div>
+  <!-- Banner -->
+  {{ with .Params.banner }}
+    <div class="mb-8">
+      <img src="{{ . }}" alt="Banner" class="w-full rounded-xl shadow">
     </div>
-  </section>
+  {{ end }}
 
-  <!-- Intro từ _index.md -->
-  <section class="max-w-3xl mx-auto mb-12 prose prose-lg">
-    {{ .Content }}
-  </section>
+  <!-- Tiêu đề Trang Chủ -->
+  <header class="mb-10 text-center">
+    <h1 class="text-4xl font-extrabold text-gray-900 mb-2">{{ .Title }}</h1>
+    {{ with .Content }}
+      <p class="text-gray-600 max-w-2xl mx-auto">{{ . }}</p>
+    {{ end }}
+  </header>
 
-  <!-- Danh sách bài viết mới -->
-  <section id="posts" class="max-w-5xl mx-auto">
-    <h2 class="text-2xl font-bold mb-6">📝 Bài viết mới</h2>
-    <ul class="space-y-4">
-      {{ range first 5 .Site.RegularPages.ByDate.Reverse }}
-        <li class="bg-white border rounded-xl p-4 shadow hover:shadow-lg transition">
-          <a href="{{ .Permalink }}" class="text-xl font-semibold hover:text-blue-600">{{ .Title }}</a>
-          <div class="text-gray-500 text-sm">{{ .Date.Format "02/01/2006" }}</div>
-        </li>
-      {{ else }}
-        <p>Chưa có bài viết nào.</p>
+  <!-- Grid bài viết -->
+  {{ if .Site.RegularPages }}
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {{ range first 9 .Site.RegularPages.ByDate.Reverse }}
+        <article class="bg-white border rounded-2xl shadow-sm hover:shadow-md transition p-6 flex flex-col">
+          <h2 class="text-2xl font-semibold mb-3">
+            <a href="{{ .RelPermalink }}" class="hover:text-blue-600">{{ .Title }}</a>
+          </h2>
+          <p class="text-sm text-gray-500 mb-2">{{ .Date.Format "02/01/2006" }}</p>
+          {{ with .Description }}
+            <p class="text-gray-700 flex-grow">{{ . }}</p>
+          {{ else }}
+            <p class="text-gray-700 flex-grow">{{ .Summary }}</p>
+          {{ end }}
+          <div class="mt-4">
+            <a href="{{ .RelPermalink }}" class="inline-block text-blue-600 hover:underline font-medium">Đọc tiếp →</a>
+          </div>
+        </article>
       {{ end }}
-    </ul>
-  </section>
-
-  <!-- Redirect script -->
-  <script>
-    if (window.location.hash && window.location.hash.includes("confirmation_token")) {
-      window.location.href = "/admin/" + window.location.hash;
-    }
-  </script>
+    </div>
+  {{ else }}
+    <p class="text-gray-600 text-center">Chưa có bài viết nào.</p>
+  {{ end }}
 {{ end }}
