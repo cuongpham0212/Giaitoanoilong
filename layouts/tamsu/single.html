@@ -1,0 +1,66 @@
+{{ define "main" }}
+<article class="bg-white rounded-2xl shadow p-6 lg:p-10 max-w-4xl mx-auto">
+
+  <!-- Banner -->
+  {{ with .Params.banner }}
+  <img src="{{ . }}" alt="Banner" class="w-full h-64 object-cover rounded-xl mb-6 shadow-sm">
+  {{ end }}
+
+  <!-- Tiêu đề và ngày -->
+  <header class="mb-8 text-center border-b pb-4">
+    <h1 class="text-4xl font-extrabold text-gray-900 mb-2">{{ .Title }}</h1>
+    <p class="text-sm text-gray-500">{{ .Date.Format "02/01/2006" }}</p>
+  </header>
+
+  <!-- Nội dung bài viết -->
+  <div class="prose prose-lg max-w-none text-gray-800 text-justify leading-relaxed">
+    {{ .Content }}
+  </div>
+
+  <!-- Box bài viết liên quan -->
+  <section class="mt-12 mb-10 flex justify-center">
+    <div class="bg-gray-50 border rounded-2xl p-6 shadow-sm w-full md:w-2/3">
+      <h2 class="text-xl font-bold mb-4 text-center text-gray-800">Bài viết liên quan</h2>
+      <ul class="space-y-2 text-left">
+        {{ range first 3 (where .Site.RegularPages "Section" .Section) }}
+          {{ if ne .Permalink $.Permalink }}
+            <li>
+              <a href="{{ .Permalink }}" class="text-blue-600 hover:underline">{{ .Title }}</a>
+            </li>
+          {{ end }}
+        {{ end }}
+      </ul>
+    </div>
+  </section>
+
+  <!-- Nút chia sẻ -->
+  <div class="mt-6 flex justify-center space-x-4">
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" 
+       target="_blank" rel="noopener"
+       class="px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition shadow-sm">Facebook</a>
+    <a href="https://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ .Title }}" 
+       target="_blank" rel="noopener"
+       class="px-4 py-2 bg-sky-500 text-white rounded-full hover:bg-sky-600 transition shadow-sm">Twitter</a>
+  </div>
+
+<!-- Nút Donate & Book Lịch -->
+<div class="mt-10 flex flex-wrap justify-center gap-4">
+  <a href="https://www.momo.vn/your-donate-link" 
+     target="_blank" rel="noopener"
+     class="px-5 py-3 bg-yellow-500 text-white font-bold rounded-lg shadow hover:bg-yellow-600 transition">
+     🌱 Donate Ủng Hộ
+  </a>
+  <a href="https://calendly.com/your-booking-link" 
+     target="_blank" rel="noopener"
+     class="px-5 py-3 bg-blue-500 text-white font-bold rounded-lg shadow hover:bg-blue-600 transition">
+     📅 Book Lịch Chia Sẻ
+  </a>
+</div>
+
+  <!-- Nút quay lại -->
+  <footer class="mt-10 text-center">
+    <a href="{{ .Section | relURL }}" class="text-gray-600 hover:text-blue-600">← Quay lại {{ .Section }}</a>
+  </footer>
+
+</article>
+{{ end }}

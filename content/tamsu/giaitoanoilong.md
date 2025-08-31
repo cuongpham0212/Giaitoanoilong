@@ -1,8 +1,9 @@
 +++
 title = "Giải Tỏa Nỗi Lòng – Lắng Nghe Không Phán Xét"
+layout = "single"
 description = "Không phán xét, chỉ lắng nghe. Không gian sẻ chia dành cho người thu nhập thấp: trò chuyện riêng tư, bài viết miễn phí, gợi ý đầu tư nhỏ. Đặt lịch hoặc donate để cùng duy trì"
 date = 2025-08-30
-type = "tamsu"
+
 +++
 
 

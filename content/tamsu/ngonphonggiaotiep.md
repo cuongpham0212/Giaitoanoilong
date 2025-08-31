@@ -1,5 +1,6 @@
 +++
 title = "Ngôn Phong Chia Sẻ Và Hành Trình Tìm Lại Cốt Lõi Con Người"
+layout = "single"
 date = "2025-08-29T12:00:00+07:00"
 description = "Từ ngôn phong hàn lâm đến đời thường, từ quyền uy đến đồng cảm – hành trình tìm lại cốt lõi con người sau nhiều biến cố."
 tags = ["ngôn phong chia sẻ", "ngôn phong hàn lâm", "ngôn phong trải đời", "cốt lõi con người", "chia sẻ đồng hành"]
@@ -29,11 +30,3 @@ Bạn có thể:
 - Hoặc book lịch một buổi trò chuyện chuyên sâu cùng tôi.  
 
 ---
-
-<div style="margin-top:20px; display:flex; gap:12px; flex-wrap:wrap;">
-
-<a href="#" style="display:inline-block; padding:10px 18px; background-color:#f59e0b; color:#fff; text-decoration:none; border-radius:8px; font-weight:bold; transition:0.25s;">🌱 Donate Ủng Hộ</a>
-
-<a href="#" style="display:inline-block; padding:10px 18px; background-color:#3b82f6; color:#fff; text-decoration:none; border-radius:8px; font-weight:bold; transition:0.25s;">📅 Book Lịch Chia Sẻ</a>
-
-</div>
