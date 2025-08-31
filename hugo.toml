@@ -5,6 +5,10 @@ title = 'Giải Tỏa Nỗi Lòng'
 [permalinks]
   post = "/:slug/"
 
+[params]
+  description = "Blog chia sẻ tâm sự cuộc sống, đầu tư và góc nhìn thú vị."
+  author = "Huy Cường"
+
 [menu]
   [[menu.main]]
     name = "Trang chủ"
