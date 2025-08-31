@@ -2,6 +2,11 @@ baseURL = 'https://giaitoanoilong.netlify.app/'
 languageCode = 'vi'
 title = 'Giải Tỏa Nỗi Lòng'
 
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
+  
 [permalinks]
   post = "/:slug/"
 
