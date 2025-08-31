@@ -9,13 +9,23 @@
 </div>
 
 <script>
+  // Dùng safeJS để giữ nguyên JSON chuẩn
+  const tarotMajor = {{ site.Data.tarot_major.cards | jsonify | safeJS }};
+  const tarotWands = {{ site.Data.tarot_wands.cards | jsonify | safeJS }};
+  const tarotCups = {{ site.Data.tarot_cups.cards | jsonify | safeJS }};
+  const tarotSwords = {{ site.Data.tarot_swords.cards | jsonify | safeJS }};
+  const tarotPentacles = {{ site.Data.tarot_pentacles.cards | jsonify | safeJS }};
+
+  // Gộp tất cả dữ liệu vào 1 mảng
   const tarotData = [
-    {{ site.Data.tarot_major.cards | jsonify }},
-    {{ site.Data.tarot_wands.cards | jsonify }},
-    {{ site.Data.tarot_cups.cards | jsonify }},
-    {{ site.Data.tarot_swords.cards | jsonify }},
-    {{ site.Data.tarot_pentacles.cards | jsonify }}
-  ].flat();
+    ...tarotMajor,
+    ...tarotWands,
+    ...tarotCups,
+    ...tarotSwords,
+    ...tarotPentacles
+  ];
+
+  console.log("Tarot Data:", tarotData); // Kiểm tra kết quả ở Console
 
   document.addEventListener("DOMContentLoaded", () => {
     const btn = document.getElementById("drawBtn");
@@ -25,6 +35,11 @@
     btn.addEventListener("click", () => {
       res.innerHTML = "";
       sum.innerHTML = "";
+
+      if (!tarotData || tarotData.length === 0) {
+        res.innerHTML = "<p style='color:red'>Không có dữ liệu tarot!</p>";
+        return;
+      }
 
       const cards = tarotData.sort(() => 0.5 - Math.random()).slice(0, 3);
 
@@ -39,15 +54,18 @@
         `;
       });
 
-      sum.innerHTML = `
-        <h2>Diễn giải chung</h2>
-        <p><strong>Năng lượng hiện tại:</strong> ${cards[0].intro}</p>
-        <p><strong>Thách thức:</strong> ${cards[1].intro}</p>
-        <p><strong>Hướng đi phía trước:</strong> ${cards[2].intro}</p>
-      `;
+      if (cards.length === 3) {
+        sum.innerHTML = `
+          <h2>Diễn giải chung</h2>
+          <p><strong>Năng lượng hiện tại:</strong> ${cards[0].intro}</p>
+          <p><strong>Thách thức:</strong> ${cards[1].intro}</p>
+          <p><strong>Hướng đi phía trước:</strong> ${cards[2].intro}</p>
+        `;
+      }
     });
   });
 </script>
+
 
 <style>
   .btn-wrap { display:flex; justify-content:center; margin:20px 0;}
