@@ -1,7 +1,6 @@
 baseURL = 'https://giaitoanoilong.netlify.app/'
 languageCode = 'vi'
 title = 'Giải Tỏa Nỗi Lòng'
-theme = "mytheme"
 
 [permalinks]
   post = "/:slug/"
@@ -22,7 +21,12 @@ theme = "mytheme"
   [[menu.main]]
     name = "Giới thiệu"
     url  = "/pages/giải-tỏa-nỗi-lòng--lắng-nghe-không-phán-xét-dịch-vụ-tâm-sự-giá-rẻ-cho-người-thu-nhập-thấp/"
-    eight = 4
+    weight = 4
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]

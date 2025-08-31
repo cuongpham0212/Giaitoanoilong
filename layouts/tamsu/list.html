@@ -1,0 +1,21 @@
+{{ define "main" }}
+<div class="p-6 bg-white rounded-xl shadow-md">
+  <h1 class="text-3xl font-bold mb-6 text-red-600">Trang Tâm Sự Cuộc Sống</h1>
+
+  {{ if .Pages }}
+    <ul class="space-y-4">
+      {{ range .Pages.ByDate.Reverse }}
+        <li class="border-b pb-2">
+          <a href="{{ .RelPermalink }}" class="text-xl font-semibold text-blue-700 hover:underline">
+            {{ .Title }}
+          </a>
+          <p class="text-sm text-gray-500">{{ .Date.Format "02/01/2006" }}</p>
+          <p class="text-gray-700">{{ .Summary }}</p>
+        </li>
+      {{ end }}
+    </ul>
+  {{ else }}
+    <p class="text-gray-500">Chưa có bài viết nào trong mục này.</p>
+  {{ end }}
+</div>
+{{ end }}

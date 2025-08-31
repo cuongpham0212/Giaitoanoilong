@@ -1,7 +1,18 @@
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{ .Title }} | {{ .Site.Title }}</title>
-<meta name="description" content="{{ .Description }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ block "title" . }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+  {{ with .Description }}<meta name="description" content="{{ . }}">{{ end }}
 
-<!-- Tailwind CSS -->
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- CSS pipeline của Hugo -->
+  {{ $styles := resources.Get "css/main.css" | postCSS }}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+
+  <!-- Favicon -->
+  <link rel="icon" href="{{ "favicon.ico" | relURL }}" type="image/x-icon">
+  <link rel="icon" href="{{ "favicon-32.png" | relURL }}" type="image/png">
+  <link rel="apple-touch-icon" href="{{ "favicon-180.png" | relURL }}">
+</head>

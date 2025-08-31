@@ -1,0 +1,52 @@
+{{ define "main" }}
+  <!-- Tiêu đề trang (menu) -->
+  <header class="mb-10">
+    <h1 class="text-4xl font-extrabold text-gray-900 mb-4 tracking-tight">
+      {{ .Title }}
+    </h1>
+    {{ with .Content }}
+      <div class="prose max-w-none text-gray-700 leading-relaxed">
+        {{ . }}
+      </div>
+    {{ end }}
+  </header>
+
+  <!-- Danh sách bài viết -->
+  {{ if .Pages }}
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {{ range .Pages.ByDate.Reverse }}
+        <article class="bg-white border rounded-2xl shadow hover:shadow-lg transition-all p-6 flex flex-col h-full">
+          <!-- Tiêu đề bài viết -->
+          <h2 class="text-2xl font-bold text-gray-900 mb-2 leading-snug">
+            <a href="{{ .RelPermalink }}" class="hover:text-blue-600">
+              {{ .Title }}
+            </a>
+          </h2>
+
+          <!-- Ngày đăng -->
+          <p class="text-sm text-gray-500 mb-3">
+            {{ .Date.Format "02/01/2006" }}
+          </p>
+
+          <!-- Mô tả ngắn -->
+          <p class="text-gray-700 text-base leading-relaxed flex-grow">
+            {{ if .Description }}
+              {{ .Description }}
+            {{ else }}
+              {{ .Summary | plainify | truncate 120 }}
+            {{ end }}
+          </p>
+
+          <!-- Nút đọc tiếp -->
+          <div class="mt-4">
+            <a href="{{ .RelPermalink }}" class="inline-block text-blue-600 hover:underline font-medium">
+              Đọc tiếp →
+            </a>
+          </div>
+        </article>
+      {{ end }}
+    </div>
+  {{ else }}
+    <p class="text-gray-600 text-lg">Chưa có bài viết nào trong mục này.</p>
+  {{ end }}
+{{ end }}

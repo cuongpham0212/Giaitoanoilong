@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+  {{ partial "head.html" . }}
+  <body class="bg-gray-50 text-gray-900 font-sans min-h-screen flex flex-col">
+
+    <!-- Debug: hiển thị layout đang dùng -->
+    <div class="fixed bottom-2 right-2 bg-yellow-200 text-black px-3 py-1 rounded shadow text-sm">
+      Layout đang dùng: {{ .Layout }}
+    </div>
+
+    <!-- Header -->
+    {{ partial "header.html" . }}
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-4 gap-8 flex-grow">
+      
+      <!-- Nội dung chính -->
+      <div class="lg:col-span-3">
+        {{ block "main" . }}{{ end }}
+      </div>
+      
+      <!-- Sidebar -->
+      <aside class="lg:col-span-1 space-y-6">
+        <div class="p-4 border rounded-lg bg-white">
+          <h3 class="font-bold mb-2 text-lg">Danh mục</h3>
+          <ul class="space-y-1">
+            {{ range .Site.Menus.main }}
+              <li><a href="{{ .URL }}" class="text-gray-700 hover:text-blue-600">{{ .Name }}</a></li>
+            {{ end }}
+          </ul>
+        </div>
+
+        <div class="p-4 border rounded-lg bg-white">
+          <h3 class="font-bold mb-2 text-lg">Bài viết mới</h3>
+          <ul class="space-y-1">
+            {{ range first 5 .Site.RegularPages }}
+              <li><a href="{{ .Permalink }}" class="text-gray-700 hover:text-blue-600">{{ .Title }}</a></li>
+            {{ end }}
+          </ul>
+        </div>
+      </aside>
+
+    </main>
+
+    <!-- Footer -->
+    {{ partial "footer.html" . }}
+
+  </body>
+</html>
