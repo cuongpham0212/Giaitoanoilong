@@ -1,14 +1,15 @@
-<header class="bg-gray-100 shadow-md sticky top-0 z-50">
-  <!-- Banner -->
-  <div class="w-full">
-    <img src="{{ "images/banner.jpg" | relURL }}" alt="Banner" class="w-full h-48 object-cover">
-  </div>
+<header 
+  class="{{ if .IsHome }}
+           absolute top-0 left-0 w-full bg-transparent z-50
+         {{ else }}
+           bg-gray-100 shadow-md sticky top-0 z-50
+         {{ end }}">
 
-  <!-- Header bar -->
+  <!-- Thanh menu/logo -->
   <div class="container mx-auto px-4 py-3 flex items-center justify-between relative">
+    
     <!-- MENU + Nút -->
     <div class="flex items-center gap-3 relative">
-      <!-- Button menu -->
       <button id="menu-btn"
               class="p-2 rounded-lg bg-blue-600 text-white shadow hover:bg-blue-700 transition"
               aria-controls="site-menu" aria-expanded="false" aria-label="Mở menu">
@@ -52,58 +53,16 @@
       </nav>
     </div>
 
-    <!-- Logo (phải) -->
+    <!-- Logo -->
     <h1 class="text-2xl font-extrabold tracking-tight">
-      <a href="{{ "/" | relURL }}" class="text-blue-700 hover:text-blue-900 transition">{{ .Site.Title }}</a>
+      <a href="{{ "/" | relURL }}" 
+         class="{{ if .IsHome }}
+                  text-white drop-shadow hover:text-blue-200
+                {{ else }}
+                  text-blue-700 hover:text-blue-900
+                {{ end }} transition">
+         {{ .Site.Title }}
+      </a>
     </h1>
   </div>
 </header>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const btn = document.getElementById("menu-btn");
-  const menu = document.getElementById("site-menu");
-  const header = menu.closest('header');
-
-  // Toggle menu
-  btn.addEventListener("click", () => {
-    const isHidden = menu.classList.contains("hidden");
-    menu.classList.toggle("hidden");
-    btn.setAttribute("aria-expanded", String(isHidden));
-  });
-
-  // Dropdown logic mobile
-  const parents = menu.querySelectorAll(".group");
-  parents.forEach((parent) => {
-    const link = parent.querySelector("a");
-    const submenu = parent.querySelector(".submenu");
-    if (!link || !submenu) return;
-
-    link.addEventListener("click", (e) => {
-      if (window.innerWidth < 1024) {
-        e.preventDefault();
-        parents.forEach(p => {
-          if (p !== parent) p.querySelector(".submenu")?.classList.add("hidden");
-        });
-        submenu.classList.toggle("hidden");
-      }
-    });
-  });
-
-  // Click ngoài menu → đóng
-  document.addEventListener("click", (e) => {
-    if (!header.contains(e.target)) {
-      menu.classList.add("hidden");
-      btn.setAttribute("aria-expanded", "false");
-      menu.querySelectorAll(".submenu").forEach(s => s.classList.add("hidden"));
-    }
-  });
-
-  // Resize reset submenu
-  window.addEventListener("resize", () => {
-    if (window.innerWidth >= 1024) {
-      menu.querySelectorAll(".submenu").forEach(s => s.classList.add("hidden"));
-    }
-  });
-});
-</script>

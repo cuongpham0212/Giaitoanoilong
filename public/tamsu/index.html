@@ -26,7 +26,7 @@
 
   
   
-  <link rel="stylesheet" href="/css/main.min.ec3c5f79046e64ce60d00be4396dd3c132244f1794e42c8f869baf9dd9b1de8f.css">
+  <link rel="stylesheet" href="/css/main.min.246edd9588fced437d0d24835ab5022ec87944ab776c21f93f4c5d129b379003.css">
 
   
   <link rel="icon" href='/favicon.ico' type="image/x-icon">
@@ -52,17 +52,16 @@
   <body class="bg-gray-50 text-gray-900 font-sans min-h-screen flex flex-col">
 
     
-    <header class="bg-gray-100 shadow-md sticky top-0 z-50">
-  
-  <div class="w-full">
-    <img src="/images/banner.jpg" alt="Banner" class="w-full h-48 object-cover">
-  </div>
+    <header 
+  class="
+           bg-gray-100 shadow-md sticky top-0 z-50
+         ">
 
   
   <div class="container mx-auto px-4 py-3 flex items-center justify-between relative">
     
+    
     <div class="flex items-center gap-3 relative">
-      
       <button id="menu-btn"
               class="p-2 rounded-lg bg-blue-600 text-white shadow hover:bg-blue-700 transition"
               aria-controls="site-menu" aria-expanded="false" aria-label="Mở menu">
@@ -115,67 +114,26 @@
 
     
     <h1 class="text-2xl font-extrabold tracking-tight">
-      <a href="/" class="text-blue-700 hover:text-blue-900 transition">Giải Tỏa Nỗi Lòng</a>
+      <a href="/" 
+         class="
+                  text-blue-700 hover:text-blue-900
+                 transition">
+         Giải Tỏa Nỗi Lòng
+      </a>
     </h1>
   </div>
 </header>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const btn = document.getElementById("menu-btn");
-  const menu = document.getElementById("site-menu");
-  const header = menu.closest('header');
-
-  
-  btn.addEventListener("click", () => {
-    const isHidden = menu.classList.contains("hidden");
-    menu.classList.toggle("hidden");
-    btn.setAttribute("aria-expanded", String(isHidden));
-  });
-
-  
-  const parents = menu.querySelectorAll(".group");
-  parents.forEach((parent) => {
-    const link = parent.querySelector("a");
-    const submenu = parent.querySelector(".submenu");
-    if (!link || !submenu) return;
-
-    link.addEventListener("click", (e) => {
-      if (window.innerWidth < 1024) {
-        e.preventDefault();
-        parents.forEach(p => {
-          if (p !== parent) p.querySelector(".submenu")?.classList.add("hidden");
-        });
-        submenu.classList.toggle("hidden");
-      }
-    });
-  });
-
-  
-  document.addEventListener("click", (e) => {
-    if (!header.contains(e.target)) {
-      menu.classList.add("hidden");
-      btn.setAttribute("aria-expanded", "false");
-      menu.querySelectorAll(".submenu").forEach(s => s.classList.add("hidden"));
-    }
-  });
-
-  
-  window.addEventListener("resize", () => {
-    if (window.innerWidth >= 1024) {
-      menu.querySelectorAll(".submenu").forEach(s => s.classList.add("hidden"));
-    }
-  });
-});
-</script>
-
 
     
-    <main class="container mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-4 gap-8 flex-grow">
+    <main class="flex-grow">
       
-      
-      <div class="lg:col-span-3 space-y-6">
         
+        <div class="container mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-4 gap-8">
+          
+          
+          <div class="lg:col-span-3 space-y-6">
+            
 <div class="p-6 bg-white rounded-xl shadow-md max-w-6xl mx-auto">
 
   
@@ -216,43 +174,44 @@ document.addEventListener("DOMContentLoaded", function () {
   
 </div>
 
-      </div>
-      
-      
-      <aside class="hidden lg:block lg:col-span-1 space-y-6">
-        <div class="p-4 border rounded-lg bg-white">
-          <h3 class="font-bold mb-2 text-lg">Danh mục</h3>
-          <ul class="space-y-1">
-            
-              <li><a href="/" class="text-gray-700 hover:text-blue-600">Trang chủ</a></li>
-            
-              <li><a href="/tamsu/" class="text-gray-700 hover:text-blue-600">Tâm sự cuộc sống</a></li>
-            
-              <li><a href="/dautu/" class="text-gray-700 hover:text-blue-600">Đầu tư ít vốn</a></li>
-            
-              <li><a href="/tarot/" class="text-gray-700 hover:text-blue-600">Tarot</a></li>
-            
-              <li><a href="/pages/gi%E1%BA%A3i-t%E1%BB%8Fa-n%E1%BB%97i-l%C3%B2ng--l%E1%BA%AFng-nghe-kh%C3%B4ng-ph%C3%A1n-x%C3%A9t-d%E1%BB%8Bch-v%E1%BB%A5-t%C3%A2m-s%E1%BB%B1-gi%C3%A1-r%E1%BA%BB-cho-ng%C6%B0%E1%BB%9Di-thu-nh%E1%BA%ADp-th%E1%BA%A5p/" class="text-gray-700 hover:text-blue-600">Giới thiệu</a></li>
-            
-          </ul>
-        </div>
+          </div>
+          
+          
+          <aside class="hidden lg:block lg:col-span-1 space-y-6">
+            <div class="p-4 border rounded-lg bg-white">
+              <h3 class="font-bold mb-2 text-lg">Danh mục</h3>
+              <ul class="space-y-1">
+                
+                  <li><a href="/" class="text-gray-700 hover:text-blue-600">Trang chủ</a></li>
+                
+                  <li><a href="/tamsu/" class="text-gray-700 hover:text-blue-600">Tâm sự cuộc sống</a></li>
+                
+                  <li><a href="/dautu/" class="text-gray-700 hover:text-blue-600">Đầu tư ít vốn</a></li>
+                
+                  <li><a href="/tarot/" class="text-gray-700 hover:text-blue-600">Tarot</a></li>
+                
+                  <li><a href="/pages/gi%E1%BA%A3i-t%E1%BB%8Fa-n%E1%BB%97i-l%C3%B2ng--l%E1%BA%AFng-nghe-kh%C3%B4ng-ph%C3%A1n-x%C3%A9t-d%E1%BB%8Bch-v%E1%BB%A5-t%C3%A2m-s%E1%BB%B1-gi%C3%A1-r%E1%BA%BB-cho-ng%C6%B0%E1%BB%9Di-thu-nh%E1%BA%ADp-th%E1%BA%A5p/" class="text-gray-700 hover:text-blue-600">Giới thiệu</a></li>
+                
+              </ul>
+            </div>
 
-        <div class="p-4 border rounded-lg bg-white">
-          <h3 class="font-bold mb-2 text-lg">Bài viết mới</h3>
-          <ul class="space-y-1">
-            
-              <li><a href="http://localhost:1313/tamsu/giaitoanoilong/" class="text-gray-700 hover:text-blue-600">Giải Tỏa Nỗi Lòng – Lắng Nghe Không Phán Xét</a></li>
-            
-              <li><a href="http://localhost:1313/tamsu/ngonphonggiaotiep/" class="text-gray-700 hover:text-blue-600">Ngôn Phong Chia Sẻ Và Hành Trình Tìm Lại Cốt Lõi Con Người</a></li>
-            
-              <li><a href="http://localhost:1313/pages/gi%E1%BA%A3i-t%E1%BB%8Fa-n%E1%BB%97i-l%C3%B2ng--l%E1%BA%AFng-nghe-kh%C3%B4ng-ph%C3%A1n-x%C3%A9t-d%E1%BB%8Bch-v%E1%BB%A5-t%C3%A2m-s%E1%BB%B1-gi%C3%A1-r%E1%BA%BB-cho-ng%C6%B0%E1%BB%9Di-thu-nh%E1%BA%ADp-th%E1%BA%A5p/" class="text-gray-700 hover:text-blue-600">Giải Tỏa Nỗi Lòng – Lắng Nghe Không Phán Xét, Dịch Vụ Tâm Sự Giá Rẻ Cho Người Thu Nhập Thấp</a></li>
-            
-              <li><a href="http://localhost:1313/tarot/" class="text-gray-700 hover:text-blue-600">Rút Tarot 3 Lá</a></li>
-            
-          </ul>
+            <div class="p-4 border rounded-lg bg-white">
+              <h3 class="font-bold mb-2 text-lg">Bài viết mới</h3>
+              <ul class="space-y-1">
+                
+                  <li><a href="http://localhost:1313/tamsu/giaitoanoilong/" class="text-gray-700 hover:text-blue-600">Giải Tỏa Nỗi Lòng – Lắng Nghe Không Phán Xét</a></li>
+                
+                  <li><a href="http://localhost:1313/tamsu/ngonphonggiaotiep/" class="text-gray-700 hover:text-blue-600">Ngôn Phong Chia Sẻ Và Hành Trình Tìm Lại Cốt Lõi Con Người</a></li>
+                
+                  <li><a href="http://localhost:1313/pages/gi%E1%BA%A3i-t%E1%BB%8Fa-n%E1%BB%97i-l%C3%B2ng--l%E1%BA%AFng-nghe-kh%C3%B4ng-ph%C3%A1n-x%C3%A9t-d%E1%BB%8Bch-v%E1%BB%A5-t%C3%A2m-s%E1%BB%B1-gi%C3%A1-r%E1%BA%BB-cho-ng%C6%B0%E1%BB%9Di-thu-nh%E1%BA%ADp-th%E1%BA%A5p/" class="text-gray-700 hover:text-blue-600">Giải Tỏa Nỗi Lòng – Lắng Nghe Không Phán Xét, Dịch Vụ Tâm Sự Giá Rẻ Cho Người Thu Nhập Thấp</a></li>
+                
+                  <li><a href="http://localhost:1313/tarot/" class="text-gray-700 hover:text-blue-600">Rút Tarot 3 Lá</a></li>
+                
+              </ul>
+            </div>
+          </aside>
         </div>
-      </aside>
-
+      
     </main>
 
     
@@ -302,5 +261,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     
     <script src="/js/main.js"></script>
+
+<button id="backToTop" 
+        class="hidden fixed bottom-6 right-6 z-50 
+               bg-blue-600 text-white p-3 rounded-full shadow-lg 
+               hover:bg-blue-700 transition">
+  ↑
+</button>
+
   </body>
 </html>

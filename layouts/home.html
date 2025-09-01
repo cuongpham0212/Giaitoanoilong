@@ -1,35 +1,49 @@
 {{ define "main" }}
-  <!-- Tiêu đề Trang Chủ -->
-  <header class="mb-10 text-center">
-    <h1 class="text-4xl font-extrabold text-gray-900 mb-3">{{ .Title }}</h1>
-    {{ with .Content }}
-      <p class="text-gray-600 max-w-2xl mx-auto text-lg">{{ . }}</p>
-    {{ end }}
-  </header>
+  <!-- Banner trang chủ -->
+  <section 
+    class="relative min-h-screen w-full bg-cover bg-center flex items-center justify-center"
+    style="background-image: url('/images/banner.jpg');">
+    
+    <!-- Lớp phủ mờ -->
+    <div class="absolute inset-0 bg-black/50"></div>
 
-  <!-- Grid bài viết -->
-  {{ if .Site.RegularPages }}
-    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-      {{ range first 9 .Site.RegularPages.ByDate.Reverse }}
-        <article class="bg-white border rounded-2xl shadow hover:shadow-lg transition transform hover:-translate-y-1 p-6 flex flex-col">
-          <h2 class="text-2xl font-semibold mb-3">
-            <a href="{{ .RelPermalink }}" class="hover:text-blue-600">{{ .Title }}</a>
-          </h2>
-          <p class="text-sm text-gray-500 mb-2">{{ .Date.Format "02/01/2006" }}</p>
-          <div class="text-gray-700 flex-grow leading-relaxed">
-            {{ with .Description }}
-              {{ . }}
-            {{ else }}
-              {{ .Summary }}
-            {{ end }}
-          </div>
-          <div class="mt-4">
-            <a href="{{ .RelPermalink }}" class="inline-block text-blue-600 hover:underline font-medium">Đọc tiếp →</a>
-          </div>
-        </article>
+    <!-- Nội dung banner -->
+    <div class="relative z-10 text-center text-white px-4">
+      <h1 class="text-5xl md:text-6xl font-extrabold mb-6 drop-shadow-lg">{{ .Title }}</h1>
+      {{ with .Content }}
+        <p class="max-w-2xl mx-auto text-lg md:text-xl leading-relaxed">{{ . }}</p>
       {{ end }}
+      <div class="mt-8">
+        <a href="#posts" class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-xl font-semibold shadow-lg transition">Khám phá ngay</a>
+      </div>
     </div>
-  {{ else }}
-    <p class="text-gray-600 text-center">Chưa có bài viết nào.</p>
-  {{ end }}
+  </section>
+
+  <!-- Nội dung bài viết -->
+  <section id="posts" class="relative z-20 container mx-auto px-4 py-16">
+    {{ if .Site.RegularPages }}
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {{ range first 9 .Site.RegularPages.ByDate.Reverse }}
+          <article class="bg-white border rounded-2xl shadow hover:shadow-xl transition transform hover:-translate-y-1 p-6 flex flex-col">
+            <h2 class="text-2xl font-semibold mb-3">
+              <a href="{{ .RelPermalink }}" class="hover:text-blue-600">{{ .Title }}</a>
+            </h2>
+            <p class="text-sm text-gray-500 mb-2">{{ .Date.Format "02/01/2006" }}</p>
+            <div class="text-gray-700 flex-grow leading-relaxed line-clamp-3">
+              {{ with .Description }}
+                {{ . }}
+              {{ else }}
+                {{ .Summary }}
+              {{ end }}
+            </div>
+            <div class="mt-4">
+              <a href="{{ .RelPermalink }}" class="inline-block text-blue-600 hover:underline font-medium">Đọc tiếp →</a>
+            </div>
+          </article>
+        {{ end }}
+      </div>
+    {{ else }}
+      <p class="text-gray-600 text-center">Chưa có bài viết nào.</p>
+    {{ end }}
+  </section>
 {{ end }}
