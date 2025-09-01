@@ -1,109 +1,109 @@
 <header class="bg-gray-100 shadow-md sticky top-0 z-50">
-  <!-- Banner Image -->
+  <!-- Banner -->
   <div class="w-full">
     <img src="{{ "images/banner.jpg" | relURL }}" alt="Banner" class="w-full h-48 object-cover">
   </div>
 
-  <!-- Header Content -->
-  <div class="container mx-auto flex items-center justify-between p-4 relative">
-    <!-- Logo -->
-    <h1 class="text-2xl font-bold text-blue-600">
-      <a href="{{ .Site.BaseURL }}" class="hover:text-blue-800">{{ .Site.Title }}</a>
-    </h1>
+  <!-- Header bar -->
+  <div class="container mx-auto px-4 py-3 flex items-center justify-between relative">
+    <!-- MENU + Nút -->
+    <div class="flex items-center gap-3 relative">
+      <!-- Button menu -->
+      <button id="menu-btn"
+              class="p-2 rounded-lg bg-blue-600 text-white shadow hover:bg-blue-700 transition"
+              aria-controls="site-menu" aria-expanded="false" aria-label="Mở menu">
+        ☰ MENU
+      </button>
 
-    <!-- Hamburger button (mobile) -->
-    <button id="menu-btn" class="p-2 border rounded bg-blue-500 text-white lg:hidden">
-      ☰ MENU
-    </button>
-
-    <!-- Nav links -->
-    <nav id="menu"
-      class="hidden flex-col space-y-2 absolute top-20 right-4 bg-white border rounded p-4 shadow-md
-            lg:static lg:flex lg:flex-row lg:space-y-0 lg:space-x-6 lg:border-0 lg:p-0 lg:shadow-none transition-all duration-300">
-      {{ range .Site.Menus.main }}
-        {{ if .HasChildren }}
-          <div class="group relative submenu-parent">
-            <a href="{{ .URL | relURL }}" 
-               class="flex items-center text-gray-700 hover:text-blue-600 hover:font-bold transition">
-              {{ .Name }} ▾
-            </a>
-            <div class="submenu hidden absolute top-full left-0 mt-1 bg-white border rounded shadow-lg min-w-[180px] transform origin-top transition-all duration-300 ease-out scale-y-0 opacity-0">
-              {{ range .Children }}
-                <a href="{{ .URL | relURL }}" 
-                   class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 hover:font-semibold transition">
-                   {{ .Name }}
-                </a>
-              {{ end }}
+      <!-- Nav -->
+      <nav id="site-menu"
+           class="hidden absolute top-full left-0 mt-2 z-50
+                  bg-white border rounded-2xl shadow-lg p-4 flex flex-col gap-1
+                  min-w-[300px] max-w-md w-full">
+        {{ range .Site.Menus.main }}
+          {{ if .HasChildren }}
+            <div class="group relative">
+              <a href="{{ .URL | relURL }}"
+                 class="flex justify-between items-center px-4 py-2 rounded-lg 
+                        text-gray-700 hover:text-blue-700 hover:bg-blue-50 transition font-medium">
+                {{ .Name }}
+                <span class="ml-2">▸</span>
+              </a>
+              <!-- Submenu -->
+              <div class="submenu hidden
+                          lg:absolute lg:top-0 lg:left-full lg:ml-2
+                          lg:min-w-[220px] lg:bg-white lg:border lg:rounded-xl lg:shadow-lg
+                          group-hover:block">
+                {{ range .Children }}
+                  <a href="{{ .URL | relURL }}"
+                     class="block px-4 py-2 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition">
+                    {{ .Name }}
+                  </a>
+                {{ end }}
+              </div>
             </div>
-          </div>
-        {{ else }}
-          <a href="{{ .URL | relURL }}" 
-             class="text-gray-700 hover:text-blue-600 hover:font-bold transition">
-            {{ .Name }}
-          </a>
+          {{ else }}
+            <a href="{{ .URL | relURL }}"
+               class="block px-4 py-2 rounded-lg text-gray-700 hover:text-blue-700 hover:bg-blue-50 transition font-medium">
+              {{ .Name }}
+            </a>
+          {{ end }}
         {{ end }}
-      {{ end }}
-    </nav>
+      </nav>
+    </div>
+
+    <!-- Logo (phải) -->
+    <h1 class="text-2xl font-extrabold tracking-tight">
+      <a href="{{ "/" | relURL }}" class="text-blue-700 hover:text-blue-900 transition">{{ .Site.Title }}</a>
+    </h1>
   </div>
 </header>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const menuBtn = document.getElementById("menu-btn");
-    const menu = document.getElementById("menu");
-    const submenuParents = document.querySelectorAll(".submenu-parent");
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.getElementById("menu-btn");
+  const menu = document.getElementById("site-menu");
+  const header = menu.closest('header');
 
-    // Toggle menu mobile
-    menuBtn.addEventListener("click", () => {
-      menu.classList.toggle("hidden");
-    });
+  // Toggle menu
+  btn.addEventListener("click", () => {
+    const isHidden = menu.classList.contains("hidden");
+    menu.classList.toggle("hidden");
+    btn.setAttribute("aria-expanded", String(isHidden));
+  });
 
-    // Submenu animation for desktop & mobile
-    submenuParents.forEach(parent => {
-      const submenu = parent.querySelector(".submenu");
-      
-      // Hover mở submenu trên desktop
-      parent.addEventListener("mouseenter", () => {
-        if (window.innerWidth >= 1024) {
-          submenu.classList.remove("hidden");
-          setTimeout(() => {
-            submenu.classList.remove("opacity-0", "scale-y-0");
-          }, 10);
-        }
-      });
+  // Dropdown logic mobile
+  const parents = menu.querySelectorAll(".group");
+  parents.forEach((parent) => {
+    const link = parent.querySelector("a");
+    const submenu = parent.querySelector(".submenu");
+    if (!link || !submenu) return;
 
-      parent.addEventListener("mouseleave", () => {
-        if (window.innerWidth >= 1024) {
-          submenu.classList.add("opacity-0", "scale-y-0");
-          setTimeout(() => submenu.classList.add("hidden"), 300);
-        }
-      });
-
-      // Click mở submenu trên mobile
-      parent.addEventListener("click", (e) => {
-        if (window.innerWidth < 1024) {
-          e.preventDefault();
-          submenu.classList.toggle("hidden");
-          submenu.classList.toggle("opacity-0");
-          submenu.classList.toggle("scale-y-0");
-        }
-      });
+    link.addEventListener("click", (e) => {
+      if (window.innerWidth < 1024) {
+        e.preventDefault();
+        parents.forEach(p => {
+          if (p !== parent) p.querySelector(".submenu")?.classList.add("hidden");
+        });
+        submenu.classList.toggle("hidden");
+      }
     });
   });
-</script>
 
-<style>
-  /* Transition submenu mượt */
-  .submenu {
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    transform-origin: top;
-  }
-  /* Hover item */
-  nav a {
-    transition: all 0.2s ease;
-  }
-  nav a:hover {
-    color: #1d4ed8;
-    font-weight: bold;
-  }
-</style>
+  // Click ngoài menu → đóng
+  document.addEventListener("click", (e) => {
+    if (!header.contains(e.target)) {
+      menu.classList.add("hidden");
+      btn.setAttribute("aria-expanded", "false");
+      menu.querySelectorAll(".submenu").forEach(s => s.classList.add("hidden"));
+    }
+  });
+
+  // Resize reset submenu
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 1024) {
+      menu.querySelectorAll(".submenu").forEach(s => s.classList.add("hidden"));
+    }
+  });
+});
+</script>
