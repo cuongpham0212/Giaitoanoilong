@@ -1,61 +1,34 @@
 <header class="bg-gray-100 shadow-md">
   <div class="container mx-auto flex items-center justify-between p-4">
     <!-- Logo -->
-    <h1 class="text-2xl font-bold text-blue-600 logo">
+    <h1 class="text-2xl font-bold text-blue-600">
       <a href="/" class="hover:text-blue-800">{{ .Site.Title }}</a>
     </h1>
 
-    <!-- Menu Desktop -->
-    <nav class="main-nav hidden lg:block">
-      <ul class="flex space-x-6">
-        {{ range .Site.Menus.main }}
-        <li>
-          <a href="{{ .URL }}" class="text-gray-700 hover:text-blue-600 font-medium">
-            {{ .Name }}
-          </a>
-        </li>
-        {{ end }}
-      </ul>
-    </nav>
-
-    <!-- Nút Hamburger (Mobile) -->
-    <button id="menu-toggle" class="lg:hidden text-gray-700 text-3xl focus:outline-none">
-      ☰
+    <!-- Hamburger button (luôn hiển thị để test) -->
+    <button id="menu-btn" class="p-2 border rounded bg-blue-500 text-white lg:hidden">
+      ☰ MENU
     </button>
-  </div>
 
-  <!-- Menu Mobile -->
-  <nav id="menu-mobile"
-       class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out lg:hidden bg-gray-50 border-t border-gray-200">
-    <ul class="flex flex-col p-4 space-y-3">
+    <!-- Nav links -->
+    <nav id="menu" class="hidden flex-col space-y-2 absolute top-16 right-4 bg-white border rounded p-4 lg:static lg:flex lg:flex-row lg:space-y-0 lg:space-x-6 lg:border-0 lg:p-0">
       {{ range .Site.Menus.main }}
-      <li>
-        <a href="{{ .URL }}" class="block text-gray-700 hover:text-blue-600 font-medium">
+        <a href="{{ .URL }}" class="text-gray-700 hover:text-blue-600 font-medium">
           {{ .Name }}
         </a>
-      </li>
       {{ end }}
-    </ul>
-  </nav>
-</header>
+    </nav>
+  </div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.getElementById("menu-toggle");
-    const menu = document.getElementById("menu-mobile");
-
-    toggle.addEventListener("click", () => {
-      if (menu.classList.contains("max-h-0")) {
-        // Mở menu
-        menu.classList.remove("max-h-0");
-        menu.classList.add("max-h-screen");
-        toggle.textContent = "✕"; // đổi icon thành X
-      } else {
-        // Đóng menu
-        menu.classList.add("max-h-0");
-        menu.classList.remove("max-h-screen");
-        toggle.textContent = "☰"; // đổi lại icon hamburger
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu");
+      if (btn) {
+        btn.addEventListener("click", function() {
+          menu.classList.toggle("hidden");
+        });
       }
     });
-  });
-</script>
+  </script>
+</header>
