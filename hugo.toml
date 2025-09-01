@@ -60,4 +60,4 @@ title = "Tâm sự cuộc sống"
   [[menu.main]]
     name = "Giới thiệu"
     url = "/gioi-thieu/"
-    weight = 6
+    weight = 5

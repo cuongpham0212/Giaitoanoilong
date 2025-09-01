@@ -1,13 +1,16 @@
 ---
-title: Giải Tỏa Nỗi Lòng – Lắng Nghe Không Phán Xét, Dịch Vụ Tâm Sự Giá Rẻ Cho
-  Người Thu Nhập Thấp
-description: Dịch vụ lắng nghe không phán xét, phí rẻ phù hợp người thu nhập
-  thấp. Nơi giải tỏa nỗi lòng, chia sẻ tâm lý và gợi ý đầu tư nhỏ giúp cân bằng
-  cuộc sống.
----
-2025-08-30
+title: "Giải Tỏa Nỗi Lòng – Lắng Nghe Không Phán Xét, Dịch Vụ Tâm Sự Giá Rẻ Cho Người Thu Nhập Thấp"
+description: "Dịch vụ lắng nghe không phán xét, phí rẻ phù hợp người thu nhập thấp. Nơi giải tỏa nỗi lòng, chia sẻ tâm lý và gợi ý đầu tư nhỏ giúp cân bằng cuộc sống."
+slug: "gioi-thieu"
+url: "/gioi-thieu/"
+date: 2025-08-30T00:00:00+07:00
+lastmod: 2025-08-30T00:00:00+07:00
 draft: false
+keywords: ["dịch vụ lắng nghe", "tâm sự giá rẻ", "không phán xét", "người thu nhập thấp", "giải tỏa nỗi lòng", "tâm lý đồng cảm"]
+author: "Tên của bạn"
+robots: "index, follow"
 ---
+
 
 # Giải Tỏa Nỗi Lòng – Lắng Nghe Không Phán Xét  
 
