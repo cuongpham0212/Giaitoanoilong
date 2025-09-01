@@ -76,6 +76,7 @@
       "hover:bg-blue-700",
       "hover:bg-sky-600",
       "hover:bg-yellow-600",
+      "hover:font-bold",
       "hover:shadow-lg",
       "hover:shadow-xl",
       "hover:text-blue-600",

@@ -23,17 +23,22 @@
       {{ range .Site.Menus.main }}
         {{ if .HasChildren }}
           <div class="group relative">
-            <a href="{{ .URL | relURL }}" class="text-gray-700 hover:text-blue-600 font-medium flex items-center">
+            <a href="{{ .URL | relURL }}" 
+               class="text-gray-700 hover:text-blue-600 hover:font-bold transition flex items-center">
               {{ .Name }} ▾
             </a>
-            <div class="hidden group-hover:block absolute top-full left-0 mt-1 bg-white border rounded shadow-lg min-w-[150px] z-50">
+            <div class="hidden absolute top-full left-0 mt-1 bg-white border rounded shadow-lg min-w-[180px] opacity-0 group-hover:opacity-100 group-hover:block transform scale-y-0 group-hover:scale-y-100 origin-top transition-all duration-200">
               {{ range .Children }}
-                <a href="{{ .URL | relURL }}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">{{ .Name }}</a>
+                <a href="{{ .URL | relURL }}" 
+                   class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 hover:font-semibold transition">
+                   {{ .Name }}
+                </a>
               {{ end }}
             </div>
           </div>
         {{ else }}
-          <a href="{{ .URL | relURL }}" class="text-gray-700 hover:text-blue-600 font-medium">
+          <a href="{{ .URL | relURL }}" 
+             class="text-gray-700 hover:text-blue-600 hover:font-bold transition">
             {{ .Name }}
           </a>
         {{ end }}
@@ -42,5 +47,29 @@
   </div>
 </header>
 
-<!-- Gọi file JS -->
-<script src="/js/menu.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuBtn = document.getElementById("menu-btn");
+    const menu = document.getElementById("menu");
+    const dropdownParents = menu.querySelectorAll(".group");
+
+    // Toggle menu mobile
+    menuBtn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+
+    // Dropdown cho mobile
+    dropdownParents.forEach(parent => {
+      parent.addEventListener("click", (e) => {
+        if (window.innerWidth < 1024) {
+          e.preventDefault();
+          const dropdown = parent.querySelector("div");
+          if (dropdown) {
+            dropdown.classList.toggle("hidden");
+            dropdown.classList.toggle("opacity-0");
+          }
+        }
+      });
+    });
+  });
+</script>

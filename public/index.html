@@ -27,7 +27,7 @@
 
   
   
-  <link rel="stylesheet" href="/css/main.min.89edfec9a1b5f36cf73b7fb6557a726eda525e1323275c2d5acf3ceb495ccfe6.css">
+  <link rel="stylesheet" href="/css/main.min.135104687fc6e58e6a67de862914dcced6e155dbc7dd133fadf8c1e2de77e28a.css">
 
   
   <link rel="icon" href='/favicon.ico' type="image/x-icon">
@@ -88,31 +88,36 @@
             lg:static lg:flex lg:flex-row lg:space-y-0 lg:space-x-6 lg:border-0 lg:p-0 lg:shadow-none transition-all duration-300">
       
         
-          <a href="/" class="text-gray-700 hover:text-blue-600 font-medium">
+          <a href="/" 
+             class="text-gray-700 hover:text-blue-600 hover:font-bold transition">
             Trang chủ
           </a>
         
       
         
-          <a href="/tamsu/" class="text-gray-700 hover:text-blue-600 font-medium">
+          <a href="/tamsu/" 
+             class="text-gray-700 hover:text-blue-600 hover:font-bold transition">
             Tâm sự cuộc sống
           </a>
         
       
         
-          <a href="/dautu/" class="text-gray-700 hover:text-blue-600 font-medium">
+          <a href="/dautu/" 
+             class="text-gray-700 hover:text-blue-600 hover:font-bold transition">
             Đầu tư ít vốn
           </a>
         
       
         
-          <a href="/tarot/" class="text-gray-700 hover:text-blue-600 font-medium">
+          <a href="/tarot/" 
+             class="text-gray-700 hover:text-blue-600 hover:font-bold transition">
             Tarot
           </a>
         
       
         
-          <a href="/pages/gi%E1%BA%A3i-t%E1%BB%8Fa-n%E1%BB%97i-l%C3%B2ng--l%E1%BA%AFng-nghe-kh%C3%B4ng-ph%C3%A1n-x%C3%A9t-d%E1%BB%8Bch-v%E1%BB%A5-t%C3%A2m-s%E1%BB%B1-gi%C3%A1-r%E1%BA%BB-cho-ng%C6%B0%E1%BB%9Di-thu-nh%E1%BA%ADp-th%E1%BA%A5p/" class="text-gray-700 hover:text-blue-600 font-medium">
+          <a href="/pages/gi%E1%BA%A3i-t%E1%BB%8Fa-n%E1%BB%97i-l%C3%B2ng--l%E1%BA%AFng-nghe-kh%C3%B4ng-ph%C3%A1n-x%C3%A9t-d%E1%BB%8Bch-v%E1%BB%A5-t%C3%A2m-s%E1%BB%B1-gi%C3%A1-r%E1%BA%BB-cho-ng%C6%B0%E1%BB%9Di-thu-nh%E1%BA%ADp-th%E1%BA%A5p/" 
+             class="text-gray-700 hover:text-blue-600 hover:font-bold transition">
             Giới thiệu
           </a>
         
@@ -121,8 +126,32 @@
   </div>
 </header>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuBtn = document.getElementById("menu-btn");
+    const menu = document.getElementById("menu");
+    const dropdownParents = menu.querySelectorAll(".group");
 
-<script src="/js/menu.js"></script>
+    
+    menuBtn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+
+    
+    dropdownParents.forEach(parent => {
+      parent.addEventListener("click", (e) => {
+        if (window.innerWidth < 1024) {
+          e.preventDefault();
+          const dropdown = parent.querySelector("div");
+          if (dropdown) {
+            dropdown.classList.toggle("hidden");
+            dropdown.classList.toggle("opacity-0");
+          }
+        }
+      });
+    });
+  });
+</script>
 
 
     
