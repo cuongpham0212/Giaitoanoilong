@@ -7,31 +7,31 @@
   <title>Tags | Giải Tỏa Nỗi Lòng</title>
 
   
-  <meta name="description" content="Blog chia sẻ tâm sự cuộc sống, đầu tư và góc nhìn thú vị.">
-  <meta name="author" content="Admin">
+  <meta name="description" content='Blog chia sẻ tâm sự cuộc sống, đầu tư và góc nhìn thú vị.'>
+  <meta name="author" content='Admin'>
   <link rel="canonical" href="http://localhost:1313/tags/">
 
   
-  <meta property="og:title" content="Tags">
-  <meta property="og:description" content="Blog chia sẻ tâm sự cuộc sống, đầu tư và góc nhìn thú vị.">
+  <meta property="og:title" content='Tags'>
+  <meta property="og:description" content='Blog chia sẻ tâm sự cuộc sống, đầu tư và góc nhìn thú vị.'>
   <meta property="og:type" content="website">
   <meta property="og:url" content="http://localhost:1313/tags/">
-  <meta property="og:image" content="http://localhost:1313/images/default-banner.jpg">
+  <meta property="og:image" content='http://localhost:1313/images/default-banner.jpg'>
 
   
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Tags">
-  <meta name="twitter:description" content="Blog chia sẻ tâm sự cuộc sống, đầu tư và góc nhìn thú vị.">
-  <meta name="twitter:image" content="http://localhost:1313/images/default-banner.jpg">
+  <meta name="twitter:title" content='Tags'>
+  <meta name="twitter:description" content='Blog chia sẻ tâm sự cuộc sống, đầu tư và góc nhìn thú vị.'>
+  <meta name="twitter:image" content='http://localhost:1313/images/default-banner.jpg'>
 
   
   
-  <link rel="stylesheet" href="/css/main.min.3ed02a6be16c3c7a45e98532bcfe1531f49b9d6857fc79d644ad89ea4718e4c6.css">
+  <link rel="stylesheet" href="/css/main.min.ad42b92ecf298a10940ab050e8d73a0738b4a4ef4334f99e5323bf5e6fa4169b.css">
 
   
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/favicon-32.png" type="image/png">
-  <link rel="apple-touch-icon" href="/favicon-180.png">
+  <link rel="icon" href='/favicon.ico' type="image/x-icon">
+  <link rel="icon" href='/favicon-32.png' type="image/png">
+  <link rel="apple-touch-icon" href='/favicon-180.png'>
 
   
   
@@ -43,55 +43,91 @@
   <body class="bg-gray-50 text-gray-900 font-sans min-h-screen flex flex-col">
 
     
-    <header class="bg-gray-100 shadow-md">
-  <div class="container mx-auto flex items-center justify-between p-4">
-    <h1 class="text-2xl font-bold text-blue-600 logo">
-      <a href="/" class="hover:text-blue-800">Giải Tỏa Nỗi Lòng</a>
+    <header class="bg-gray-100 shadow-md sticky top-0 z-50">
+  
+  <div class="w-full">
+    <img src="/images/banner.jpg" alt="Banner" class="w-full h-48 object-cover">
+  </div>
+
+  
+  <div class="container mx-auto flex items-center justify-between p-4 relative">
+    
+    <h1 class="text-2xl font-bold text-blue-600">
+      <a href="http://localhost:1313/" class="hover:text-blue-800">Giải Tỏa Nỗi Lòng</a>
     </h1>
-    <nav class="main-nav">
-      <ul class="flex space-x-6">
+
+    
+    <button id="menu-btn" class="p-2 border rounded bg-blue-500 text-white lg:hidden">
+      ☰ MENU
+    </button>
+
+    
+    <nav id="menu"
+      class="hidden flex-col space-y-2 absolute top-20 right-4 bg-white border rounded p-4 shadow-md
+            lg:static lg:flex lg:flex-row lg:space-y-0 lg:space-x-6 lg:border-0 lg:p-0 lg:shadow-none">
+      
         
-        <li>
           <a href="/" class="text-gray-700 hover:text-blue-600 font-medium">
             Trang chủ
           </a>
-        </li>
         
-        <li>
+      
+        
           <a href="/tamsu/" class="text-gray-700 hover:text-blue-600 font-medium">
             Tâm sự cuộc sống
           </a>
-        </li>
         
-        <li>
+      
+        
           <a href="/dautu/" class="text-gray-700 hover:text-blue-600 font-medium">
             Đầu tư ít vốn
           </a>
-        </li>
         
-        <li>
+      
+        
           <a href="/tarot/" class="text-gray-700 hover:text-blue-600 font-medium">
             Tarot
           </a>
-        </li>
         
-        <li>
+      
+        
           <a href="/pages/gi%E1%BA%A3i-t%E1%BB%8Fa-n%E1%BB%97i-l%C3%B2ng--l%E1%BA%AFng-nghe-kh%C3%B4ng-ph%C3%A1n-x%C3%A9t-d%E1%BB%8Bch-v%E1%BB%A5-t%C3%A2m-s%E1%BB%B1-gi%C3%A1-r%E1%BA%BB-cho-ng%C6%B0%E1%BB%9Di-thu-nh%E1%BA%ADp-th%E1%BA%A5p/" class="text-gray-700 hover:text-blue-600 font-medium">
             Giới thiệu
           </a>
-        </li>
         
-      </ul>
+      
     </nav>
   </div>
 </header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuBtn = document.getElementById("menu-btn");
+    const menu = document.getElementById("menu");
+
+    menuBtn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+
+    const dropdownParents = menu.querySelectorAll(".group");
+    dropdownParents.forEach(parent => {
+      parent.addEventListener("click", (e) => {
+        if (window.innerWidth < 1024) {
+          e.preventDefault();
+          const dropdown = parent.querySelector("div");
+          if (dropdown) dropdown.classList.toggle("hidden");
+        }
+      });
+    });
+  });
+</script>
 
 
     
     <main class="container mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-4 gap-8 flex-grow">
       
       
-      <div class="lg:col-span-3">
+      <div class="lg:col-span-3 space-y-6">
         
   <h1>Tags</h1>
   
@@ -110,7 +146,7 @@
       </div>
       
       
-      <aside class="lg:col-span-1 space-y-6">
+      <aside class="hidden lg:block lg:col-span-1 space-y-6">
         <div class="p-4 border rounded-lg bg-white">
           <h3 class="font-bold mb-2 text-lg">Danh mục</h3>
           <ul class="space-y-1">
@@ -191,5 +227,7 @@
 </footer>
 
 
+    
+    <script src="/js/main.js"></script>
   </body>
 </html>

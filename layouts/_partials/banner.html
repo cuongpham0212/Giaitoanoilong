@@ -40,26 +40,29 @@
       {{ end }}
     </nav>
   </div>
-</header>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const menuBtn = document.getElementById("menu-btn");
-    const menu = document.getElementById("menu");
+  <!-- Toggle Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuBtn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu");
 
-    menuBtn.addEventListener("click", () => {
-      menu.classList.toggle("hidden");
-    });
+      // Toggle menu on mobile
+      menuBtn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
 
-    const dropdownParents = menu.querySelectorAll(".group");
-    dropdownParents.forEach(parent => {
-      parent.addEventListener("click", (e) => {
-        if (window.innerWidth < 1024) {
-          e.preventDefault();
-          const dropdown = parent.querySelector("div");
-          if (dropdown) dropdown.classList.toggle("hidden");
-        }
+      // Toggle dropdowns on mobile
+      const dropdownParents = menu.querySelectorAll(".group");
+      dropdownParents.forEach(parent => {
+        parent.addEventListener("click", (e) => {
+          if (window.innerWidth < 1024) { // Only on mobile
+            e.preventDefault();
+            const dropdown = parent.querySelector("div");
+            if (dropdown) dropdown.classList.toggle("hidden");
+          }
+        });
       });
     });
-  });
-</script>
+  </script>
+</header>

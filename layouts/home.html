@@ -1,16 +1,9 @@
 {{ define "main" }}
-  <!-- Banner -->
-  {{ with .Params.banner }}
-    <div class="mb-8">
-      <img src="{{ . }}" alt="Banner" class="w-full rounded-xl shadow">
-    </div>
-  {{ end }}
-
   <!-- Tiêu đề Trang Chủ -->
   <header class="mb-10 text-center">
-    <h1 class="text-4xl font-extrabold text-gray-900 mb-2">{{ .Title }}</h1>
+    <h1 class="text-4xl font-extrabold text-gray-900 mb-4">{{ .Title }}</h1>
     {{ with .Content }}
-      <p class="text-gray-600 max-w-2xl mx-auto">{{ . }}</p>
+      <p class="text-gray-600 max-w-2xl mx-auto text-lg">{{ . }}</p>
     {{ end }}
   </header>
 
@@ -18,18 +11,29 @@
   {{ if .Site.RegularPages }}
     <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
       {{ range first 9 .Site.RegularPages.ByDate.Reverse }}
-        <article class="bg-white border rounded-2xl shadow-sm hover:shadow-md transition p-6 flex flex-col">
-          <h2 class="text-2xl font-semibold mb-3">
-            <a href="{{ .RelPermalink }}" class="hover:text-blue-600">{{ .Title }}</a>
-          </h2>
-          <p class="text-sm text-gray-500 mb-2">{{ .Date.Format "02/01/2006" }}</p>
-          {{ with .Description }}
-            <p class="text-gray-700 flex-grow">{{ . }}</p>
-          {{ else }}
-            <p class="text-gray-700 flex-grow">{{ .Summary }}</p>
+        <article class="bg-white rounded-2xl shadow-sm hover:shadow-lg transition overflow-hidden flex flex-col">
+          <!-- Ảnh đại diện bài viết -->
+          {{ with .Params.featured_image }}
+            <img src="{{ . | relURL }}" alt="{{ $.Title }}" class="h-48 w-full object-cover">
           {{ end }}
-          <div class="mt-4">
-            <a href="{{ .RelPermalink }}" class="inline-block text-blue-600 hover:underline font-medium">Đọc tiếp →</a>
+
+          <div class="p-6 flex flex-col flex-grow">
+            <h2 class="text-xl font-semibold mb-2 hover:text-blue-600 transition">
+              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </h2>
+            <p class="text-sm text-gray-500 mb-3">{{ .Date.Format "02/01/2006" }}</p>
+
+            {{ with .Description }}
+              <p class="text-gray-700 flex-grow">{{ . }}</p>
+            {{ else }}
+              <p class="text-gray-700 flex-grow">{{ .Summary }}</p>
+            {{ end }}
+
+            <div class="mt-4">
+              <a href="{{ .RelPermalink }}" class="inline-block text-blue-600 hover:underline font-medium">
+                Đọc tiếp →
+              </a>
+            </div>
           </div>
         </article>
       {{ end }}
