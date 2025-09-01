@@ -1,0 +1,80 @@
+[33m59d2831[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m fix banner trang chủ
+[33mb8408a9[m[33m ([m[1;31morigin/main[m[33m)[m tạo menu ẩn cho mobile
+[33md8da8b2[m Update header.html
+[33mbecb0cf[m Update baseof.html
+[33mba43953[m Create main.js
+[33meb55838[m Delete assets/css/Js directory
+[33mf01997d[m Update baseof.html
+[33mb6b14c3[m Create main.js
+[33mf4620e3[m Update header.html
+[33m2d0df11[m Update header.html
+[33m444b678[m Update header.html
+[33m12c0e22[m Update baseof.html
+[33m0b6d697[m them file .md cho cups
+[33m90f3d62[m thêm file .md cho các nhóm tarot
+[33m690fb0e[m hiển thị nội dung diễn giải trang tarot
+[33m82f8558[m xác minh gg
+[33m449d05b[m Merge remote-tracking branch 'origin/main'
+[33mc661773[m tạo trang rút tarot
+[33m8b458cd[m Update hugo.toml
+[33mc5d2572[m thêm các seo
+[33m16a2138[m giao diện trang single
+[33m38baa41[m thêm banner
+[33mc1ce4d9[m hiển thị trang menu
+[33m4f0f9d1[m chỉnh sửa trang chủ
+[33m6d197b6[m fix hiển thị trang menu và trang bài viết
+[33me306a1d[m Create Chia Sẻ Không Phán Xét – Ngôn Phong Từ Trải Đời
+[33md1353b8[m trang giới thiệu - update
+[33m175214e[m trang giới thiệu - test
+[33m83da5e0[m tạo thêm menu giới thiệu
+[33m5bf5129[m Update hugo.toml
+[33m34bd8b9[m Update hugo.toml
+[33md212dda[m Update Trang tĩnh “giải-tỏa-nỗi-lòng-–-lắng-nghe-không-phán-xét-dịch-vụ-tâm-sự-giá-rẻ-cho-người-thu-nhập-thấp”
+[33m7092c85[m Update Trang tĩnh “giải-tỏa-nỗi-lòng-–-lắng-nghe-không-phán-xét-dịch-vụ-tâm-sự-giá-rẻ-cho-người-thu-nhập-thấp”
+[33m7a32e7a[m Update hugo.toml
+[33mb50b5dc[m Create Trang tĩnh “giải-tỏa-nỗi-lòng-–-lắng-nghe-không-phán-xét-dịch-vụ-tâm-sự-giá-rẻ-cho-người-thu-nhập-thấp”
+[33m82e2508[m Create Trang tĩnh “giải-tỏa-nỗi-lòng-–-lắng-nghe-không-phán-xét”
+[33m1fbdb70[m Delete Tâm sự “giải-tỏa-nỗi-lòng”
+[33mfe22d3d[m Create Tâm sự “giải-tỏa-nỗi-lòng”
+[33m9b62910[m Update cms.js
+[33m5bc1707[m Update cms.js
+[33m2b58b64[m Update cms.js
+[33mb6f1357[m Update cms.js
+[33mb4b58da[m Update cms.js
+[33me5f2d93[m Update cms.js
+[33m16694de[m Update cms.js
+[33m16cc0a7[m Update index.html
+[33meee62bb[m Update cms.js
+[33m673b3e1[m Update cms.js
+[33mf157690[m Update cms.js
+[33m02048e8[m fix lỗi nhảy chữ khung soạn thảo admin, fix file cms.js v.o2
+[33m98f2e7e[m fix lỗi nhảy chữ khung soạn thảo admin, fix file cms.js v.o1
+[33m7db109f[m fix lỗi nhảy chữ khung soạn thảo admin, fix file cms.js
+[33m916ec3e[m fix preview admin, fix file cms.js
+[33m1b9af17[m fix preview admin, tạo file cms.js
+[33m6c2bd36[m fix preview admin
+[33m2ba0ebb[m Update netlify.toml
+[33md45d09b[m Update hugo.toml
+[33ma07ed0f[m Update netlify.toml
+[33m81425b1[m Update netlify.toml
+[33m285ef39[m Update config.yml
+[33mc75ca2f[m Update config.yml
+[33m3f5daf0[m Update netlify.toml
+[33m6b17249[m Update index.html
+[33m63278c9[m Update index.html
+[33m47d5aa9[m Update netlify.toml
+[33mbcee2a0[m Update netlify.toml
+[33m0263db0[m Update netlify.toml
+[33m479ca15[m thêm code redirect giao diện admin file index.html trong layout chính
+[33m17af1c4[m link redirect giao diện admin
+[33m4c844f4[m điều chỉnh code config.yml trong admin
+[33ma9ced74[m thêm folder uploads
+[33mf16fae4[m Update hugo.toml
+[33m414e6d7[m thêm config.yml ; index.html ; trang admin cms
+[33m86e91d3[m Cập nhật baseof.html, header, footer, xóa CSS cũ
+[33md152d8e[m Update layout, add Tailwind, remove old CSS
+[33m395464d[m Add Netlify config for Hugo 0.149.0
+[33m57fe123[m Thêm file .gitignore để bỏ qua public và file rác
+[33m6f7d910[m Add favicon and other changes
+[33m46c9c8b[m Add custom index.html layout
+[33mbb26a4d[m Initial commit
