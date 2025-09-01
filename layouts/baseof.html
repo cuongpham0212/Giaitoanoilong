@@ -49,7 +49,11 @@
 
     <!-- Footer -->
     {{ partial "footer.html" . }}
-{{ $js := resources.Get "js/main.js" | js.Build }}
-<script src="{{ $js.RelPermalink }}"></script>
+
+    <!-- Script -->
+    <script src="/js/main.js"></script>
+  </body>
+</html>
+
   </body>
 </html>
