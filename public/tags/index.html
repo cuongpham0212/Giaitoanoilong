@@ -26,7 +26,7 @@
 
   
   
-  <link rel="stylesheet" href="/css/main.min.6b8a9ac7cd37e69cd0e71e0381daad5e5f7924a57b70634bfce2c3177bc1f819.css">
+  <link rel="stylesheet" href="/css/main.min.ec3c5f79046e64ce60d00be4396dd3c132244f1794e42c8f869baf9dd9b1de8f.css">
 
   
   <link rel="icon" href='/favicon.ico' type="image/x-icon">
@@ -54,8 +54,10 @@
     
     <header class="bg-gray-100 shadow-md sticky top-0 z-50">
   
-  <div class="w-full">
-    <img src="/images/banner.jpg" alt="Banner" class="w-full h-48 object-cover">
+  <div class="w-full aspect-[16/9] bg-black">
+    <img src="/images/banner.jpg" 
+         alt="Banner" 
+         class="w-full h-full object-contain">
   </div>
 
   
@@ -126,14 +128,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const menu = document.getElementById("site-menu");
   const header = menu.closest('header');
 
-  
   btn.addEventListener("click", () => {
     const isHidden = menu.classList.contains("hidden");
     menu.classList.toggle("hidden");
     btn.setAttribute("aria-expanded", String(isHidden));
   });
 
-  
   const parents = menu.querySelectorAll(".group");
   parents.forEach((parent) => {
     const link = parent.querySelector("a");
@@ -151,7 +151,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  
   document.addEventListener("click", (e) => {
     if (!header.contains(e.target)) {
       menu.classList.add("hidden");
@@ -160,7 +159,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  
   window.addEventListener("resize", () => {
     if (window.innerWidth >= 1024) {
       menu.querySelectorAll(".submenu").forEach(s => s.classList.add("hidden"));
