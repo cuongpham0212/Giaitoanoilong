@@ -1,9 +1,12 @@
 <header class="bg-gray-100 shadow-md">
   <div class="container mx-auto flex items-center justify-between p-4">
+    <!-- Logo -->
     <h1 class="text-2xl font-bold text-blue-600 logo">
       <a href="/" class="hover:text-blue-800">{{ .Site.Title }}</a>
     </h1>
-    <nav class="main-nav">
+
+    <!-- Menu Desktop -->
+    <nav class="main-nav hidden lg:block">
       <ul class="flex space-x-6">
         {{ range .Site.Menus.main }}
         <li>
@@ -14,5 +17,33 @@
         {{ end }}
       </ul>
     </nav>
+
+    <!-- Nút Hamburger (mobile) -->
+    <button id="menu-toggle" class="lg:hidden text-gray-700 text-3xl focus:outline-none">
+      ☰
+    </button>
   </div>
+
+  <!-- Menu Mobile (ẩn mặc định) -->
+  <nav id="menu-mobile" class="hidden lg:hidden bg-gray-50 border-t border-gray-200">
+    <ul class="flex flex-col p-4 space-y-3">
+      {{ range .Site.Menus.main }}
+      <li>
+        <a href="{{ .URL }}" class="block text-gray-700 hover:text-blue-600 font-medium">
+          {{ .Name }}
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </nav>
 </header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu-mobile");
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  });
+</script>
