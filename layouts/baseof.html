@@ -6,7 +6,7 @@
     <!-- Header -->
     {{ partial "header.html" . }}
 
-    <!-- Banner (chỉ hiển thị trên mobile, ẩn ở desktop nếu cần) -->
+    <!-- Banner: Chỉ mobile -->
     <div class="block lg:hidden">
       {{ partial "banner.html" . }}
     </div>
@@ -16,7 +16,7 @@
       
       <!-- Nội dung chính -->
       <div class="lg:col-span-3 space-y-6">
-        <!-- Banner (chỉ hiện ở desktop) -->
+        <!-- Banner: Chỉ desktop -->
         <div class="hidden lg:block">
           {{ partial "banner.html" . }}
         </div>
@@ -24,13 +24,13 @@
         {{ block "main" . }}{{ end }}
       </div>
       
-      <!-- Sidebar (ẩn trên mobile, hiện trên desktop) -->
+      <!-- Sidebar: Ẩn mobile, hiện desktop -->
       <aside class="hidden lg:block lg:col-span-1 space-y-6">
         <div class="p-4 border rounded-lg bg-white">
           <h3 class="font-bold mb-2 text-lg">Danh mục</h3>
           <ul class="space-y-1">
             {{ range .Site.Menus.main }}
-              <li><a href="{{ .URL }}" class="text-gray-700 hover:text-blue-600">{{ .Name }}</a></li>
+              <li><a href="{{ .URL | relURL }}" class="text-gray-700 hover:text-blue-600">{{ .Name }}</a></li>
             {{ end }}
           </ul>
         </div>
@@ -52,8 +52,5 @@
 
     <!-- Script -->
     <script src="/js/main.js"></script>
-  </body>
-</html>
-
   </body>
 </html>

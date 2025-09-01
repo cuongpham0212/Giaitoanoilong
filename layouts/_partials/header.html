@@ -1,23 +1,68 @@
-<header class="bg-gray-100 shadow-md">
-  <div class="container mx-auto flex items-center justify-between p-4">
+<header class="bg-gray-100 shadow-md sticky top-0 z-50">
+  <!-- Banner Image -->
+  <div class="w-full">
+    <img src="{{ "images/banner.jpg" | relURL }}" alt="Banner" class="w-full h-48 object-cover">
+  </div>
+
+  <!-- Header Content -->
+  <div class="container mx-auto flex items-center justify-between p-4 relative">
     <!-- Logo -->
     <h1 class="text-2xl font-bold text-blue-600">
-      <a href="/" class="hover:text-blue-800">{{ .Site.Title }}</a>
+      <a href="{{ .Site.BaseURL }}" class="hover:text-blue-800">{{ .Site.Title }}</a>
     </h1>
 
-    <!-- Hamburger button (chỉ hiện trên mobile) -->
+    <!-- Hamburger button (mobile) -->
     <button id="menu-btn" class="p-2 border rounded bg-blue-500 text-white lg:hidden">
       ☰ MENU
     </button>
 
     <!-- Nav links -->
-    <nav id="menu" class="hidden flex-col space-y-2 absolute top-16 right-4 bg-white border rounded p-4 
-                        lg:static lg:flex lg:flex-row lg:space-y-0 lg:space-x-6 lg:border-0 lg:p-0">
+    <nav id="menu"
+      class="hidden flex-col space-y-2 absolute top-20 right-4 bg-white border rounded p-4 shadow-md
+            lg:static lg:flex lg:flex-row lg:space-y-0 lg:space-x-6 lg:border-0 lg:p-0 lg:shadow-none">
       {{ range .Site.Menus.main }}
-        <a href="{{ .URL }}" class="text-gray-700 hover:text-blue-600 font-medium">
-          {{ .Name }}
-        </a>
+        {{ if .HasChildren }}
+          <div class="group relative">
+            <a href="{{ .URL | relURL }}" class="text-gray-700 hover:text-blue-600 font-medium flex items-center">
+              {{ .Name }} ▾
+            </a>
+            <div class="hidden group-hover:block absolute top-full left-0 mt-1 bg-white border rounded shadow-lg min-w-[150px] z-50">
+              {{ range .Children }}
+                <a href="{{ .URL | relURL }}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">{{ .Name }}</a>
+              {{ end }}
+            </div>
+          </div>
+        {{ else }}
+          <a href="{{ .URL | relURL }}" class="text-gray-700 hover:text-blue-600 font-medium">
+            {{ .Name }}
+          </a>
+        {{ end }}
       {{ end }}
     </nav>
   </div>
+
+  <!-- Toggle Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuBtn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu");
+
+      // Toggle menu on mobile
+      menuBtn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+
+      // Toggle dropdowns on mobile
+      const dropdownParents = menu.querySelectorAll(".group");
+      dropdownParents.forEach(parent => {
+        parent.addEventListener("click", (e) => {
+          if (window.innerWidth < 1024) { // Only on mobile
+            e.preventDefault();
+            const dropdown = parent.querySelector("div");
+            if (dropdown) dropdown.classList.toggle("hidden");
+          }
+        });
+      });
+    });
+  </script>
 </header>
