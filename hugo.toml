@@ -1,49 +1,63 @@
-baseURL = 'https://giaitoanoilong.netlify.app/'
-languageCode = 'vi'
-title = 'Giải Tỏa Nỗi Lòng'
+baseURL = "https://ten-mien-cua-ban.com/"
+languageCode = "vi"
+title = "Tâm sự cuộc sống"
 
-[sitemap]
-  changefreq = "monthly"
-  priority = 0.5
-  filename = "sitemap.xml"
-  
-[permalinks]
-  post = "/:slug/"
-
-[params]
-  description = "Blog chia sẻ tâm sự cuộc sống, đầu tư và góc nhìn thú vị."
-  author = "Huy Cường"
+[pagination]
+  pagerSize = 10
 
 [menu]
   [[menu.main]]
     name = "Trang chủ"
     url = "/"
     weight = 1
+
   [[menu.main]]
     name = "Tâm sự cuộc sống"
     url = "/tamsu/"
     weight = 2
+
   [[menu.main]]
     name = "Đầu tư ít vốn"
     url = "/dautu/"
     weight = 3
-[[menu.main]]
+
+  [[menu.main]]
     name = "Tarot"
     url = "/tarot/"
     weight = 4
+    identifier = "tarot"
+
   [[menu.main]]
-    name = "Giới thiệu"
-    url  = "/pages/giải-tỏa-nỗi-lòng--lắng-nghe-không-phán-xét-dịch-vụ-tâm-sự-giá-rẻ-cho-người-thu-nhập-thấp/"
+    parent = "tarot"
+    name = "Nhóm Chính"
+    url = "/tarot/nhom-chinh/"
+    weight = 1
+
+  [[menu.main]]
+    parent = "tarot"
+    name = "Nhóm Gậy"
+    url = "/tarot/nhom-gay/"
+    weight = 2
+
+  [[menu.main]]
+    parent = "tarot"
+    name = "Nhóm Kiếm"
+    url = "/tarot/nhom-kiem/"
+    weight = 3
+
+  [[menu.main]]
+    parent = "tarot"
+    name = "Nhóm Ly"
+    url = "/tarot/nhom-ly/"
+    weight = 4
+
+  [[menu.main]]
+    parent = "tarot"
+    name = "Nhóm Xu"
+    url = "/tarot/nhom-xu/"
     weight = 5
 
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
-
-[outputs]
-  home = ["HTML", "RSS", "JSON"]
-
-[build]
-  writeStats = true
-
+  [[menu.main]]
+    name = "Giới thiệu"
+    url = "/gioi-thieu/"
+    weight = 6

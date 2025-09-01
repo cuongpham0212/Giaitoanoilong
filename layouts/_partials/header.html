@@ -1,9 +1,4 @@
-<header 
-  class="{{ if .IsHome }}
-           absolute top-0 left-0 w-full bg-transparent z-50
-         {{ else }}
-           bg-gray-100 shadow-md sticky top-0 z-50
-         {{ end }}">
+<header class='{{ cond .IsHome "absolute top-0 left-0 w-full bg-transparent z-50" "bg-gray-100 shadow-md sticky top-0 z-50" }}'>
 
   <!-- Thanh menu/logo -->
   <div class="container mx-auto px-4 py-3 flex items-center justify-between relative">
@@ -31,10 +26,9 @@
                 <span class="ml-2">▸</span>
               </a>
               <!-- Submenu -->
-              <div class="submenu hidden
-                          lg:absolute lg:top-0 lg:left-full lg:ml-2
-                          lg:min-w-[220px] lg:bg-white lg:border lg:rounded-xl lg:shadow-lg
-                          group-hover:block">
+              <div class="submenu absolute top-0 left-full ml-1
+                          min-w-[220px] bg-white border rounded-xl shadow-lg z-50
+                          hidden group-hover:block transition">
                 {{ range .Children }}
                   <a href="{{ .URL | relURL }}"
                      class="block px-4 py-2 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition">
@@ -56,11 +50,7 @@
     <!-- Logo -->
     <h1 class="text-2xl font-extrabold tracking-tight">
       <a href="{{ "/" | relURL }}" 
-         class="{{ if .IsHome }}
-                  text-white drop-shadow hover:text-blue-200
-                {{ else }}
-                  text-blue-700 hover:text-blue-900
-                {{ end }} transition">
+         class='{{ cond .IsHome "text-white drop-shadow hover:text-blue-200" "text-blue-700 hover:text-blue-900" }} transition'>
          {{ .Site.Title }}
       </a>
     </h1>
