@@ -1,10 +1,60 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
+<article class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-6 lg:p-10 mt-6">
 
-  {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-  {{ $dateHuman := .Date | time.Format ":date_long" }}
-  <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+  <!-- Banner nếu có -->
+  {{ with .Params.banner }}
+  <img src="{{ . }}" alt="Banner" class="w-full h-64 object-cover rounded-xl mb-6 shadow-sm">
+  {{ end }}
 
-  {{ .Content }}
-  {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+  <!-- Tiêu đề & ngày đăng -->
+  <header class="mb-8 text-center border-b pb-4">
+    <h1 class="text-4xl lg:text-5xl font-extrabold text-blue-700 mb-3 tracking-tight leading-tight">
+      {{ .Title }}
+    </h1>
+    <p class="text-sm text-gray-500 italic">
+      {{ .Date.Format "02/01/2006" }}
+    </p>
+  </header>
+
+  <!-- Nội dung bài viết (canh lề đều) -->
+  <div class="prose prose-lg max-w-none text-gray-800 leading-relaxed text-justify">
+    {{ .Content }}
+  </div>
+
+  <!-- Tag bài viết -->
+  <div class="mt-8 text-center">
+    {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+  </div>
+
+  <!-- Bài viết liên quan -->
+  <section class="mt-12 mb-10">
+    <h2 class="text-2xl font-bold mb-6 text-center text-gray-800">Bài viết liên quan</h2>
+    <div class="grid gap-4 md:grid-cols-2">
+      {{ range first 4 (where .Site.RegularPages "Section" .Section) }}
+        {{ if ne .Permalink $.Permalink }}
+        <a href="{{ .Permalink }}" 
+           class="block p-4 border rounded-xl hover:shadow-md transition bg-gray-50 hover:bg-white text-justify">
+          <h3 class="text-lg font-semibold text-blue-600">{{ .Title }}</h3>
+          <p class="text-sm text-gray-500 mt-1">{{ .Date.Format "02/01/2006" }}</p>
+        </a>
+        {{ end }}
+      {{ end }}
+    </div>
+  </section>
+
+  <!-- Nút chia sẻ -->
+  <div class="mt-8 flex justify-center gap-4">
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" 
+       target="_blank" rel="noopener"
+       class="px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">Chia sẻ Facebook</a>
+    <a href="https://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ .Title }}" 
+       target="_blank" rel="noopener"
+       class="px-4 py-2 bg-sky-500 text-white rounded-full hover:bg-sky-600 transition">Chia sẻ Twitter</a>
+  </div>
+
+  <!-- Nút quay lại -->
+  <footer class="mt-10 text-center">
+    <a href="{{ .Section | relURL }}" class="text-gray-600 hover:text-blue-600">← Quay lại {{ .Section }}</a>
+  </footer>
+</article>
 {{ end }}

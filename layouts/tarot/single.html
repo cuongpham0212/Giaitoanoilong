@@ -16,6 +16,12 @@
   <!-- Kết quả -->
   <div id="tarotResult" class="tarot-result"></div>
   <div id="tarotSummary" class="tarot-summary"></div>
+
+  <!-- Box gợi ý đặt lịch -->
+  <div id="tarotBooking" class="mystic-box" style="display:none;">
+    <p>✨ Vũ trụ đã gửi đi thông điệp... nhưng nếu bạn vẫn còn băn khoăn, hãy để những lá bài mở ra con đường riêng cho bạn.</p>
+    <a href="https://calendly.com/your-booking-link" target="_blank" class="mystic-btn">🔮 Đặt Lịch Trải Bài Riêng</a>
+  </div>
 </div>
 
 <script>
@@ -37,10 +43,12 @@
     const btn = document.getElementById("drawBtn");
     const res = document.getElementById("tarotResult");
     const sum = document.getElementById("tarotSummary");
+    const booking = document.getElementById("tarotBooking");
 
     btn.addEventListener("click", () => {
       res.innerHTML = "";
       sum.innerHTML = "";
+      booking.style.display = "none";
 
       if (!tarotData || tarotData.length === 0) {
         res.innerHTML = "<p style='color:red'>Không có dữ liệu tarot!</p>";
@@ -67,6 +75,7 @@
           <p><strong>Thách thức:</strong> ${cards[1].intro}</p>
           <p><strong>Hướng đi phía trước:</strong> ${cards[2].intro}</p>
         `;
+        booking.style.display = "block";
       }
     });
   });
@@ -74,8 +83,6 @@
 
 <style>
   .tarot-container { text-align:center; padding:20px; }
-
-  /* Tiêu đề lớn, huyền bí */
   .tarot-title {
     font-size: 2.2em;
     color: #6a1b9a;
@@ -84,15 +91,12 @@
     font-family: 'Georgia', serif;
     letter-spacing: 1px;
   }
-
-  /* Câu mô tả mềm mại hơn */
   .tarot-subtitle {
     font-size: 1.3em;
     color: #8e24aa;
     margin-bottom: 25px;
     font-style: italic;
   }
-
   .btn-wrap { display:flex; justify-content:center; margin:20px 0; }
   .tarot-btn { padding:12px 24px; font-size:1.2em; background:#ff6f61; color:#fff; border:none; border-radius:8px; cursor:pointer; transition:0.3s; }
   .tarot-btn:hover { background:#ff3b2e; transform:scale(1.05); }
@@ -104,5 +108,37 @@
   .detail-link:hover { text-decoration:underline; }
   .tarot-summary { max-width:600px; margin:30px auto; text-align:left; background:#f9f9f9; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
   .tarot-summary h2 { text-align:center; margin-bottom:15px; }
+  /* Box gợi ý đặt lịch */
+  .mystic-box {
+    margin: 25px auto;
+    max-width: 600px;
+    background: #2e003e;
+    color: #f3e5f5;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(150, 0, 200, 0.4);
+    animation: fadeIn 1.2s ease-in-out;
+  }
+  .mystic-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 15px;
+    background: #ff4081;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(255, 64, 129, 0.4);
+  }
+  .mystic-btn:hover {
+    background: #f50057;
+    transform: scale(1.05);
+  }
+  @keyframes fadeIn {
+    from {opacity: 0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
 </style>
 {{ end }}

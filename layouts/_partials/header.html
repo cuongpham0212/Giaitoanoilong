@@ -22,12 +22,12 @@
             lg:static lg:flex lg:flex-row lg:space-y-0 lg:space-x-6 lg:border-0 lg:p-0 lg:shadow-none transition-all duration-300">
       {{ range .Site.Menus.main }}
         {{ if .HasChildren }}
-          <div class="group relative">
+          <div class="group relative submenu-parent">
             <a href="{{ .URL | relURL }}" 
-               class="text-gray-700 hover:text-blue-600 hover:font-bold transition flex items-center">
+               class="flex items-center text-gray-700 hover:text-blue-600 hover:font-bold transition">
               {{ .Name }} ▾
             </a>
-            <div class="hidden absolute top-full left-0 mt-1 bg-white border rounded shadow-lg min-w-[180px] opacity-0 group-hover:opacity-100 group-hover:block transform scale-y-0 group-hover:scale-y-100 origin-top transition-all duration-200">
+            <div class="submenu hidden absolute top-full left-0 mt-1 bg-white border rounded shadow-lg min-w-[180px] transform origin-top transition-all duration-300 ease-out scale-y-0 opacity-0">
               {{ range .Children }}
                 <a href="{{ .URL | relURL }}" 
                    class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 hover:font-semibold transition">
@@ -51,25 +51,59 @@
   document.addEventListener("DOMContentLoaded", function () {
     const menuBtn = document.getElementById("menu-btn");
     const menu = document.getElementById("menu");
-    const dropdownParents = menu.querySelectorAll(".group");
+    const submenuParents = document.querySelectorAll(".submenu-parent");
 
     // Toggle menu mobile
     menuBtn.addEventListener("click", () => {
       menu.classList.toggle("hidden");
     });
 
-    // Dropdown cho mobile
-    dropdownParents.forEach(parent => {
+    // Submenu animation for desktop & mobile
+    submenuParents.forEach(parent => {
+      const submenu = parent.querySelector(".submenu");
+      
+      // Hover mở submenu trên desktop
+      parent.addEventListener("mouseenter", () => {
+        if (window.innerWidth >= 1024) {
+          submenu.classList.remove("hidden");
+          setTimeout(() => {
+            submenu.classList.remove("opacity-0", "scale-y-0");
+          }, 10);
+        }
+      });
+
+      parent.addEventListener("mouseleave", () => {
+        if (window.innerWidth >= 1024) {
+          submenu.classList.add("opacity-0", "scale-y-0");
+          setTimeout(() => submenu.classList.add("hidden"), 300);
+        }
+      });
+
+      // Click mở submenu trên mobile
       parent.addEventListener("click", (e) => {
         if (window.innerWidth < 1024) {
           e.preventDefault();
-          const dropdown = parent.querySelector("div");
-          if (dropdown) {
-            dropdown.classList.toggle("hidden");
-            dropdown.classList.toggle("opacity-0");
-          }
+          submenu.classList.toggle("hidden");
+          submenu.classList.toggle("opacity-0");
+          submenu.classList.toggle("scale-y-0");
         }
       });
     });
   });
 </script>
+
+<style>
+  /* Transition submenu mượt */
+  .submenu {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: top;
+  }
+  /* Hover item */
+  nav a {
+    transition: all 0.2s ease;
+  }
+  nav a:hover {
+    color: #1d4ed8;
+    font-weight: bold;
+  }
+</style>

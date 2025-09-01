@@ -27,7 +27,7 @@
 
   
   
-  <link rel="stylesheet" href="/css/main.min.135104687fc6e58e6a67de862914dcced6e155dbc7dd133fadf8c1e2de77e28a.css">
+  <link rel="stylesheet" href="/css/main.min.60481a9deb3035a3032e42a9a9c583f44ebaa7ea1119c4ada8907bd08040fad5.css">
 
   
   <link rel="icon" href='/favicon.ico' type="image/x-icon">
@@ -130,7 +130,7 @@
   document.addEventListener("DOMContentLoaded", function () {
     const menuBtn = document.getElementById("menu-btn");
     const menu = document.getElementById("menu");
-    const dropdownParents = menu.querySelectorAll(".group");
+    const submenuParents = document.querySelectorAll(".submenu-parent");
 
     
     menuBtn.addEventListener("click", () => {
@@ -138,20 +138,54 @@
     });
 
     
-    dropdownParents.forEach(parent => {
+    submenuParents.forEach(parent => {
+      const submenu = parent.querySelector(".submenu");
+      
+      
+      parent.addEventListener("mouseenter", () => {
+        if (window.innerWidth >= 1024) {
+          submenu.classList.remove("hidden");
+          setTimeout(() => {
+            submenu.classList.remove("opacity-0", "scale-y-0");
+          }, 10);
+        }
+      });
+
+      parent.addEventListener("mouseleave", () => {
+        if (window.innerWidth >= 1024) {
+          submenu.classList.add("opacity-0", "scale-y-0");
+          setTimeout(() => submenu.classList.add("hidden"), 300);
+        }
+      });
+
+      
       parent.addEventListener("click", (e) => {
         if (window.innerWidth < 1024) {
           e.preventDefault();
-          const dropdown = parent.querySelector("div");
-          if (dropdown) {
-            dropdown.classList.toggle("hidden");
-            dropdown.classList.toggle("opacity-0");
-          }
+          submenu.classList.toggle("hidden");
+          submenu.classList.toggle("opacity-0");
+          submenu.classList.toggle("scale-y-0");
         }
       });
     });
   });
 </script>
+
+<style>
+   
+  .submenu {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: top;
+  }
+   
+  nav a {
+    transition: all 0.2s ease;
+  }
+  nav a:hover {
+    color: #1d4ed8;
+    font-weight: bold;
+  }
+</style>
 
 
     

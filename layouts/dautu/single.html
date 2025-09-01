@@ -18,7 +18,7 @@
     {{ .Content }}
   </div>
 
-  <!-- Bài viết liên quan dạng grid card -->
+  <!-- Bài viết liên quan -->
   <section class="mt-14">
     <h2 class="text-2xl font-bold mb-6 text-center text-gray-800">Bài viết liên quan</h2>
     <div class="grid gap-6 md:grid-cols-2">
@@ -43,11 +43,54 @@
 
   <!-- Nút chia sẻ -->
   <div class="mt-10 flex justify-center gap-4 flex-wrap">
-    <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank" rel="noopener"
-       class="px-5 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition shadow-md">Facebook</a>
-    <a href="https://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ .Title }}" target="_blank" rel="noopener"
-       class="px-5 py-2 bg-sky-500 text-white rounded-full hover:bg-sky-600 transition shadow-md">Twitter</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" 
+       target="_blank" rel="noopener"
+       class="share-btn bg-blue-600 hover:bg-blue-700">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <a href="https://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ .Title }}" 
+       target="_blank" rel="noopener"
+       class="share-btn bg-sky-500 hover:bg-sky-600">
+      <i class="fab fa-twitter"></i>
+    </a>
+
+    <a href="https://zalo.me/share?url={{ .Permalink }}" 
+       target="_blank" rel="noopener"
+       class="share-btn bg-green-500 hover:bg-green-600">
+      Z
+    </a>
+
+    <button onclick="copyLink()" 
+       class="share-btn bg-gray-600 hover:bg-gray-700">
+      <i class="fas fa-link"></i>
+    </button>
   </div>
+
+  <script>
+  function copyLink() {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      alert("Đã copy link bài viết!");
+    });
+  }
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <style>
+    .share-btn {
+      width: 40px; height: 40px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 50%;
+      color: white;
+      font-size: 18px;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .share-btn:hover {
+      transform: scale(1.1);
+    }
+  </style>
 
   <!-- Nút Donate & Book lịch -->
   <div class="mt-10 flex flex-wrap justify-center gap-4">
@@ -61,7 +104,6 @@
     </a>
   </div>
 
-  <!-- Nút quay lại -->
   <footer class="mt-12 text-center border-t pt-6">
     <a href="{{ .Section | relURL }}" class="text-gray-600 hover:text-blue-600 transition">
       ← Quay lại {{ .Section }}
