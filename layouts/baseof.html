@@ -6,16 +6,26 @@
     <!-- Header -->
     {{ partial "header.html" . }}
 
+    <!-- Banner (chỉ hiển thị trên mobile, ẩn ở desktop nếu cần) -->
+    <div class="block lg:hidden">
+      {{ partial "banner.html" . }}
+    </div>
+
     <!-- Main Content -->
     <main class="container mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-4 gap-8 flex-grow">
       
       <!-- Nội dung chính -->
-      <div class="lg:col-span-3">
+      <div class="lg:col-span-3 space-y-6">
+        <!-- Banner (chỉ hiện ở desktop) -->
+        <div class="hidden lg:block">
+          {{ partial "banner.html" . }}
+        </div>
+
         {{ block "main" . }}{{ end }}
       </div>
       
-      <!-- Sidebar -->
-      <aside class="lg:col-span-1 space-y-6">
+      <!-- Sidebar (ẩn trên mobile, hiện trên desktop) -->
+      <aside class="hidden lg:block lg:col-span-1 space-y-6">
         <div class="p-4 border rounded-lg bg-white">
           <h3 class="font-bold mb-2 text-lg">Danh mục</h3>
           <ul class="space-y-1">
