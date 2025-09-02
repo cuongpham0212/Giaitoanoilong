@@ -3,10 +3,7 @@ title = "Ý Nghĩa Judgement Trong Tarot"
 description = "Khám phá ý nghĩa lá Judgement thuộc Major Arcana trong Tarot – mang thông điệp sâu sắc về hành trình cuộc đời."
 keywords = ["Judgement", "ý nghĩa lá bài Tarot", "Major Arcana", "ý nghĩa Judgement"]
 slug = "judgement"
-
-[menu.main]
-name = "Judgement"
-parent = "Major Arcana"
+mame = "Judgement"
 weight = 21
 +++
 

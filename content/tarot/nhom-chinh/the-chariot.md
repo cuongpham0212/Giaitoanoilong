@@ -4,9 +4,8 @@ description = "Khám phá ý nghĩa lá The Chariot thuộc Major Arcana trong T
 keywords = ["The Chariot", "ý nghĩa lá bài Tarot", "Major Arcana", "ý nghĩa The Chariot"]
 slug = "the-chariot"
 
-[menu.main]
 name = "The Chariot"
-parent = "Major Arcana"
+
 weight = 8
 +++
 

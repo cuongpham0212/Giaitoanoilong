@@ -3,10 +3,8 @@ title = "Ý Nghĩa The World Trong Tarot"
 description = "Khám phá ý nghĩa lá The World thuộc Major Arcana trong Tarot – mang thông điệp sâu sắc về hành trình cuộc đời."
 keywords = ["The World", "ý nghĩa lá bài Tarot", "Major Arcana", "ý nghĩa The World"]
 slug = "the-world"
-
-[menu.main]
 name = "The World"
-parent = "Major Arcana"
+
 weight = 22
 +++
 

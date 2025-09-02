@@ -4,9 +4,8 @@ description = "Khám phá ý nghĩa lá The High Priestess thuộc Major Arcana 
 keywords = ["The High Priestess", "ý nghĩa lá bài Tarot", "Major Arcana", "ý nghĩa The High Priestess"]
 slug = "the-high-priestess"
 
-[menu.main]
 name = "The High Priestess"
-parent = "Major Arcana"
+
 weight = 3
 +++
 

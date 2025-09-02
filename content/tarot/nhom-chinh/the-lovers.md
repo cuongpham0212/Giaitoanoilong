@@ -4,9 +4,8 @@ description = "Khám phá ý nghĩa lá The Lovers thuộc Major Arcana trong Ta
 keywords = ["The Lovers", "ý nghĩa lá bài Tarot", "Major Arcana", "ý nghĩa The Lovers"]
 slug = "the-lovers"
 
-[menu.main]
 name = "The Lovers"
-parent = "Major Arcana"
+
 weight = 7
 +++
 

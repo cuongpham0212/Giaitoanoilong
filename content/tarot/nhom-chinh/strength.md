@@ -4,9 +4,7 @@ description = "Khám phá ý nghĩa lá Strength thuộc Major Arcana trong Taro
 keywords = ["Strength", "ý nghĩa lá bài Tarot", "Major Arcana", "ý nghĩa Strength"]
 slug = "strength"
 
-[menu.main]
 name = "Strength"
-parent = "Major Arcana"
 weight = 9
 +++
 

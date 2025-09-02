@@ -4,9 +4,8 @@ description = "Khám phá ý nghĩa lá Wheel of Fortune thuộc Major Arcana tr
 keywords = ["Wheel of Fortune", "ý nghĩa lá bài Tarot", "Major Arcana", "ý nghĩa Wheel of Fortune"]
 slug = "wheel-of-fortune"
 
-[menu.main]
 name = "Wheel of Fortune"
-parent = "Major Arcana"
+ 
 weight = 11
 +++
 

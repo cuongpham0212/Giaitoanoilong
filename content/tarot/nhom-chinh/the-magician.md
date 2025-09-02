@@ -4,9 +4,7 @@ description = "Khám phá ý nghĩa lá The Magician thuộc Major Arcana trong 
 keywords = ["The Magician", "ý nghĩa lá bài Tarot", "Major Arcana", "ý nghĩa The Magician"]
 slug = "the-magician"
 
-[menu.main]
 name = "The Magician"
-parent = "Major Arcana"
 weight = 2
 +++
 

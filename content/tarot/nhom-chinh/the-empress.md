@@ -4,9 +4,8 @@ description = "Khám phá ý nghĩa lá The Empress thuộc Major Arcana trong T
 keywords = ["The Empress", "ý nghĩa lá bài Tarot", "Major Arcana", "ý nghĩa The Empress"]
 slug = "the-empress"
 
-[menu.main]
 name = "The Empress"
-parent = "Major Arcana"
+
 weight = 4
 +++
 

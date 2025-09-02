@@ -4,9 +4,8 @@ description = "Khám phá ý nghĩa lá The Sun thuộc Major Arcana trong Tarot
 keywords = ["The Sun", "ý nghĩa lá bài Tarot", "Major Arcana", "ý nghĩa The Sun"]
 slug = "the-sun"
 
-[menu.main]
 name = "The Sun"
-parent = "Major Arcana"
+
 weight = 20
 +++
 

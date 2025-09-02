@@ -4,9 +4,8 @@ description = "Khám phá ý nghĩa lá The Star thuộc Major Arcana trong Taro
 keywords = ["The Star", "ý nghĩa lá bài Tarot", "Major Arcana", "ý nghĩa The Star"]
 slug = "the-star"
 
-[menu.main]
 name = "The Star"
-parent = "Major Arcana"
+
 weight = 18
 +++
 

@@ -24,17 +24,23 @@
   <nav id="site-menu"
        class="hidden absolute left-2 top-[100%] mt-2 z-[10000] bg-white border rounded-2xl shadow-lg p-3 flex flex-col space-y-1 w-64 relative">
     {{ range .Site.Menus.main }}
-      {{ if and (not .Parent) .Menu }} <!-- chỉ render menu cha có khai báo -->
+      {{ if not .Parent }} <!-- chỉ render menu cha -->
         <div class="relative inline-block w-full">
           {{ if .HasChildren }}
-            {{ $id := printf "sm-%s" (urlize .Identifier) }}
-            <!-- Nút menu cha -->
-            <button type="button"
-                    class="submenu-btn w-full text-left px-3 py-2 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-700 transition flex items-center justify-between"
-                    aria-controls="{{ $id }}" aria-expanded="false">
-              <span>{{ .Name }}</span>
-              <span class="ml-1">▸</span>
-            </button>
+            {{ $id := printf "sm-%s" (urlize .Name) }}
+
+            <!-- Hàng menu cha: link + nút xổ -->
+            <div class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-blue-50">
+              <a href="{{ .URL | relURL }}" 
+                 class="text-gray-800 hover:text-blue-700 transition">
+                {{ .Name }}
+              </a>
+              <button type="button"
+                      class="submenu-toggle ml-2 text-gray-600 hover:text-blue-700 transition"
+                      aria-controls="{{ $id }}" aria-expanded="false">
+                ▸
+              </button>
+            </div>
 
             <!-- Submenu xổ ngang -->
             <div id="{{ $id }}"

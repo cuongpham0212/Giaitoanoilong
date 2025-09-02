@@ -4,9 +4,7 @@ description = "Khám phá ý nghĩa lá The Hanged Man thuộc Major Arcana tron
 keywords = ["The Hanged Man", "ý nghĩa lá bài Tarot", "Major Arcana", "ý nghĩa The Hanged Man"]
 slug = "the-hanged-man"
 
-[menu.main]
 name = "The Hanged Man"
-parent = "Major Arcana"
 weight = 13
 +++
 

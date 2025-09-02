@@ -4,9 +4,7 @@ description = "Khám phá ý nghĩa lá The Hierophant thuộc Major Arcana tron
 keywords = ["The Hierophant", "ý nghĩa lá bài Tarot", "Major Arcana", "ý nghĩa The Hierophant"]
 slug = "the-hierophant"
 
-[menu.main]
 name = "The Hierophant"
-parent = "Major Arcana"
 weight = 6
 +++
 

@@ -6,7 +6,7 @@ slug = "the-devil"
 
 [menu.main]
 name = "The Devil"
-parent = "Major Arcana"
+
 weight = 16
 +++
 

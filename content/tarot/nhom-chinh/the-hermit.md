@@ -4,9 +4,7 @@ description = "Khám phá ý nghĩa lá The Hermit thuộc Major Arcana trong Ta
 keywords = ["The Hermit", "ý nghĩa lá bài Tarot", "Major Arcana", "ý nghĩa The Hermit"]
 slug = "the-hermit"
 
-[menu.main]
 name = "The Hermit"
-parent = "Major Arcana"
 weight = 10
 +++
 

@@ -4,9 +4,7 @@ description = "Khám phá ý nghĩa lá Justice thuộc Major Arcana trong Tarot
 keywords = ["Justice", "ý nghĩa lá bài Tarot", "Major Arcana", "ý nghĩa Justice"]
 slug = "justice"
 
-[menu.main]
 name = "Justice"
-parent = "Major Arcana"
 weight = 12
 +++
 

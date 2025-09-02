@@ -3,10 +3,8 @@ title = "Ý Nghĩa The Tower Trong Tarot"
 description = "Khám phá ý nghĩa lá The Tower thuộc Major Arcana trong Tarot – mang thông điệp sâu sắc về hành trình cuộc đời."
 keywords = ["The Tower", "ý nghĩa lá bài Tarot", "Major Arcana", "ý nghĩa The Tower"]
 slug = "the-tower"
-
-[menu.main]
 name = "The Tower"
-parent = "Major Arcana"
+
 weight = 17
 +++
 

@@ -4,9 +4,8 @@ description = "Khám phá ý nghĩa lá The Moon thuộc Major Arcana trong Taro
 keywords = ["The Moon", "ý nghĩa lá bài Tarot", "Major Arcana", "ý nghĩa The Moon"]
 slug = "the-moon"
 
-[menu.main]
 name = "The Moon"
-parent = "Major Arcana"
+
 weight = 19
 +++
 

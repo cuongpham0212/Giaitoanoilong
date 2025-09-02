@@ -4,9 +4,8 @@ description = "Khám phá ý nghĩa lá The Fool thuộc Major Arcana trong Taro
 keywords = ["The Fool", "ý nghĩa lá bài Tarot", "Major Arcana", "ý nghĩa The Fool"]
 slug = "the-fool"
 
-[menu.main]
 name = "The Fool"
-parent = "Major Arcana"
+
 weight = 1
 +++
 

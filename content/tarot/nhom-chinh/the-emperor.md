@@ -4,9 +4,8 @@ description = "Khám phá ý nghĩa lá The Emperor thuộc Major Arcana trong T
 keywords = ["The Emperor", "ý nghĩa lá bài Tarot", "Major Arcana", "ý nghĩa The Emperor"]
 slug = "the-emperor"
 
-[menu.main]
 name = "The Emperor"
-parent = "Major Arcana"
+
 weight = 5
 +++
 

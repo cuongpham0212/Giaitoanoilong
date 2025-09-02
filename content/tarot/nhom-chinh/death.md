@@ -3,10 +3,7 @@ title = "Ý Nghĩa Death Trong Tarot"
 description = "Khám phá ý nghĩa lá Death thuộc Major Arcana trong Tarot – mang thông điệp sâu sắc về hành trình cuộc đời."
 keywords = ["Death", "ý nghĩa lá bài Tarot", "Major Arcana", "ý nghĩa Death"]
 slug = "death"
-
-[menu.main]
 name = "Death"
-parent = "Major Arcana"
 weight = 14
 +++
 

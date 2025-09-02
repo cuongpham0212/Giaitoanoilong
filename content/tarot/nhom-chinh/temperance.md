@@ -4,9 +4,8 @@ description = "Khám phá ý nghĩa lá Temperance thuộc Major Arcana trong Ta
 keywords = ["Temperance", "ý nghĩa lá bài Tarot", "Major Arcana", "ý nghĩa Temperance"]
 slug = "temperance"
 
-[menu.main]
 name = "Temperance"
-parent = "Major Arcana"
+
 weight = 15
 +++
 
