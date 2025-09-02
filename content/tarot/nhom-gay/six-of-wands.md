@@ -7,7 +7,7 @@ slug = "six-of-wands"
 [menu.main]
 name = "Six of Wands"
 parent = "Nhóm Gậy"
-weight = 1
+weight = 6
 +++
 
 ## Ý Nghĩa Lá Six of Wands Trong Tarot

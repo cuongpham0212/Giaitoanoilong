@@ -7,7 +7,7 @@ slug = "three-of-wands"
 [menu.main]
 name = "Three of Wands"
 parent = "Nhóm Gậy"
-weight = 1
+weight = 3
 +++
 
 ## Ý Nghĩa Lá Three of Wands Trong Tarot

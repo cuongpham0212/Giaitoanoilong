@@ -7,7 +7,7 @@ slug = "five-of-wands"
 [menu.main]
 name = "Five of Wands"
 parent = "Nhóm Gậy"
-weight = 1
+weight = 5
 +++
 
 ## Ý Nghĩa Lá Five of Wands Trong Tarot

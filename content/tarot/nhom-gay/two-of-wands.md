@@ -7,7 +7,7 @@ slug = "two-of-wands"
 [menu.main]
 name = "Two of Wands"
 parent = "Nhóm Gậy"
-weight = 1
+weight = 2
 +++
 
 ## Ý Nghĩa Lá Two of Wands Trong Tarot

@@ -7,7 +7,7 @@ slug = "seven-of-wands"
 [menu.main]
 name = "Seven of Wands"
 parent = "Nhóm Gậy"
-weight = 1
+weight = 7
 +++
 
 ## Ý Nghĩa Lá Seven of Wands Trong Tarot

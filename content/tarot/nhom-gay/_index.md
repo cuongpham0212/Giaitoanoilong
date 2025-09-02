@@ -2,7 +2,6 @@
 title = "Ý Nghĩa Nhóm Gậy (Bộ Wands) Trong Tarot"
 description = "Khám phá ý nghĩa Nhóm Gậy trong Tarot – biểu tượng cho năng lượng, đam mê và sáng tạo. Dành cho người mới học Tarot muốn hiểu sâu hơn về từng lá bài trong nhóm này."
 keywords = ["Nhóm Gậy Tarot", "Bộ Wands", "ý nghĩa Tarot", "tarot cho người mới"]
-slug = "nhom-gay"
 
 [menu.main]
 name = "Nhóm Gậy"

@@ -7,7 +7,7 @@ slug = "page-of-wands"
 [menu.main]
 name = "Page of Wands"
 parent = "Nhóm Gậy"
-weight = 1
+weight = 11
 +++
 
 ## Ý Nghĩa Lá Page of Wands Trong Tarot

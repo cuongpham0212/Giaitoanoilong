@@ -1,5 +1,6 @@
 import os
 
+# Danh sách các lá bài trong Nhóm Kiếm (Swords)
 cards = [
     "Ace of Swords", "Two of Swords", "Three of Swords", "Four of Swords",
     "Five of Swords", "Six of Swords", "Seven of Swords", "Eight of Swords",
@@ -7,38 +8,45 @@ cards = [
     "Queen of Swords", "King of Swords"
 ]
 
+# Thư mục chứa file .md
 folder = "content/tarot/nhom-kiem"
 os.makedirs(folder, exist_ok=True)
 
-for card in cards:
+# Tạo từng file .md
+for i, card in enumerate(cards, start=1):
     slug = card.lower().replace(" ", "-")
-    filename = f"{folder}/{slug}.md"
+    filename = os.path.join(folder, f"{slug}.md")
     with open(filename, "w", encoding="utf-8") as f:
         f.write(f"""+++
 title = "Ý Nghĩa {card} Trong Tarot"
-description = "Ý nghĩa lá {card} trong Nhóm Kiếm (Swords) – đại diện cho trí tuệ, thử thách và sự thật."
-keywords = ["{card}", "ý nghĩa lá bài Tarot", "Swords", "ý nghĩa {card}"]
+description = "Khám phá ý nghĩa lá {card} trong Tarot - thông điệp về cuộc sống, tình yêu và sự nghiệp."
+keywords = ["{card}", "ý nghĩa lá bài Tarot", "Tarot cho người mới", "ý nghĩa {card}"]
 slug = "{slug}"
 
 [menu.main]
 name = "{card}"
 parent = "Nhóm Kiếm"
-weight = 2
+weight = {i}
 +++
 
-## Ý Nghĩa Lá {card} Trong Tarot (Nhóm Kiếm)
+## Ý Nghĩa Lá {card} Trong Tarot
 
-Lá **{card}** thuộc nhóm Kiếm, biểu trưng cho trí tuệ, xung đột và thử thách trong cuộc sống.  
+Lá **{card}** mang thông điệp đặc biệt trong hành trình Tarot.  
+Tùy vào bối cảnh trải bài, ý nghĩa có thể khác nhau:
 
 ### Khi lá bài xuôi:
-- Lý trí, sự thật được soi sáng  
-- Vượt qua thử thách bằng tư duy  
+- Ý nghĩa tích cực  
+- Cơ hội, thuận lợi  
 
 ### Khi lá bài ngược:
-- Bế tắc, lo âu  
-- Sự thật bị che giấu  
+- Thách thức, cản trở  
+- Cần xem xét lại kế hoạch  
 
 ---
+
+## Liên quan:
+- [Rút bài Tarot 3 lá](../../)
+- [Ý nghĩa Nhóm Kiếm](../)
 """)
 
-print("✅ Đã tạo xong 14 file .md trong folder:", folder)
+print("✅ Đã tạo xong 14 file Nhóm Kiếm trong folder:", folder)

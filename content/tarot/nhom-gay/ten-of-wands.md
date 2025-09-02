@@ -7,7 +7,7 @@ slug = "ten-of-wands"
 [menu.main]
 name = "Ten of Wands"
 parent = "Nhóm Gậy"
-weight = 1
+weight = 10
 +++
 
 ## Ý Nghĩa Lá Ten of Wands Trong Tarot

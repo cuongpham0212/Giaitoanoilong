@@ -7,7 +7,7 @@ slug = "four-of-wands"
 [menu.main]
 name = "Four of Wands"
 parent = "Nhóm Gậy"
-weight = 1
+weight = 4
 +++
 
 ## Ý Nghĩa Lá Four of Wands Trong Tarot

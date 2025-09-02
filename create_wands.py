@@ -1,6 +1,6 @@
 import os
 
-# Danh sách các lá bài trong Nhóm Gậy
+# Danh sách các lá bài trong Nhóm Gậy (Wands)
 cards = [
     "Ace of Wands", "Two of Wands", "Three of Wands", "Four of Wands",
     "Five of Wands", "Six of Wands", "Seven of Wands", "Eight of Wands",
@@ -13,9 +13,9 @@ folder = "content/tarot/nhom-gay"
 os.makedirs(folder, exist_ok=True)
 
 # Tạo từng file .md
-for card in cards:
+for i, card in enumerate(cards, start=1):
     slug = card.lower().replace(" ", "-")
-    filename = f"{folder}/{slug}.md"
+    filename = os.path.join(folder, f"{slug}.md")
     with open(filename, "w", encoding="utf-8") as f:
         f.write(f"""+++
 title = "Ý Nghĩa {card} Trong Tarot"
@@ -26,7 +26,7 @@ slug = "{slug}"
 [menu.main]
 name = "{card}"
 parent = "Nhóm Gậy"
-weight = 1
+weight = {i}
 +++
 
 ## Ý Nghĩa Lá {card} Trong Tarot
@@ -49,4 +49,4 @@ Tùy vào bối cảnh trải bài, ý nghĩa có thể khác nhau:
 - [Ý nghĩa Nhóm Gậy](../)
 """)
 
-print("✅ Đã tạo xong 14 file .md trong folder:", folder)
+print("✅ Đã tạo xong 14 file Nhóm Gậy trong folder:", folder)

@@ -7,7 +7,7 @@ slug = "knight-of-wands"
 [menu.main]
 name = "Knight of Wands"
 parent = "Nhóm Gậy"
-weight = 1
+weight = 12
 +++
 
 ## Ý Nghĩa Lá Knight of Wands Trong Tarot

@@ -7,7 +7,7 @@ slug = "eight-of-wands"
 [menu.main]
 name = "Eight of Wands"
 parent = "Nhóm Gậy"
-weight = 1
+weight = 8
 +++
 
 ## Ý Nghĩa Lá Eight of Wands Trong Tarot

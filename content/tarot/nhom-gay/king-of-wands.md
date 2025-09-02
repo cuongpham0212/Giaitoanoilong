@@ -7,7 +7,7 @@ slug = "king-of-wands"
 [menu.main]
 name = "King of Wands"
 parent = "Nhóm Gậy"
-weight = 1
+weight = 14
 +++
 
 ## Ý Nghĩa Lá King of Wands Trong Tarot

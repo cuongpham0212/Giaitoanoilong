@@ -7,7 +7,7 @@ slug = "queen-of-wands"
 [menu.main]
 name = "Queen of Wands"
 parent = "Nhóm Gậy"
-weight = 1
+weight = 13
 +++
 
 ## Ý Nghĩa Lá Queen of Wands Trong Tarot
