@@ -4,6 +4,7 @@ description = "Khám phá ý nghĩa Nhóm Gậy trong Tarot – biểu tượng 
 keywords = ["Nhóm Gậy Tarot", "Bộ Wands", "ý nghĩa Tarot", "tarot cho người mới"]
 
 [menu.main]
+identifier = "nhom-gay"
 name = "Nhóm Gậy"
 parent = "Tarot"
 weight = 1

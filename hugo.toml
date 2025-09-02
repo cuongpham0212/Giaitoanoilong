@@ -13,6 +13,8 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
   pagerSize = 10
 
 [menu]
+
+  # Menu chính
   [[menu.main]]
     name = "Trang chủ"
     url = "/"
@@ -28,12 +30,14 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
     url = "/dautu/"
     weight = 3
 
+  # Menu cha Tarot
   [[menu.main]]
     name = "Tarot"
     url = "/tarot/"
     weight = 4
     identifier = "tarot"
 
+  # Các nhóm trong Tarot
   [[menu.main]]
     parent = "tarot"
     name = "Nhóm Chính"
@@ -64,6 +68,7 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
     url = "/tarot/nhom-xu/"
     weight = 5
 
+  # Giới thiệu
   [[menu.main]]
     name = "Giới thiệu"
     url = "/gioi-thieu/"
