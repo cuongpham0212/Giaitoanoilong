@@ -2,7 +2,6 @@ baseURL = "https://giaitoanoilong.netlify.app/"
 languageCode = "vi"
 title = "Tâm sự cuộc sống"
 
-# Kích hoạt sitemap
 [sitemap]
   changefreq = "monthly"
   priority = 0.5
@@ -66,4 +65,4 @@ title = "Tâm sự cuộc sống"
   [[menu.main]]
     name = "Giới thiệu"
     url = "/gioi-thieu/"
-    weight = 5
+    weight = 6

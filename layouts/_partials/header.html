@@ -1,49 +1,52 @@
-<header class='{{ cond .IsHome "absolute top-0 left-0 w-full bg-transparent z-50" "bg-gray-100 shadow-md sticky top-0 z-50" }}'>
-
-  <!-- Thanh menu/logo -->
+<header class='{{ cond .IsHome "absolute top-0 left-0 w-full bg-transparent z-[9999] isolate" "bg-gray-100 shadow-md sticky top-0 z-[9999] isolate" }}'>
   <div class="container mx-auto px-4 py-3 flex items-center justify-between relative">
-    
+
     <!-- MENU + Nút -->
     <div class="flex items-center gap-3 relative">
       <button id="menu-btn"
               class="p-2 rounded-lg bg-blue-600 text-white shadow hover:bg-blue-700 transition"
-              aria-controls="site-menu" aria-expanded="false" aria-label="Mở menu">
+              aria-controls="site-menu" aria-expanded="false" aria-label="Mở menu" type="button">
         ☰ MENU
       </button>
 
-      <!-- Nav -->
+      <!-- Backdrop để bắt click ra ngoài -->
+      <div id="menu-backdrop" class="hidden fixed inset-0 bg-black/30 z-[9998]"></div>
+
+      <!-- Nav: dropdown dọc, không dùng absolute layer chồng chéo -->
       <nav id="site-menu"
-           class="hidden absolute top-full left-0 mt-2 z-50
-                  bg-white border rounded-2xl shadow-lg p-4 flex flex-col gap-1
-                  min-w-[300px] max-w-md w-full">
+           class="hidden absolute top-full left-0 mt-2 z-[9999]
+                  bg-white border rounded-2xl shadow-lg p-3 w-[min(92vw,340px)]">
+
         {{ range .Site.Menus.main }}
-          {{ if .HasChildren }}
-            <div class="group relative">
-              <a href="{{ .URL | relURL }}"
-                 class="flex justify-between items-center px-4 py-2 rounded-lg 
-                        text-gray-700 hover:text-blue-700 hover:bg-blue-50 transition font-medium">
-                {{ .Name }}
-                <span class="ml-2">▸</span>
-              </a>
-              <!-- Submenu -->
-              <div class="submenu absolute top-0 left-full ml-0
-                          min-w-[220px] bg-white border rounded-xl shadow-lg z-50
-                          hidden group-hover:block transition">
-                {{ range .Children }}
-                  <a href="{{ .URL | relURL }}"
-                     class="block px-4 py-2 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition">
-                    {{ .Name }}
-                  </a>
-                {{ end }}
+          {{ if not .Parent }}
+            {{ if .HasChildren }}
+              {{ $id := printf "sm-%s" (urlize .Name) }}
+              <div class="mb-1 group">
+                <button type="button"
+                        class="submenu-btn flex w-full items-center justify-between px-3 py-2 rounded-lg
+                               text-gray-800 hover:bg-blue-50 hover:text-blue-700 transition"
+                        aria-controls="{{ $id }}" aria-expanded="false">
+                  <span class="font-medium">{{ .Name }}</span>
+                  <span class="ml-2 select-none">▸</span>
+                </button>
+                <div id="{{ $id }}" class="submenu hidden pl-2 border-l ml-2 mt-1">
+                  {{ range .Children }}
+                    <a href="{{ .URL | relURL }}"
+                       class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition">
+                      {{ .Name }}
+                    </a>
+                  {{ end }}
+                </div>
               </div>
-            </div>
-          {{ else }}
-            <a href="{{ .URL | relURL }}"
-               class="block px-4 py-2 rounded-lg text-gray-700 hover:text-blue-700 hover:bg-blue-50 transition font-medium">
-              {{ .Name }}
-            </a>
+            {{ else }}
+              <a href="{{ .URL | relURL }}"
+                 class="block px-3 py-2 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-700 transition font-medium">
+                {{ .Name }}
+              </a>
+            {{ end }}
           {{ end }}
         {{ end }}
+
       </nav>
     </div>
 
@@ -54,5 +57,6 @@
          {{ .Site.Title }}
       </a>
     </h1>
+
   </div>
 </header>
