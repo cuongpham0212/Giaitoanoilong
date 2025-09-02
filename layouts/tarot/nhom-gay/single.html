@@ -1,0 +1,114 @@
+{{ define "main" }}
+<article class="bg-white rounded-2xl shadow-lg p-6 lg:p-10 max-w-4xl mx-auto transition duration-300 ease-in-out">
+
+  <!-- Banner -->
+  {{ with .Params.banner }}
+    <img src="{{ . }}" alt="Banner bài viết"
+         class="w-full h-64 object-cover rounded-2xl mb-6 shadow-md hover:opacity-95 transition duration-300">
+  {{ end }}
+
+  <!-- Tiêu đề & Ngày -->
+  <header class="mb-8 text-center border-b pb-4">
+    <h1 class="text-4xl font-extrabold text-gray-900 mb-3 leading-tight">{{ .Title }}</h1>
+    <p class="text-sm text-gray-500 italic">{{ .Date.Format "02/01/2006" }}</p>
+  </header>
+
+  <!-- Nội dung bài viết -->
+  <div class="prose prose-lg max-w-none text-gray-800 text-justify leading-relaxed">
+    {{ .Content }}
+  </div>
+
+  <!-- Bài viết liên quan -->
+  <section class="mt-14">
+    <h2 class="text-2xl font-bold mb-6 text-center text-gray-800">Bài viết liên quan</h2>
+    <div class="grid gap-6 md:grid-cols-2">
+      {{ $currentPage := . }}
+      {{ range first 4 (where .Site.RegularPages "Section" .Section) }}
+        {{ if ne .Permalink $currentPage.Permalink }}
+          <div class="bg-gray-50 border rounded-xl p-4 shadow hover:shadow-lg transition duration-300 hover:-translate-y-1">
+            <a href="{{ .RelPermalink }}">
+              {{ with .Params.banner }}
+                <img src="{{ . }}" alt="{{ .Title }}" class="rounded-lg mb-3 w-full h-32 object-cover">
+              {{ end }}
+            </a>
+            <h3 class="font-semibold text-lg mb-1">
+              <a href="{{ .RelPermalink }}" class="hover:text-blue-600 transition duration-200">{{ .Title }}</a>
+            </h3>
+            <p class="text-sm text-gray-500">{{ .Date.Format "02/01/2006" }}</p>
+          </div>
+        {{ end }}
+      {{ end }}
+    </div>
+  </section>
+
+  <!-- Nút chia sẻ -->
+  <div class="mt-10 flex justify-center gap-4 flex-wrap">
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" 
+       target="_blank" rel="noopener"
+       class="share-btn bg-blue-600 hover:bg-blue-700">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <a href="https://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ .Title }}" 
+       target="_blank" rel="noopener"
+       class="share-btn bg-sky-500 hover:bg-sky-600">
+      <i class="fab fa-twitter"></i>
+    </a>
+
+    <a href="https://zalo.me/share?url={{ .Permalink }}" 
+       target="_blank" rel="noopener"
+       class="share-btn bg-green-500 hover:bg-green-600">
+      Z
+    </a>
+
+    <button onclick="copyLink()" 
+       class="share-btn bg-gray-600 hover:bg-gray-700">
+      <i class="fas fa-link"></i>
+    </button>
+  </div>
+
+  <script>
+  function copyLink() {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      alert("Đã copy link bài viết!");
+    });
+  }
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <style>
+    .share-btn {
+      width: 40px; height: 40px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 50%;
+      color: white;
+      font-size: 18px;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .share-btn:hover {
+      transform: scale(1.1);
+    }
+  </style>
+
+  <!-- Nút Donate & Book lịch -->
+  <div class="mt-10 flex flex-wrap justify-center gap-4">
+    <a href="https://www.momo.vn/your-donate-link" target="_blank" rel="noopener"
+       class="px-6 py-3 bg-yellow-500 text-white font-bold rounded-xl shadow hover:bg-yellow-600 transition duration-200">
+       🌱 Donate Ủng Hộ
+    </a>
+    <a href="https://calendly.com/your-booking-link" target="_blank" rel="noopener"
+       class="px-6 py-3 bg-blue-500 text-white font-bold rounded-xl shadow hover:bg-blue-600 transition duration-200">
+       📅 Book Lịch Chia Sẻ
+    </a>
+  </div>
+
+  <footer class="mt-12 text-center border-t pt-6">
+    <a href="{{ .Section | relURL }}" class="text-gray-600 hover:text-blue-600 transition">
+      ← Quay lại {{ .Section }}
+    </a>
+  </footer>
+
+</article>
+{{ end }}

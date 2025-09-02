@@ -1,6 +1,12 @@
-baseURL = "https://ten-mien-cua-ban.com/"
+baseURL = "https://giaitoanoilong.netlify.app/"
 languageCode = "vi"
 title = "Tâm sự cuộc sống"
+
+# Kích hoạt sitemap
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml" 
 
 [pagination]
   pagerSize = 10
