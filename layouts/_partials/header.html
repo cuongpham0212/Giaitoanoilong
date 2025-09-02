@@ -1,62 +1,59 @@
-<header class='{{ cond .IsHome "absolute top-0 left-0 w-full bg-transparent z-[9999] isolate" "bg-gray-100 shadow-md sticky top-0 z-[9999] isolate" }}'>
+<header class='{{ cond .IsHome "absolute top-0 left-0 w-full bg-transparent z-[9999]" "bg-gray-100 shadow-md sticky top-0 z-[9999]" }}'>
   <div class="container mx-auto px-4 py-3 flex items-center justify-between relative">
 
-    <!-- MENU + Nút -->
-    <div class="flex items-center gap-3 relative">
-      <button id="menu-btn"
-              class="p-2 rounded-lg bg-blue-600 text-white shadow hover:bg-blue-700 transition"
-              aria-controls="site-menu" aria-expanded="false" aria-label="Mở menu" type="button">
-        ☰ MENU
-      </button>
+    <!-- Nút menu (trái) -->
+    <button id="menu-btn"
+            class="p-2 rounded-lg bg-blue-600 text-white shadow hover:bg-blue-700 transition"
+            aria-controls="site-menu" aria-expanded="false" aria-label="Mở menu">
+      ☰ MENU
+    </button>
 
-      <!-- Backdrop để bắt click ra ngoài -->
-      <div id="menu-backdrop" class="hidden fixed inset-0 bg-black/30 z-[9998]"></div>
-
-      <!-- Nav: dropdown dọc, không dùng absolute layer chồng chéo -->
-      <nav id="site-menu"
-           class="hidden absolute top-full left-0 mt-2 z-[9999]
-                  bg-white border rounded-2xl shadow-lg p-3 w-[min(92vw,340px)]">
-
-        {{ range .Site.Menus.main }}
-          {{ if not .Parent }}
-            {{ if .HasChildren }}
-              {{ $id := printf "sm-%s" (urlize .Name) }}
-              <div class="mb-1 group">
-                <button type="button"
-                        class="submenu-btn flex w-full items-center justify-between px-3 py-2 rounded-lg
-                               text-gray-800 hover:bg-blue-50 hover:text-blue-700 transition"
-                        aria-controls="{{ $id }}" aria-expanded="false">
-                  <span class="font-medium">{{ .Name }}</span>
-                  <span class="ml-2 select-none">▸</span>
-                </button>
-                <div id="{{ $id }}" class="submenu hidden pl-2 border-l ml-2 mt-1">
-                  {{ range .Children }}
-                    <a href="{{ .URL | relURL }}"
-                       class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition">
-                      {{ .Name }}
-                    </a>
-                  {{ end }}
-                </div>
-              </div>
-            {{ else }}
-              <a href="{{ .URL | relURL }}"
-                 class="block px-3 py-2 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-700 transition font-medium">
-                {{ .Name }}
-              </a>
-            {{ end }}
-          {{ end }}
-        {{ end }}
-
-      </nav>
-    </div>
-
-    <!-- Logo -->
+    <!-- Logo / Tiêu đề (phải) -->
     <h1 class="text-2xl font-extrabold tracking-tight">
-      <a href="{{ "/" | relURL }}" 
+      <a href="{{ "/" | relURL }}"
          class='{{ cond .IsHome "text-white drop-shadow hover:text-blue-200" "text-blue-700 hover:text-blue-900" }} transition'>
-         {{ .Site.Title }}
+        {{ .Site.Title }}
       </a>
     </h1>
-
   </div>
+
+  <!-- Backdrop -->
+  <div id="menu-backdrop" class="hidden fixed inset-0 bg-black/40 z-[9998]"></div>
+
+  <!-- Menu dropdown -->
+  <nav id="site-menu"
+       class="hidden absolute left-2 top-[100%] mt-2 z-[10000] bg-white border rounded-2xl shadow-lg p-3 flex flex-col space-y-1 w-64 relative">
+    {{ range .Site.Menus.main }}
+      {{ if not .Parent }}
+        <div class="relative inline-block w-full">
+          {{ if .HasChildren }}
+            {{ $id := printf "sm-%s" (urlize .Name) }}
+            <!-- Nút menu cha -->
+            <button type="button"
+                    class="submenu-btn w-full text-left px-3 py-2 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-700 transition flex items-center justify-between"
+                    aria-controls="{{ $id }}" aria-expanded="false">
+              <span>{{ .Name }}</span>
+              <span class="ml-1">▸</span>
+            </button>
+
+            <!-- Submenu xổ ngang -->
+            <div id="{{ $id }}"
+                 class="submenu hidden absolute top-0 left-full ml-2 bg-white border rounded-lg shadow-lg min-w-[200px] z-[10001]">
+              {{ range .Children }}
+                <a href="{{ .URL | relURL }}"
+                   class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition">
+                  {{ .Name }}
+                </a>
+              {{ end }}
+            </div>
+          {{ else }}
+            <a href="{{ .URL | relURL }}"
+               class="block px-3 py-2 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-700 transition">
+              {{ .Name }}
+            </a>
+          {{ end }}
+        </div>
+      {{ end }}
+    {{ end }}
+  </nav>
 </header>
