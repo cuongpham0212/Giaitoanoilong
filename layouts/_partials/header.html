@@ -24,10 +24,10 @@
   <nav id="site-menu"
        class="hidden absolute left-2 top-[100%] mt-2 z-[10000] bg-white border rounded-2xl shadow-lg p-3 flex flex-col space-y-1 w-64 relative">
     {{ range .Site.Menus.main }}
-      {{ if not .Parent }}
+      {{ if and (not .Parent) .Menu }} <!-- chỉ render menu cha có khai báo -->
         <div class="relative inline-block w-full">
           {{ if .HasChildren }}
-            {{ $id := printf "sm-%s" (urlize .Name) }}
+            {{ $id := printf "sm-%s" (urlize .Identifier) }}
             <!-- Nút menu cha -->
             <button type="button"
                     class="submenu-btn w-full text-left px-3 py-2 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-700 transition flex items-center justify-between"
